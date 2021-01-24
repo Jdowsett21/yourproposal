@@ -1,8 +1,10 @@
 const navArray = [
   { route: '', mainItem: 'Home' },
-  { route: '/about', mainItem: 'About' },
-  { route: '/projects', mainItem: 'Our Work' },
-  { route: 'whyus', mainItem: 'Why Us' },
+  { route: 'services', mainItem: 'Services' },
+  { route: 'process', mainItem: 'Process' },
+  { route: 'portfolio', mainItem: 'Portfolio' },
+  { route: 'technical', mainItem: 'Technical' },
+  { route: 'contact', mainItem: 'Contact Us' },
 ];
 
 export default navArray;

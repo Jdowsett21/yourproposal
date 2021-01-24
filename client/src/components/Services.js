@@ -1,5 +1,6 @@
 import React from 'react';
-import sprite from '../img/sprite.svg';
+import sprite from '../img/svg/sprite.svg';
+import { Link } from 'react-router-dom';
 function Services(props) {
   return (
     <section className='services'>
@@ -9,6 +10,9 @@ function Services(props) {
           We offer all services related to web development and will ensure every
           idea you have is realized
         </p>
+        <Link to='/services' className='service__button'>
+          <p className='service__button-text'>Learn More</p>
+        </Link>
       </div>
 
       <div className='service service--1'>
@@ -18,10 +22,11 @@ function Services(props) {
         <h4 className='heading-4'>Modern UI/UX Design</h4>
         <div className='service__hover-gradient'>
           <p className='service__text'>
-            We build a beautiful and modern User Experience in every website we
-            develop. We will provide a full design concept and wireframe
-            ensuring you are satisfied before coding begins.
+            Get the professional site you've always wanted.
           </p>
+          <Link to='/services' className='service__button'>
+            <p className='service__button-text'>Learn More</p>
+          </Link>
         </div>
       </div>
 
@@ -32,38 +37,41 @@ function Services(props) {
         <h4 className='heading-4'>Responsive Design</h4>
         <div className='service__hover-gradient'>
           <p className='service__text'>
-            Every single one of our sites is just a user friendly and well
-            designed on mobile applications as on Desktops. Your customers will
-            love your site no matter what device they are using
+            Your website, looking great, on any device.
           </p>
+          <Link to='/services' className='service__button'>
+            <p className='service__button-text'>Learn More</p>
+          </Link>
         </div>
       </div>
 
       <div className='service service--3'>
         <svg className='service__icon'>
-          <use href={sprite + '#web-security'}></use>
+          <use href={sprite + '#ecommerce'}></use>
         </svg>
-        <h4 className='heading-4'>Secure Payments</h4>
+        <h4 className='heading-4'>Profit Online</h4>
         <div className='service__hover-gradient'>
           <p className='service__text'>
-            We provide end to end encrypted shopping experience for your
-            customers so they can rest assured their information is protect and
-            can shop at ease.{' '}
+            Get your customers shopping you your site, safely and securely.
           </p>
+          <Link to='/services' className='service__button'>
+            <p className='service__button-text'>Learn More</p>
+          </Link>
         </div>
       </div>
 
       <div className='service service--4'>
         <svg className='service__icon'>
-          <use href={sprite + '#bug'}></use>
+          <use href={sprite + '#dashboard'}></use>
         </svg>
-        <h4 className='heading-4'>Error Free Guarantee</h4>
+        <h4 className='heading-4'>Customized Systems</h4>
         <div className='service__hover-gradient'>
           <p className='service__text'>
-            We have a rigorous testing process for every site before it enters
-            production. We also have a lifetime warranty to fix any bugs that
-            might occur and will fix them free of charge
+            Create a custom system for your business.
           </p>
+          <Link to='/services' className='service__button'>
+            <p className='service__button-text'>Learn More</p>
+          </Link>
         </div>
       </div>
 
@@ -74,24 +82,42 @@ function Services(props) {
         <h4 className='heading-4'>Technology Integration</h4>
         <div className='service__hover-gradient'>
           <p className='service__text'>
-            Combine different technologies used in your business to create
-            seamless processes and improve your users experiences.
+            Combine technologies to improve your users experiences.
           </p>
+          <Link to='/services' className='service__button'>
+            <p className='service__button-text'>Learn More</p>
+          </Link>
         </div>
       </div>
 
       <div className='service service--6'>
-        <svg className='service__icon'>
-          <use href={sprite + '#database'}></use>
+        <svg
+          className='service__icon'
+          style={{ opacity: '.7', marginRight: '8rem', marginBottom: '4rem' }}
+        >
+          <use href={sprite + '#android'}></use>
         </svg>
-        <h4 className='heading-4'>Database Management</h4>
+        <svg
+          className='service__icon'
+          style={{
+            opacity: '.8',
+            marginLeft: '10rem',
+            marginTop: '4rem',
+            fill: '#bd80e1',
+          }}
+        >
+          <use href={sprite + '#apple'}></use>
+        </svg>
+        <h4 className='heading-4' style={{ marginTop: '2.5rem' }}>
+          Mobile Flexibility
+        </h4>
         <div className='service__hover-gradient'>
           <p className='service__text'>
-            In order for customers to have their own accounts or any information
-            to be saved and updated by the user or yourself, you will need a
-            database. We will ensure you and your users can perform whatever
-            tasks neccesary on your site.
+            Save the expense of building two applications!
           </p>
+          <Link to='/services' className='service__button'>
+            <p className='service__button-text'>Learn More</p>
+          </Link>
         </div>
       </div>
     </section>

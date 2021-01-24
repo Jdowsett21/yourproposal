@@ -3,7 +3,7 @@ import React from 'react';
 const FormInput = (props) => {
   return (
     <div
-      className={`${props.form}input--${props.name}`}
+      className={`${props.form}input--${props.name} ${props.form}input--${props.name}${props.modification} `}
       style={{ marginBottom: props.helperText === '' ? '3rem' : '.5rem' }}
     >
       {props.name === 'message' || props.name === 'coverLetter' ? (

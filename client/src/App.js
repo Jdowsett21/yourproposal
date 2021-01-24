@@ -15,6 +15,14 @@ import store from './utils/store';
 
 import ToTopPageOnReload from './utils/ToTopPageOnReload';
 import Home from './pages/Home';
+import ProcessPage from './pages/ProcessPage';
+import ContactPage from './pages/ContactPage';
+import TechnicalPage from './pages/TechnicalPage';
+import ServicesPage from './pages/ServicesPage';
+import Portfolio from './pages/Portfolio';
+import MediaorPage from './pages/MediaorPage';
+import GrivetyPage from './pages/GrivetyPage';
+import CleanSoilsPage from './pages/CleanSoilsPage';
 
 const LoadingFallback = () => (
   <AppShell>
@@ -28,6 +36,30 @@ const AppRoutes = () => (
       {/* <Suspense fallback={<LoadingFallback />}> */}
 
       <Switch>
+        <Route exact path='/process'>
+          <ProcessPage />
+        </Route>
+        <Route exact path='/portfolio'>
+          <Portfolio />
+        </Route>
+        <Route exact path='/mediaor'>
+          <MediaorPage />
+        </Route>
+        <Route exact path='/grivety'>
+          <GrivetyPage />
+        </Route>
+        <Route exact path='/cleanSoils'>
+          <CleanSoilsPage />
+        </Route>
+        <Route exact path='/contact'>
+          <ContactPage />
+        </Route>
+        <Route exact path='/services'>
+          <ServicesPage />
+        </Route>
+        <Route exact path='/technical'>
+          <TechnicalPage />
+        </Route>
         <Route exact path='/'>
           <Home />
         </Route>

@@ -7,6 +7,7 @@ import { submitEmail } from '../actions/EmailActions.js';
 import FormInput from '../common/FormInput.js';
 
 const MyTextField = ({ placeholder, ...props }) => {
+  placeholder = '';
   const [field, meta] = useField(props);
   // touched is clicked into field
   const errorText = meta.error && meta.touched ? meta.error : '';
@@ -47,34 +48,32 @@ function ContactForm({ email: { emailSuccess, emailError }, submitEmail }) {
               We would be delighted to hear your idea and discuss how we can
               help you
             </h2>
-            <label className='contact-info__label contact-info__label--name'>
-              Your Name &#42;
-            </label>
-            <MyTextField ariaLabel='name' name='name' type='text' required />
-            <label className='contact-info__label contact-info__label--email'>
-              Email &#42;
-            </label>
+
             <MyTextField
+              ariaLabel='name'
+              name='name'
+              type='text'
+              required
+              placeholder='Name'
+            />
+            <MyTextField
+              placeholder='Email'
               id='email'
               name='email'
               type='email'
               ariaLabel='Email'
               required
             />
-            <label className='contact-info__label contact-info__label--subject'>
-              Subject &#42;
-            </label>
             <MyTextField
+              placeholder='Subject'
               ariaLabel='Subject'
               name='subject'
               type='text'
               required
             />
 
-            <label className='contact-info__label contact-info__label--message'>
-              Message &#42;
-            </label>
             <MyTextField
+              placeholder='Message'
               id='message'
               name='message'
               type='text-box'

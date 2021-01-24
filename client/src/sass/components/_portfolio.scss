@@ -1,0 +1,134 @@
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  max-height: 99vh;
+  justify-items: center;
+  &__grid {
+    align-self: end;
+    max-height: 99vh;
+    display: grid;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    grid-template-columns: minmax(8%, 1fr) minmax(30rem, 120rem) minmax(8%, 1fr);
+    grid-template-rows: repeat(3, min-content) 10rem;
+    justify-items: center;
+    z-index: 2;
+  }
+  &__company-logo {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    width: 40rem;
+    height: 10rem;
+    animation: fadeDown1 0.8s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+
+    // margin-bottom: 3rem;
+  }
+  &__logo--bottom {
+    height: 8rem;
+    grid-row: 1/2;
+  }
+  &__background {
+    object-fit: cover;
+    width: 120%;
+    // transform: translateX(-12rem);
+    height: 100%;
+    grid-row: 1/5;
+    grid-column: 1/4;
+
+    // @media only screen and (max-width: 50em) {
+    //   height: 35rem;
+    // }
+  }
+  &__description {
+    font-size: 1.4rem;
+    margin-bottom: 5rem;
+    color: rgb(116, 116, 116);
+    grid-row: 2/3;
+    font-weight: 400;
+    grid-column: 2/3;
+    line-height: 2.3rem;
+    width: 60%;
+    text-align: center;
+    animation: fadeUp 0.8s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+  }
+  &__image {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    height: 30rem;
+    margin-bottom: 13rem;
+    animation: fadeDown 0.8s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    &--1 {
+      margin-left: 20rem;
+    }
+
+    &--2 {
+      margin-right: 20rem;
+    }
+    &--grivety {
+      height: 35rem;
+      width: 70rem;
+      margin-bottom: 8rem;
+    }
+    &--mediaor {
+      height: 25rem;
+      margin-bottom: 8rem;
+      margin-top: 2rem;
+      &--1 {
+        margin-left: 25rem;
+        margin-top: 10rem;
+        z-index: 100;
+      }
+    }
+  }
+  &__image-section {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 3/4;
+    justify-items: start;
+  }
+  &__bottom-menu {
+    grid-row: 4/5;
+    grid-column: 1/4;
+    display: grid;
+    width: 100%;
+    align-self: end;
+    justify-self: start;
+    grid-template-columns: 30rem 1fr;
+  }
+  &__logo-bottom-section {
+    display: grid;
+    background-color: #fff;
+    justify-items: center;
+    height: 9rem;
+    // padding: 2rem 0
+    grid-column: 2/5;
+    justify-self: start;
+    align-self: end;
+    cursor: pointer;
+    grid-template-columns: repeat(3, minmax(31rem, 50rem));
+    padding-left: 1rem;
+  }
+  &__start-project {
+    cursor: pointer;
+    background-color: #5db9f7;
+    border-top-right-radius: 10px;
+    border: none;
+    height: 10rem;
+    width: 100%;
+    margin-right: 5rem;
+    font-size: 1.9rem;
+    grid-column: 1/2;
+    font-weight: 400;
+  }
+  &__link {
+    text-decoration: none;
+    color: #fff;
+  }
+}

@@ -2,7 +2,7 @@
   display: grid;
 
   z-index: 200;
-  // grid-template-rows: repeat(2, min-content);
+
   &__main {
     grid-template-columns: minmax(20%, 1fr) minmax(22rem, 50rem) minmax(
         20%,
@@ -18,9 +18,11 @@
   &__column {
     grid-row: 2/3;
     grid-column: 2/3;
-
+    display: grid;
     justify-content: center;
     grid-template-rows: min-content;
+    &--2 {
+    }
   }
   &__logo {
     width: 100%;

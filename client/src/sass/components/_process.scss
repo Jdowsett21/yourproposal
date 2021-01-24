@@ -14,21 +14,39 @@
     justify-content: center;
     margin-left: 9rem;
   }
-  &__header {
+  &__header-section {
     grid-row: 1/2;
-    color: #fff;
-    padding: 5rem 0 8rem 0;
-    font-size: 3rem;
+    padding-top: 5rem;
+    margin: 5rem 0 8rem 0;
     grid-column: 1/6;
-    text-align: center;
+    display: grid;
+    justify-content: center;
+  }
+  &__header {
+    color: #fff;
+    border-bottom: 5px solid #5db9f7;
+    font-size: 3rem;
   }
   &__secondary-header {
     color: #fff;
+    grid-column: 1/2;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: rem;
+  }
+  &__paragraph {
     grid-row: 5/6;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 5%;
     margin: 7rem 0;
     grid-column: 1/6;
+  }
+  &__secondary-text {
+    grid-column: 2/3;
+    color: #fff;
     font-weight: 100;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   &__section {
     grid-row: 3/4;

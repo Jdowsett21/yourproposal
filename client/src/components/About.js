@@ -1,5 +1,5 @@
 import React from 'react';
-import happyCustomer from '../img/Screen Shot 2021-01-10 at 2.30.49 PM.png';
+import happyCustomer from '../img/pledge.jpg';
 function About(props) {
   return (
     <div className='about'>
