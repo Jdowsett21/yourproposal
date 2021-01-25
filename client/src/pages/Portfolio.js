@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import BackgroundVideo from '../common/BackgroundVideo';
 import Grivety from '../components/Grivety';
 import Mediaor from '../components/Mediaor';
 import CleanSoils from '../components/CleanSoils';

@@ -5,6 +5,7 @@ import {
   APPLICATION_SUCCESS,
   APPLICATION_FAILURE,
   REDIRECT_ON_SUCCESS,
+  PROJECT,
 } from '../actions/types';
 
 const initialState = {
@@ -12,6 +13,7 @@ const initialState = {
   emailFailure: false,
   applicationSuccess: false,
   applicationFailure: false,
+  project: 'cleanSoils',
 };
 
 export default (state = initialState, action) => {

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Form, Formik, useField } from 'formik';
 import * as Yup from 'yup';
 import { connect } from 'react-redux';
@@ -15,7 +15,7 @@ const MyTextField = ({ placeholder, ...props }) => {
       {...field}
       placeholder={placeholder}
       helperText={errorText}
-      modification='--small'
+      // modification='--small'
       error={!!errorText}
       form='contact-info__'
     />
