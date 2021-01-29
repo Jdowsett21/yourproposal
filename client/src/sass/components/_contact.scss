@@ -76,7 +76,9 @@
         grid-row: 2/3;
         align-self: end;
         @include respond(tab-port) {
-          font-size: 1.9rem;
+          font-size: 2.2rem;
+          font-weight: 400;
+          text-align: center;
         }
       }
     }
@@ -148,12 +150,16 @@
     border-radius: 10px;
 
     width: 100%;
+    @media only screen and (max-width: 45em) {
+      font-size: 2.1rem;
+    }
     &:focus {
       outline: 1px solid #c9c9c9e7;
     }
     &::placeholder {
       font-weight: 500;
       color: #222;
+      font-size: 2.1rem;
     }
     &--name {
       grid-column: 1/2;

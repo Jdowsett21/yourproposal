@@ -26,7 +26,11 @@ function ProcessPage(props) {
         </p>
       </div>
       <div className='process-page__section'>
-        <img src={planning} alt='' className='process-page__image' />
+        <img
+          src={planning}
+          alt=''
+          className='process-page__image process-page__image--1'
+        />
         <div className='process-page__section-text'>
           <h4 className='process-page__section-header'>Planning</h4>
           <p className='process-page__section-paragraph'>
@@ -50,8 +54,16 @@ function ProcessPage(props) {
             their website.
           </p>
         </div>
-        <img src={wireframing} alt='' className='process-page__image' />
-        <img src={design} alt='' className='process-page__image' />
+        <img
+          src={wireframing}
+          alt=''
+          className='process-page__image process-page__image--2'
+        />
+        <img
+          src={design}
+          alt=''
+          className='process-page__image process-page__image--3'
+        />
 
         <div className='process-page__section-text'>
           <h4 className='process-page__section-header'>Design</h4>
@@ -76,8 +88,16 @@ function ProcessPage(props) {
             the website is running perfectly, before deployment.{' '}
           </p>
         </div>
-        <img src={coding} alt='' className='process-page__image' />
-        <img src={deployment} alt='' className='process-page__image' />
+        <img
+          src={coding}
+          alt=''
+          className='process-page__image process-page__image--4'
+        />
+        <img
+          src={deployment}
+          alt=''
+          className='process-page__image process-page__image--5'
+        />
 
         <div className='process-page__section-text'>
           <h4 className='process-page__section-header'>Deployment</h4>

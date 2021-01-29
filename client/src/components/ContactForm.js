@@ -47,7 +47,7 @@ function ContactForm({ email: { emailSuccess, emailError }, submitEmail }) {
               <h2 className='contact-info__form-header'>Contact Us Today</h2>
               <h2 className='contact-info__form-header--secondary'>
                 We would be delighted to hear your idea and discuss how we can
-                help you
+                help you!
               </h2>
 
               <MyTextField
