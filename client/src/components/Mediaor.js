@@ -18,7 +18,7 @@ function Mediaor(props) {
         <span>
           <Link
             style={{ textDecoration: 'none', color: '#5db9f7' }}
-            to='/grivety'
+            to='/mediaor'
           >
             Learn More
           </Link>

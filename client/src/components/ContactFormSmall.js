@@ -22,7 +22,10 @@ const MyTextField = ({ placeholder, ...props }) => {
   );
 };
 
-function ContactForm({ email: { emailSuccess, emailError }, submitEmail }) {
+function ContactFormSmall({
+  email: { emailSuccess, emailError },
+  submitEmail,
+}) {
   const ContactSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),
     email: Yup.string()
@@ -94,4 +97,4 @@ function ContactForm({ email: { emailSuccess, emailError }, submitEmail }) {
 const mapStateToProps = (state) => ({
   email: state.email,
 });
-export default connect(mapStateToProps, { submitEmail })(ContactForm);
+export default connect(mapStateToProps, { submitEmail })(ContactFormSmall);

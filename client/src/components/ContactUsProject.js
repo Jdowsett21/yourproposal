@@ -45,7 +45,7 @@ function ContactUsProject({
         <Form>
           <div className='contact-info__form' id='contact-form'>
             <div className='project__form-area'>
-              <label className='project__form-label'>Name</label>
+              <label className='project__form-label'>Name &#42;</label>
               <MyTextField
                 ariaLabel='name'
                 name='name'
@@ -55,7 +55,7 @@ function ContactUsProject({
               />
             </div>
             <div className='project__form-area'>
-              <label className='project__form-label'>Email </label>
+              <label className='project__form-label'>Email &#42;</label>
               <MyTextField
                 id='email'
                 name='email'

@@ -1,6 +1,10 @@
 .contact {
   display: grid;
-  background-image: linear-gradient(to bottom right, #f37f7fee, #ffb88cc7),
+  background: linear-gradient(
+      to bottom right,
+      rgba(104, 200, 255, 0.901),
+      rgba(171, 208, 250, 0.908)
+    ),
     url(../../img/oriental-tiles.png);
   grid-template-columns: minmax(8%, 1fr) minmax(45rem, 100rem) minmax(8%, 1fr);
   padding: 0rem 0;
@@ -68,7 +72,7 @@
         color: #fff;
         grid-column: 1/3;
         justify-self: center;
-
+        margin-bottom: 2rem;
         grid-row: 1/2;
         align-self: end;
       }
@@ -76,31 +80,49 @@
   }
 
   &__button {
-    grid-row: 9/10;
+    grid-row: 10/11;
     border: none;
     grid-column: 2/3;
     justify-self: end;
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
     font-size: 1.8rem;
-    background-color: $color-secondary;
+
+    border-radius: 31px;
+    background: linear-gradient(
+      to right,
+      rgba(0, 60, 255, 0.901),
+      rgba(89, 155, 255, 0.908)
+    );
     transition: all 0.5s ease;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
+    border: 3px solid #fff;
     cursor: pointer;
     &:focus {
       outline: none;
     }
     &:hover {
       transform: scale(1.1);
-      box-shadow: 0 1rem 2rem #777;
+      box-shadow: 0 1rem 2rem rgb(240, 240, 240);
+      background: linear-gradient(
+        to right,
+        rgb(0, 60, 255),
+        rgba(89, 155, 255, 0.908)
+      );
     }
   }
   &__form-error {
     font-size: 1.4rem;
-    color: rgb(161, 27, 27);
-    border-top: 3px solid rgb(161, 27, 27);
-    grid-row: 11/12;
+    color: rgb(255, 255, 255);
+    border-top: 4px solid rgb(0, 2, 94);
+    // grid-row: 11/12;
     grid-column: 1/2;
+    width: 98%;
+    margin: 0 auto;
+    border-bottom: 15px;
+    &--message {
+      padding-bottom: 2rem;
+    }
     &--files {
       grid-row: 3/4;
       margin-top: 1rem;
@@ -115,18 +137,21 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 
-    color: rgb(75, 75, 75);
+    color: rgb(48, 48, 48);
     font-weight: 300;
     font-family: Titillium Web, sans-serif;
     font-weight: 100;
     border: 2px solid #c9c9c9e7;
-    border-radius: 0;
+    border-radius: 10px;
 
     width: 100%;
     &:focus {
       outline: 1px solid #c9c9c9e7;
     }
-
+    &::placeholder {
+      font-weight: 500;
+      color: #222;
+    }
     &--name {
       grid-column: 1/2;
       grid-row: 3/4;

@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import navArray from '../common/NavBarArray';
 import NavItem from './NavItem';
+import { withRouter } from 'react-router-dom';
 
-function NavBarList(props) {
+function NavBarList({ location }) {
   const [active, setActive] = useState('');
   const [hover, setHoverItem] = useState(false);
+
+  useEffect(() => {
+    setActive(location.pathname.substring(1));
+  }, [location]);
   return (
     <ul className='nav-bar__list'>
       {navArray.map((nav, index) => (
@@ -12,8 +17,10 @@ function NavBarList(props) {
           nav={nav}
           index={index}
           key={nav.mainItem}
-          active={active === nav.mainItem}
-          onClick={() => setActive(nav.mainItem)}
+          active={active === nav.route}
+          onClick={() => {
+            // setActive(location.pathname.substring(1));
+          }}
           onMouseEnter={() => setHoverItem(nav.mainItem)}
           hover={hover === nav.mainItem}
           onMouseLeave={() => setHoverItem('')}
@@ -23,4 +30,4 @@ function NavBarList(props) {
   );
 }
 
-export default NavBarList;
+export default withRouter(NavBarList);

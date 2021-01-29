@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from '../components/Carousel';
 import About from '../components/About';
 import Services from '../components/Services';
-import Contact from '../components/Projects';
+import ContactForm from '../components/ContactForm';
 import Process from '../components/Process';
 function Home(props) {
   return (
@@ -11,7 +11,7 @@ function Home(props) {
       <About />
       <Services />
       <Process />
-      <Contact />
+      <ContactForm />
     </div>
   );
 }

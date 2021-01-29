@@ -2,19 +2,16 @@
   object-fit: cover;
   width: 100%;
   height: 72rem;
-
-  @media only screen and (max-width: 50em) {
-    height: 35rem;
-  }
-
   z-index: -2;
   backface-visibility: hidden;
-
-  // animation: pictureFade 1s ease 1s;
-  // animation-fill-mode: backwards;
+  @media only screen and (max-width: 50em) {
+    height: 55rem;
+  }
+  @media only screen and (max-width: 43em) {
+    height: 45rem;
+  }
 }
 
-// hiding bootstrap previous and next text for carousel buttons
 .sr-only {
   color: transparent;
   z-index: -1000;
@@ -23,9 +20,6 @@
 
 .carousel {
   animation-fill-mode: backwards;
-  // &__page-buffer {
-  //   width: 5.5rem;
-  // }
 
   &__container {
     position: absolute;
@@ -58,136 +52,102 @@
   }
   &__inner-container {
     grid-column: 2/3;
+    transform: translateY(4rem);
   }
 
-  &__header-3 {
-    font-size: 2.6rem;
-    &--2,
-    &--3 {
-      margin-bottom: 2.5rem;
-    }
-    @media only screen and (max-width: 51em) {
-      font-size: 2.3rem;
-    }
-    @media only screen and (max-width: 40em) {
-      font-size: 1.8rem;
-    }
-    @media only screen and (max-width: 25em) {
-      font-size: 1.6rem;
-    }
-    color: rgb(240, 240, 240);
-    text-transform: uppercase;
-    font-weight: 100;
-    animation: carouselHeader3Up 0.5s ease 0.5s;
-    animation-fill-mode: backwards;
-    &-end {
-      font-size: 2.6rem;
-      color: rgb(240, 240, 240);
-      text-transform: uppercase;
-      font-weight: 100;
-      animation: exitUp 0.1s ease;
-    }
-  }
   &__header-1-background {
-    background: -webkit-linear-gradient(
-      to right,
-      #de6262c4,
-      #ffb88cc7
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #de6262c4, #ffb88cc7);
-    width: 60%;
-    margin: 3rem 20%;
-    justify-self: center;
     display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: max-content;
+    justify-self: center;
     justify-content: center;
     animation: carouselHeader1Up 2.5s ease 1s;
     animation-fill-mode: backwards;
+    &--1 {
+      justify-self: start;
+      justify-content: start;
+    }
+    &--2 {
+      justify-self: end;
+      justify-content: end;
+    }
   }
   &__header-1 {
+    background: linear-gradient(
+      to right,
+      rgba(38, 168, 255, 0.701),
+      rgba(38, 168, 255, 0.701)
+    );
+    border-radius: 0.3rem;
+
     font-size: 4.2rem;
     @media only screen and (max-width: 63.9em) {
-      font-size: 5.2rem;
+      font-size: 3.6rem;
     }
     @media only screen and (max-width: 51em) {
-      font-size: 4.2rem;
+      font-size: 3.2rem;
     }
-    @media only screen and (max-width: 40em) {
-      font-size: 3.5rem;
-      font-weight: 300;
+    @media only screen and (max-width: 43em) {
+      font-size: 2.7rem;
+      // font-weight: 300;
+    }
+    @media only screen and (max-width: 30em) {
+      font-size: 2.2rem;
     }
     @media only screen and (max-width: 25em) {
-      font-size: 3rem;
+      font-size: 2rem;
     }
-    padding: 1rem 0;
+
+    padding: 1rem 2rem;
     // text-transform: uppercase;
     color: #fff;
   }
   &__header-5-background {
-    background: linear-gradient(to right, #de6262c4, #ffb88cc7);
-    width: 40%;
-    margin: 3rem 30%;
-    justify-self: center;
+    margin: 3rem 0;
     display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: max-content;
+    justify-self: center;
     justify-content: center;
     animation: carouselTagLineUp 2.5s ease 1.6s;
     animation-fill-mode: backwards;
+    &--1 {
+      // justify-self: start;
+      justify-content: start;
+    }
+    &--2 {
+      // justify-self: end;
+      justify-content: end;
+    }
   }
-  &__tag-line {
+  &__header-5 {
+    border-radius: 0.3rem;
+    background: linear-gradient(
+      to right,
+      rgba(38, 168, 255, 0.701),
+      rgba(38, 168, 255, 0.701)
+    );
+    padding: 1rem 2rem;
     font-size: 1.6rem;
     @media only screen and (max-width: 51em) {
       font-size: 1.4rem;
     }
     @media only screen and (max-width: 40em) {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
     @media only screen and (max-width: 25em) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     font-weight: 500;
     color: rgb(240, 238, 238);
+    &--2 {
+      max-width: 56rem;
+      justify-self: center;
+      text-align: center;
+    }
+  }
 
-    &-end {
-      font-size: 2.5rem;
-      font-weight: 100;
-      color: rgb(240, 238, 238);
-
-      animation: exit 0.1s ease;
-    }
-  }
-  &__rectangle {
-    width: 3.7rem;
-    @media only screen and (max-width: 40em) {
-      width: 2.6rem;
-      height: 0.7rem;
-    }
-    @media only screen and (max-width: 25em) {
-      width: 1.8rem;
-      height: 0.49rem;
-    }
-    margin: 2rem;
-    height: 1rem;
-    margin-top: 3rem;
-    &--left {
-      animation: left 0.5s ease 1s;
-      animation-fill-mode: backwards;
-      &-end {
-        animation: exit 0.1s ease;
-      }
-    }
-    &--right {
-      animation: right 0.5s ease 1s;
-      animation-fill-mode: backwards;
-      &-end {
-        animation: exit 0.1s ease;
-      }
-    }
-  }
-  &__welcome-line {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   &__button {
     border: none;
     color: #fff;
@@ -203,7 +163,12 @@
       font-size: 1rem;
     }
     border-radius: 31px;
-    background: linear-gradient(to right, #de6262c4, #ffb88cc7);
+    background: linear-gradient(
+      to right,
+      rgba(38, 168, 255, 0.701),
+      rgba(38, 168, 255, 0.701)
+    );
+
     animation: carouselButtonUp 2s ease 2s;
     animation-fill-mode: backwards;
     transition: all 0.5s ease;
@@ -218,131 +183,70 @@
     }
     &:hover {
       transform: scale(1.1);
-      box-shadow: 0 1rem 5rem #777;
-      background-color: #df4c2be7;
+      box-shadow: 0 1rem 3rem rgb(224, 224, 224);
+      background: linear-gradient(
+        to right,
+        rgba(38, 168, 255, 0.701),
+        rgba(38, 168, 255, 0.701)
+      );
     }
-    &-end {
-      animation: exit 0.1s ease;
-      border: none;
+    &--text {
+      text-decoration: none;
       color: #fff;
-      padding: 1.5rem 2.7rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-      border-radius: 2px;
-      background-color: $color-secondary;
     }
   }
-}
 
-.carousel-2 {
-  animation-fill-mode: backwards;
-  &__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 1;
-  }
-
-  &__header-1 {
-    font-size: 6.2rem;
-    margin-top: -2rem;
-    text-transform: uppercase;
-    color: #fff;
-    animation: carouselHeader1Up 0.5s ease 2.5s;
-    animation-fill-mode: backwards;
-    &-end {
-      font-size: 6.2rem;
-      margin-top: -2rem;
-      text-transform: uppercase;
-      text-transform: uppercase;
-      color: #fff;
-      animation: exit 0.1s ease;
-    }
-  }
-  &__tag-line {
-    font-size: 2.5rem;
-    font-weight: 100;
-    color: rgb(240, 238, 238);
-
-    animation: carouselTagLineUp 0.5s ease 3s;
-    animation-fill-mode: backwards;
-    &-end {
-      font-size: 2.5rem;
-      font-weight: 100;
-      color: rgb(240, 238, 238);
-
-      animation: exit 0.1s ease;
-    }
-  }
-  &__rectangle {
-    width: 3.7rem;
-    margin: 2rem;
-    height: 1rem;
-    margin-top: 3rem;
-    &--left {
-      animation: left 0.5s ease 2s;
-      animation-fill-mode: backwards;
-      &-end {
-        animation: exit 0.1s ease;
+  .carousel-control {
+    &-next {
+      margin-right: 5rem;
+      padding-left: 0.2rem;
+      @media only screen and (max-width: 29em) {
+        margin-right: 2rem;
       }
     }
-    &--right {
-      animation: right 0.5s ease 2s;
-      animation-fill-mode: backwards;
-      &-end {
-        animation: exit 0.1s ease;
+    &-prev {
+      margin-left: 5rem;
+      padding-right: 0.2rem;
+      @media only screen and (max-width: 29em) {
+        margin-left: 2rem;
+      }
+    }
+
+    &-prev,
+    &-next {
+      padding-top: 1.4rem;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      top: 53%;
+      background-color: rgba(38, 168, 255, 0.701);
+      height: 3rem;
+      width: 3rem;
+      @media only screen and (max-width: 29em) {
+        height: 2rem;
+        width: 2rem;
+      }
+      border-radius: 5rem;
+    }
+  }
+  .carousel-control {
+    &-next-icon,
+    &-prev-icon {
+      width: 2rem;
+      height: 2rem;
+      @media only screen and (max-width: 29em) {
+        height: 1.2rem;
+        width: 1.2rem;
       }
     }
   }
-  &__welcome-line {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .carousel-control-next-icon {
+    // margin-left: 3rem;
   }
-  &__button {
-    border: none;
-    color: #fff;
-    padding: 1.5rem 2.7rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    border-radius: 2px;
-    background-color: $color-secondary;
-    animation: carouselButtonUp 0.5s ease 3.5s;
-    animation-fill-mode: backwards;
-    &-end {
-      animation: exit 0.1s ease;
-      border: none;
-      color: #fff;
-      padding: 1.5rem 2.7rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-      border-radius: 2px;
-      background-color: $color-secondary;
-    }
+  .carousel-indicators li {
+    width: 3rem;
+    height: 0.3rem;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
   }
-}
-.carousel-control {
-  &-next-icon,
-  &-prev-icon {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-.carousel-control-next-icon {
-  margin-left: 3rem;
-}
-.carousel-indicators li {
-  width: 3rem;
-  height: 0.3rem;
-  margin-right: 0.3rem;
-  margin-left: 0.3rem;
 }

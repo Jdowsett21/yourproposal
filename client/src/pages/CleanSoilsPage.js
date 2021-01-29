@@ -9,12 +9,11 @@ import Typeface from '../components/Typeface';
 import Icons from '../components/Icons';
 
 function CleanSoilsPage(props) {
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
   const location = useLocation();
-  console.log(
-    '🚀 ~ file: CleanSoilsPage.js ~ line 12 ~ CleanSoilsPage ~ location',
-    location
-  );
+
   return (
     <>
       <div className='project'>
@@ -24,17 +23,17 @@ function CleanSoilsPage(props) {
           </svg>
         </div>
         <p className='project__description'>
-          Grivety is a modern banking web application that displays the power of
-          using a database in unison with your web server. Grivety displays data
-          in every imaginable... Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Quae, ullam ab? Esse possimus perspiciatis sunt
-          provident ad, accusantium voluptatibus quisquam.
+          Clean Soils was looking to upgrade their site to professional look so
+          they could compete with their competition. They received a website
+          with the latest features and styles, letting their customers know that
+          they mean business. Keeping the website clean and concise was their #1
+          priority and Smarter Web Solutions delivered on their ask.
         </p>
 
         <img
           src={cleanSoilsFan}
           alt='grivety Screenshot'
-          className='project__image project__image--grivety'
+          className='project__image'
         />
         <h2
           className={
@@ -44,7 +43,7 @@ function CleanSoilsPage(props) {
           }
           ref={ref}
         >
-          Style
+          Styles
           <span
             className={
               inView
@@ -55,9 +54,28 @@ function CleanSoilsPage(props) {
             Zone
           </span>
         </h2>
-        <ColorPalette />
-        <Typeface />
-        <Icons />
+        <ColorPalette
+          color={['#25a7f4', '#77b609', '#264977']}
+          text='Clean Soils wanted to quickly display all of its services so that the site immediately grabbed the users attention.  We made sure to encorperate the Clean Soils color palette to leave a lasting reminder of the Clean Soils brand '
+        />
+        <Typeface font='Montserrat' />
+        <Icons
+          backgroundColor='#25a7f4'
+          icons={[
+            '#construction',
+            '#icon-utilities',
+            '#icon-municipal',
+            '#icon-tree',
+            '#icon-fire',
+            '#icon-lab',
+          ]}
+          text='We wanted to create a user interface that was easy to use on any device,
+          whether a laptop or mobile device. The website has creative animations to
+          capture the audiences attention and unique icons to visually demonstrate
+          the basics of Clean Soils. Users will leave the Clean Soils site fully
+          understanding what Clean Soils represents.'
+        />
+
         {/* <h2 className='project__large-header'>
         Final
         <span className='project__large-header project__large-header--1'>
@@ -92,30 +110,12 @@ function CleanSoilsPage(props) {
         <ContactUsProject />
 
         <div className='project__next-button-section'>
-          <button className='project__next-button'>
-            <Link
-              to={
-                location.pathname === '/cleanSoils'
-                  ? '/grivety'
-                  : location.pathname === 'grivety'
-                  ? '/mediaor'
-                  : '/cleanSoils'
-              }
-              className='project__next-button--text'
-            >
+          <Link to='/grivety' className='project__next-button'>
+            <Link to='/grivety' className='project__next-button--text'>
               Next Project
             </Link>
-          </button>
-          <Link
-            to={
-              location.pathname === '/cleanSoils'
-                ? '/grivety'
-                : location.pathname === '/grivety'
-                ? '/mediaor'
-                : '/cleanSoils'
-            }
-            className='project__next-button-arrow'
-          >
+          </Link>
+          <Link to='/grivety' className='project__next-button-arrow'>
             <svg className='project__next-icon'>
               <use href={sprite + '#play'}></use>
             </svg>

@@ -19,7 +19,7 @@
     justify-self: start;
     padding-bottom: 0.5rem;
     font-size: 3rem;
-    border-bottom: 5px solid #5dbaf7;
+    border-bottom: 5px solid #26a8ff;
   }
   &__group {
     grid-column: 2/4;
@@ -35,7 +35,7 @@
   }
   &__icon {
     grid-row: 1/3;
-    fill: #5dbaf7 !important;
+    fill: #26a8ff !important;
     grid-column: 1/2;
     height: 9rem;
     width: 6rem;
@@ -50,7 +50,7 @@
     grid-column: 2/3;
     font-size: 2.5rem;
     font-weight: 500;
-    color: #5dbaf7;
+    color: #26a8ff;
     margin: 1rem 0;
   }
   &__item-paragraph {

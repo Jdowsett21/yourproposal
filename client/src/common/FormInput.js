@@ -4,7 +4,14 @@ const FormInput = (props) => {
   return (
     <div
       className={`${props.form}input--${props.name} ${props.form}input--${props.name}${props.modification} `}
-      style={{ marginBottom: props.helperText === '' ? '3rem' : '.5rem' }}
+      style={{
+        marginBottom:
+          props.helperText === '' && props.name !== 'message'
+            ? '3rem'
+            : props.name === 'message'
+            ? '2.5rem'
+            : '.5rem',
+      }}
     >
       {props.name === 'message' || props.name === 'coverLetter' ? (
         <textarea

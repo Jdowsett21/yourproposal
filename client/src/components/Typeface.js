@@ -1,9 +1,11 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
-function Typeface(props) {
-  const { ref, inView } = useInView({ triggerOnce: true });
-
+function Typeface({ font }) {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+  console.log(font);
   return (
     <div ref={ref}>
       <h4
@@ -23,7 +25,9 @@ function Typeface(props) {
               : 'project__font-heading project__font-heading--1'
           }
         >
-          <h2 className='project__font-example'>Ab Bb</h2>
+          <h2 className='project__font-example' style={{ fontFamily: font }}>
+            Ab Bb
+          </h2>
         </div>
         <h4
           className={

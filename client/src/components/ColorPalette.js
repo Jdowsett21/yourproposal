@@ -1,31 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import ColorNumber from './ColorNumber';
+import ColorHeader from './ColorHeader';
+import Grivety from './Grivety';
 
-function ColorPalette(props) {
-  const { ref, inView } = useInView({ triggerOnce: true });
+function ColorPalette({ color, text }) {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {});
+
   return (
     <>
-      <h4 className='project__section-header'>Colour Palette</h4>
+      <ColorHeader />
       <div className='project__design-specifics'>
         <div className='project__color-shapes'>
           <div
             className='project__color-item project__color-item--1 '
-            style={{ backgroundColor: '#25a7f4' }}
+            style={{ backgroundColor: color[0] }}
           >
-            <ColorNumber color='#25a7f4' />
+            <ColorNumber color={color[0]} />
           </div>
           <div
             className='project__color-item project__color-item--2 '
-            style={{ backgroundColor: '#77b609' }}
+            style={{ backgroundColor: color[1] }}
           >
-            <ColorNumber color='#77b609' />
+            <ColorNumber color={color[1]} />
           </div>
           <div
             className='project__color-item project__color-item--3 '
-            style={{ backgroundColor: '#264977' }}
+            style={{ backgroundColor: color[2] }}
           >
-            <ColorNumber color='#264977' />
+            <ColorNumber color={color[2]} />
           </div>
           <p
             className={
@@ -35,12 +42,7 @@ function ColorPalette(props) {
             }
             ref={ref}
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Praesentium enim officia, quisquam, pariatur perspiciatis nesciunt
-            tenetur iure soluta illo numquam, corrupti reiciendis. Doloribus,
-            eum eaque? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Ipsum ipsa tempore labore, consectetur expedita voluptas recusandae
-            vero id nemo itaque aliquid, eveniet dicta excepturi mollitia!
+            {text}
           </p>
         </div>
       </div>

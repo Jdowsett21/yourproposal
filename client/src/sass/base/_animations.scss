@@ -30,7 +30,7 @@
 @keyframes fadeDown {
   0% {
     opacity: 0;
-    transform: translateY(-20rem);
+    transform: translateY(-30rem);
   }
 
   100% {
@@ -41,7 +41,7 @@
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(5rem);
+    transform: translateY(30rem);
   }
   90% {
     opacity: 0.2;

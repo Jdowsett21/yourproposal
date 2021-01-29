@@ -8,8 +8,8 @@ function ServicesPage(props) {
   return (
     <div>
       <Banner img={teamwork} text='Services' />
-      <div className='services__section services__section--odd'>
-        <div className='services__title-section'>
+      <div className='services__section services__section--split'>
+        <div className='services__title-section' id='responsive'>
           <h3 className='services__title'>Responsive Design</h3>
         </div>
         <p className='services__text'>
@@ -27,7 +27,7 @@ function ServicesPage(props) {
       </div>
 
       <div className='services__section '>
-        <div className='services__title-section'>
+        <div className='services__title-section' id='mondern'>
           <h3 className='services__title'>Modern UI/UX Design</h3>
         </div>
         <p className='services__text'>
@@ -44,8 +44,11 @@ function ServicesPage(props) {
           customization to ensure your website looks exactly how you desire.
         </p>
       </div>
-      <div className='services__section services__section--odd'>
-        <div className='services__title-section'>
+      <div
+        className='services__section services__section--split'
+        id='customized'
+      >
+        <div className='services__title-section services__title-section--odd '>
           <h3 className='services__title services__title--odd'>
             Customized Systems
           </h3>
@@ -65,7 +68,7 @@ function ServicesPage(props) {
           src={responsive}
         ></img>
       </div>
-      <div className='services__section '>
+      <div className='services__section ' id='profit'>
         <div className='services__title-section'>
           <h3 className='services__title '>Profit Online</h3>
         </div>
@@ -79,7 +82,10 @@ function ServicesPage(props) {
           transactions.
         </p>
       </div>
-      <div className='services__section services__section--odd'>
+      <div
+        className='services__section services__section--split'
+        id='flexibility'
+      >
         <div className='services__title-section'>
           <h3 className='services__title'>Mobile Flexibility</h3>
         </div>
@@ -98,7 +104,7 @@ function ServicesPage(props) {
           className='services__image services__image--2'
         />
       </div>
-      <div className='services__section '>
+      <div className='services__section ' id='technology'>
         <div className='services__title-section'>
           <h3 className='services__title'>Technology Integration</h3>
         </div>

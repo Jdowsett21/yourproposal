@@ -1,26 +1,38 @@
 .about {
   display: grid;
-  grid-template-columns: minmax(8%, 1fr) repeat(2, minmax(40rem, 60rem)) minmax(
+  grid-template-columns: minmax(8%, 1fr) repeat(2, minmax(20rem, 60rem)) minmax(
       8%,
       1fr
     );
   align-items: center;
   justify-items: center;
   column-gap: 5%;
+  @include respond(tab-port) {
+    column-gap: 0%;
+  }
+
   &__heading {
     grid-column: 2/4;
     font-size: 2.5rem;
     margin: 2rem 0;
   }
   &__text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin: 2rem 0 5rem 0;
     line-height: 5rem;
     grid-column: 2/3;
+    @include respond(tab-port) {
+      grid-column: 2/4;
+      grid-row: 3/4;
+    }
   }
   &__img {
     grid-column: 3/4;
     width: 100%;
     margin: 2rem 0 5rem 0;
+    @include respond(tab-port) {
+      grid-column: 2/4;
+      grid-row: 4/5;
+    }
   }
 }

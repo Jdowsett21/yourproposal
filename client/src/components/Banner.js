@@ -3,8 +3,8 @@ import Gradient from '../common/Gradient';
 function Banner({ img, text }) {
   return (
     <div className='banner'>
-      <img className='banner__img' src={img} alt='First slide' />
-      <Gradient />
+      <img className='banner__img' src={img} alt='First slide' loading='lazy' />
+      {/* <Gradient /> */}
       <h1 className='banner__header '>{text}</h1>
     </div>
   );

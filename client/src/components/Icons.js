@@ -1,11 +1,13 @@
 import React from 'react';
-import CleanSoilsSprite from '../img/svg/CleanSoilsSprite.svg';
+import sprite from '../img/svg/sprite.svg';
 import { useInView } from 'react-intersection-observer';
 import IconInfo from './IconInfo';
 
-function Icons(props) {
-  const { ref, inView } = useInView({ triggerOnce: true });
-
+function Icons({ icons, text, backgroundColor }) {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+  console.log(text);
   return (
     <>
       <h3
@@ -25,44 +27,44 @@ function Icons(props) {
             : 'project__icon-section'
         }
       >
-        <div className='project__icon-background'>
+        <div className='project__icon-background' style={{ backgroundColor }}>
           {' '}
           <svg className='project__project-icon'>
-            <use href={CleanSoilsSprite + '#construction'}></use>
+            <use href={sprite + icons[0]}></use>
           </svg>
         </div>
-        <div className='project__icon-background'>
+        <div className='project__icon-background' style={{ backgroundColor }}>
           {' '}
           <svg className='project__project-icon'>
-            <use href={CleanSoilsSprite + '#icon-utilities'}></use>
+            <use href={sprite + icons[1]}></use>
           </svg>
         </div>
-        <div className='project__icon-background'>
+        <div className='project__icon-background' style={{ backgroundColor }}>
           {' '}
           <svg className='project__project-icon'>
-            <use href={CleanSoilsSprite + '#icon-municipal'}></use>
+            <use href={sprite + icons[2]}></use>
           </svg>
         </div>
-        <div className='project__icon-background'>
+        <div className='project__icon-background' style={{ backgroundColor }}>
           {' '}
-          <svg className='project__project-icon'>
-            <use href={CleanSoilsSprite + '#icon-tree'}></use>
+          <svg className='project__project-icon' style={{ backgroundColor }}>
+            <use href={sprite + icons[3]}></use>
           </svg>
         </div>
-        <div className='project__icon-background'>
+        <div className='project__icon-background' style={{ backgroundColor }}>
           {' '}
           <svg className='project__project-icon'>
-            <use href={CleanSoilsSprite + '#soil'}></use>
+            <use href={sprite + icons[4]}></use>
           </svg>
         </div>
-        <div className='project__icon-background'>
+        <div className='project__icon-background' style={{ backgroundColor }}>
           {' '}
           <svg className='project__project-icon'>
-            <use href={CleanSoilsSprite + '#drop'}></use>
+            <use href={sprite + icons[5]}></use>
           </svg>
         </div>
       </div>
-      <IconInfo />
+      <IconInfo text={text} />
     </>
   );
 }

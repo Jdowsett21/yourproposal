@@ -5,7 +5,7 @@ import wireframing from '../img/wireframing.jpg';
 import design from '../img/design.jpg';
 import coding from '../img/coding.jpg';
 import deployment from '../img/deployment.jpg';
-import Contact from '../components/Projects';
+import ContactForm from '../components/ContactForm';
 import Process from '../components/Process';
 import process from '../img/processHome1.jpg';
 function ProcessPage(props) {
@@ -93,7 +93,7 @@ function ProcessPage(props) {
         </div>
       </div>
       <Process />
-      <Contact />
+      <ContactForm />
     </div>
   );
 }

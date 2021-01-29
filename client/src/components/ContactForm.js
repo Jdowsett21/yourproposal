@@ -7,7 +7,6 @@ import { submitEmail } from '../actions/EmailActions.js';
 import FormInput from '../common/FormInput.js';
 
 const MyTextField = ({ placeholder, ...props }) => {
-  placeholder = '';
   const [field, meta] = useField(props);
   // touched is clicked into field
   const errorText = meta.error && meta.touched ? meta.error : '';
@@ -33,64 +32,67 @@ function ContactForm({ email: { emailSuccess, emailError }, submitEmail }) {
   });
 
   return (
-    <Formik
-      initialValues={{ email: '', name: '', subject: '', message: '' }}
-      onSubmit={(values) => {
-        submitEmail(values);
-      }}
-      validationSchema={ContactSchema}
-    >
-      {() => (
-        <Form>
-          <div className='contact-info__form' id='contact-form'>
-            <h2 className='contact-info__form-header'>Contact Us Today</h2>
-            <h2 className='contact-info__form-header--secondary'>
-              We would be delighted to hear your idea and discuss how we can
-              help you
-            </h2>
+    <div className='contact'>
+      <div className=''></div>
+      <Formik
+        initialValues={{ email: '', name: '', subject: '', message: '' }}
+        onSubmit={(values) => {
+          submitEmail(values);
+        }}
+        validationSchema={ContactSchema}
+      >
+        {() => (
+          <Form>
+            <div className='contact-info__form' id='contact-form'>
+              <h2 className='contact-info__form-header'>Contact Us Today</h2>
+              <h2 className='contact-info__form-header--secondary'>
+                We would be delighted to hear your idea and discuss how we can
+                help you
+              </h2>
 
-            <MyTextField
-              ariaLabel='name'
-              name='name'
-              type='text'
-              required
-              placeholder='Name'
-            />
-            <MyTextField
-              placeholder='Email'
-              id='email'
-              name='email'
-              type='email'
-              ariaLabel='Email'
-              required
-            />
-            <MyTextField
-              placeholder='Subject'
-              ariaLabel='Subject'
-              name='subject'
-              type='text'
-              required
-            />
+              <MyTextField
+                ariaLabel='name'
+                name='name'
+                type='text'
+                required
+                placeholder='Name'
+              />
+              <MyTextField
+                placeholder='Email'
+                id='email'
+                name='email'
+                type='email'
+                ariaLabel='Email'
+                required
+              />
+              <MyTextField
+                placeholder='Subject'
+                ariaLabel='Subject'
+                name='subject'
+                type='text'
+                required
+              />
 
-            <MyTextField
-              placeholder='Message'
-              id='message'
-              name='message'
-              type='text-box'
-              ariaLabel='Message'
-              required
-            />
-            <button
-              type='submit'
-              text='Submit'
-              className='contact-info__button'
-            >
-              Submit
-            </button>
-          </div>
-        </Form>
-      )}
-    </Formik>
+              <MyTextField
+                placeholder='Message'
+                id='message'
+                name='message'
+                type='text-box'
+                ariaLabel='Message'
+                required
+              />
+              <button
+                type='submit'
+                text='Submit'
+                className='contact-info__button'
+              >
+                Submit
+              </button>
+            </div>
+          </Form>
+        )}
+      </Formik>
+    </div>
   );
 }
 

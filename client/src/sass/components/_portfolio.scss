@@ -4,6 +4,7 @@
   grid-template-rows: 1fr;
   max-height: 99vh;
   justify-items: center;
+  overflow: hidden;
   &__grid {
     align-self: end;
     max-height: 99vh;

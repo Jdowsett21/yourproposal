@@ -17,7 +17,9 @@ function ContactPage(props) {
           className='
         contact-page__col-2'
         >
-          <h3 className='contact-page__header'>Our Contact Location</h3>
+          <h3 className='contact-page__header contact-page__header--1'>
+            Our Contact Info
+          </h3>
           <img
             src={toronto}
             alt='Toronto'
@@ -34,23 +36,39 @@ function ContactPage(props) {
                 <h5 className='contact-page__info-header'>Address</h5>
               </div>
               <p className='contact-page__info-specifics'>
-                1960 Queen Street E,
+                1960 Queen Street E, Toronto, ON M4L 1H8
               </p>
-              <p className='contact-page__info-specifics  '>Toronto, ON</p>
-              <p className='contact-page__info-specifics '>M4L 1H8</p>
-            </div>
-            <div className='contact-page__info-section--col-2'>
+
               <div className='contact-page__info-header-section'>
                 <svg className='contact-page__info-icon'>
                   <use href={sprite + '#phone-call'}></use>
                 </svg>
 
-                <h5 className='contact-page__info-header'>Phone/Email</h5>
+                <h5 className='contact-page__info-header'>Phone</h5>
               </div>
-              <p className='contact-page__info-specifics'>416-577-4245</p>
-              <p className='contact-page__info-specifics'>
+              <a
+                href='tel:416-577-4245'
+                className='contact-page__info-specifics'
+              >
+                416-577-4245
+              </a>
+
+              <div className='contact-page__info-header-section'>
+                <svg className='contact-page__info-icon'>
+                  <use href={sprite + '#email'}></use>
+                </svg>
+
+                <h5 className='contact-page__info-header'>Email</h5>
+              </div>
+
+              <a
+                href='mailto:contact@smarterwebsolutions.ca'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='contact-page__info-specifics'
+              >
                 contact@smarterwebsolutions.ca
-              </p>
+              </a>
             </div>
           </div>
         </div>
