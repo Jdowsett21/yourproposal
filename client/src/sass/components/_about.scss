@@ -17,6 +17,7 @@
     margin: 2rem 0;
     @include respond(tab-port) {
       margin: 2rem 0 0;
+      font-size: 4.5rem;
     }
   }
   &__text {
@@ -27,6 +28,7 @@
     @include respond(tab-port) {
       grid-column: 2/4;
       grid-row: 3/4;
+      font-size: 1.9rem;
       line-height: 3.2rem;
       margin: 2rem 0 2rem 0;
     }

@@ -69,11 +69,6 @@ function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
                   to='/'
                   className='navigation__link '
                 >
-                  <input
-                    type='checkbox'
-                    className='navigation__checkbox'
-                    id='navi-toggle'
-                  />
                   Home
                 </NavLink>
               </li>
@@ -81,40 +76,40 @@ function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
                 <NavLink
                   smooth='true'
                   onClick={() => setNavOpen(false)}
-                  to='/industry'
+                  to='/services'
                   className='navigation__link'
                 >
-                  Industries We Serve
+                  Services
                 </NavLink>
               </li>
               <li className='navigation__item'>
                 <NavLink
                   smooth='true'
                   onClick={() => setNavOpen(false)}
-                  to='/careers'
+                  to='/process'
                   className='navigation__link'
                 >
-                  Careers
+                  Process
                 </NavLink>
               </li>
               <li className='navigation__item'>
                 <NavLink
                   smooth='true'
                   onClick={() => setNavOpen(false)}
-                  to='/accountability'
+                  to='/portfolio'
                   className='navigation__link'
                 >
-                  Accountability
+                  Portfolio
                 </NavLink>
               </li>
               <li className='navigation__item'>
                 <NavLink
                   smooth='true'
                   onClick={() => setNavOpen(false)}
-                  to='/locations'
+                  to='/technical'
                   className='navigation__link'
                 >
-                  Locations
+                  Technical
                 </NavLink>
               </li>
               <li className='navigation__item'>

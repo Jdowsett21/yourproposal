@@ -82,20 +82,20 @@
 
     font-size: 5.2rem;
     @media only screen and (max-width: 63.9em) {
-      font-size: 4.3rem;
+      font-size: 4.5rem;
     }
     @media only screen and (max-width: 51em) {
-      font-size: 3.6rem;
+      font-size: 3.9rem;
     }
     @media only screen and (max-width: 43em) {
-      font-size: 3.1rem;
+      font-size: 3.5rem;
       // font-weight: 300;
     }
     @media only screen and (max-width: 30em) {
-      font-size: 2.7rem;
+      font-size: 3.2rem;
     }
     @media only screen and (max-width: 25em) {
-      font-size: 2.5rem;
+      font-size: 3.4rem;
     }
 
     padding: 1rem 2rem;
@@ -127,16 +127,16 @@
     );
     padding: 1rem 2rem;
     font-size: 1.6rem;
-
-    @media only screen and (max-width: 51em) {
-      font-size: 1.5rem;
-    }
+    font-weight: 500;
+    // @media only screen and (max-width: 51em) {
+    //   font-size: 1.5rem;
+    // }
     @media only screen and (max-width: 40em) {
       font-size: 1.4rem;
     }
-    @media only screen and (max-width: 25em) {
-      font-size: 1.2rem;
-    }
+    // @media only screen and (max-width: 25em) {
+    //   font-size: 1.5rem;
+    // }
 
     font-weight: 500;
     color: rgb(240, 238, 238);
@@ -164,7 +164,7 @@
     }
     @media only screen and (max-width: 40em) {
       padding: 0.7rem 1.4rem;
-      font-size: 1rem;
+      font-size: 1.7rem;
     }
     border-radius: 31px;
     background: linear-gradient(

@@ -15,9 +15,7 @@ function CarouselSection() {
           <div className='carousel__container carousel__container--1'>
             <div className='carousel__inner-container'>
               <div className='carousel__header-1-background'>
-                <h1 className='carousel__header-1'>
-                  We Are Web Development Experts
-                </h1>
+                <h1 className='carousel__header-1'>Web Development Experts</h1>
               </div>
               <div className='carousel__header-5-background'>
                 <h5 className={`carousel__header-5`}>

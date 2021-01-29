@@ -115,6 +115,9 @@
       line-height: 2.5rem;
       color: #fff;
       visibility: visible;
+      @include respond(tab-port) {
+        font-size: 1.9rem;
+      }
     }
   }
   &__header {
@@ -134,10 +137,17 @@
       grid-column: 1/6;
       align-self: start;
       text-align: center;
+      font-size: 1.8rem;
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
     }
     &--heading {
       font-size: 3.5rem;
       margin-bottom: 1rem;
+      @include respond(tab-port) {
+        font-size: 4.5rem;
+      }
     }
   }
 
@@ -155,6 +165,9 @@
     width: 90%;
     text-align: center;
     margin: auto 0;
+    @include respond(tab-port) {
+      font-size: 2.2rem;
+    }
   }
 
   &__icon {
