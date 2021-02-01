@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setNavOpen } from '../actions/InViewActions';
@@ -7,9 +7,23 @@ import logo from '../img/svg/logo3.svg';
 import useWindowDimensions from '../utils/ScreenWidth';
 
 function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
+  const node = useRef();
+  useEffect(() => {
+    // add when mounted
+    document.addEventListener('mousedown', handleClick); // return function to be called when unmounted
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+    };
+  }, []);
+  const handleClick = (e) => {
+    if (node.current.contains(e.target)) {
+      return;
+    } // outside click
+    setNavOpen(false);
+  };
   const { width } = useWindowDimensions();
   return (
-    <div className='navbar'>
+    <div className='navbar' ref={node}>
       <nav className='nav-bar nav-bar--collapse'>
         <img
           className='nav-bar__logo nav-bar__logo--collapse'
@@ -40,6 +54,7 @@ function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
           </div>
           <div
             className='navigation__background'
+            ref={node}
             style={{
               transform:
                 navOpen && width >= 400

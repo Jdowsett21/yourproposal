@@ -1,6 +1,10 @@
 .project {
   display: grid;
   padding-top: 20rem;
+  @media only screen and (max-width: 46em) {
+    padding-top: 10rem;
+  }
+
   grid-template-columns: minmax(8%, 1fr) minmax(30rem, 120rem) minmax(8%, 1fr);
   // grid-template-rows: repeat(3, min-content) 10rem;
   background-image: linear-gradient(
@@ -24,6 +28,9 @@
   }
   &__company-logo-section {
     padding-bottom: 4rem;
+    @media only screen and (max-width: 46em) {
+      padding-bottom: 2rem;
+    }
   }
   &__company-logo {
     grid-row: 1/2;
@@ -31,7 +38,7 @@
     width: 28rem;
     height: 10rem;
     animation: fadeDown1 0.8s ease-in-out;
-    animation-delay: 0.5s;
+    // animation-delay: 0.5s;
     animation-fill-mode: both;
     padding-bottom: 4rem;
   }
@@ -47,15 +54,26 @@
     margin-bottom: 4rem;
     text-align: left;
     animation: fadeUp 0.8s ease-in-out;
-    animation-delay: 0.5s;
+    // animation-delay: 0.5s;
     animation-fill-mode: both;
+    @media only screen and (max-width: 46em) {
+      width: 100%;
+      font-size: 2rem;
+      line-height: 3.3rem;
+    }
   }
   &__image {
     height: 60rem;
+    @media only screen and (max-width: 46em) {
+      height: 50rem;
+    }
+    @media only screen and (max-width: 30em) {
+      height: 40rem;
+    }
     margin-bottom: 8rem;
     transform: translateY(-10rem);
     animation: fadeDown 0.8s ease-in-out;
-    animation-delay: 0.5s;
+    // animation-delay: 0.5s;
     animation-fill-mode: both;
     justify-self: center;
     &--mediaor {
@@ -81,13 +99,13 @@
     }
     &--visible {
       animation: fadeDown1 0.8s ease-in-out;
-      animation-delay: 0.5s;
+      // animation-delay: 0.5s;
       animation-fill-mode: both;
       opacity: 1;
     }
   }
   &__section-header {
-    color: #d4d8e4;
+    color: #bdc1cc;
     letter-spacing: 1.5rem;
     font-size: 2.4rem;
     margin: 2rem 0 5rem 0;
@@ -97,9 +115,12 @@
     }
     &--visible {
       animation: fadeDown1 0.8s ease-in-out;
-      animation-delay: 0.5s;
+      // animation-delay: 0.5s;
       animation-fill-mode: both;
       opacity: 1;
+    }
+    @media only screen and (max-width: 44em) {
+      font-size: 3rem;
     }
   }
   &__design-specifics {
@@ -114,7 +135,11 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(3, 17rem) 80rem;
+    column-gap: 5%;
+    grid-template-columns: repeat(3, 17rem) 1fr;
+    @media only screen and (max-width: 75em) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   &__color-item {
     width: 15rem;
@@ -126,6 +151,16 @@
     grid-template-columns: 15rem;
     align-items: center;
     justify-content: center;
+    justify-items: center;
+
+    @media only screen and (max-width: 75em) {
+      width: 17rem;
+      height: 15rem;
+    }
+    @media only screen and (max-width: 40em) {
+      width: 15rem;
+      height: 13rem;
+    }
     &--1 {
       grid-column: 1/2;
     }
@@ -141,6 +176,12 @@
     grid-row: 2/3;
     grid-column: 1/2;
     width: 100%;
+    @media only screen and (max-width: 75em) {
+      width: 17rem;
+    }
+    @media only screen and (max-width: 40em) {
+      width: 15rem;
+    }
     height: 100%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -148,6 +189,7 @@
     justify-content: center;
     background-color: rgba(51, 51, 51, 0.623);
     display: grid;
+
     opacity: 0;
     transition: all 0.8s ease-out 1s;
     &--visible {
@@ -162,7 +204,7 @@
   }
   &__explanation {
     line-height: 3.5rem;
-    width: 75%;
+    // width: 75%;
     border-radius: 3px;
     // box-shadow: 0 0.1rem 0.6rem rgba(168, 206, 255, 0.2);
     font-size: 1.5rem;
@@ -171,27 +213,51 @@
     color: #333;
     text-align: center;
     opacity: 0;
+    &__color {
+      @media only screen and (max-width: 75em) {
+        margin-top: 3rem;
+        grid-row: 2/3;
+        grid-column: 1/4;
+      }
+      @media only screen and (max-width: 40em) {
+        margin-top: 5 rem;
+
+        font-size: 2rem;
+      }
+    }
     &--visible {
       animation: fadeUp 0.8s ease-in-out;
-      animation-delay: 0.5s;
+      // animation-delay: 0.5s;
       animation-fill-mode: both;
       opacity: 1;
     }
     &--icon {
+      width: 80%;
       margin: 5rem auto 14rem;
-      grid-column: 1/7;
+      grid-column: 1/6;
+      @media only screen and (max-width: 44em) {
+        width: 90%;
+
+        font-size: 2.2rem;
+        margin: 5rem auto 8rem;
+      }
     }
   }
-  &__font-heading-section {
+  &__font {
     display: grid;
+    grid-template-columns: repeat(2, 50%);
+    @media only screen and (max-width: 44em) {
+      grid-template-columns: 1fr;
+    }
   }
+
   &__font-heading {
     grid-row: 1/2;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     opacity: 0;
     &--visible {
       animation: fadeUp 0.8s ease-in-out;
-      animation-delay: 1.5s;
+      animation-delay: 0.2s;
       animation-fill-mode: both;
       opacity: 1;
     }
@@ -202,6 +268,10 @@
     &--2 {
       grid-column: 2/3;
       font-weight: 200;
+      @media only screen and (max-width: 44em) {
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
     }
   }
   &__font-example {
@@ -210,7 +280,9 @@
     font-weight: 500;
     font-family: Titillium We, sans-serif;
     margin-bottom: 2rem;
+    grid-column: 1/2;
     &--2 {
+      // margin-top: 3rem;
       font-weight: 300;
     }
   }
@@ -221,27 +293,40 @@
     font-weight: 200;
     grid-column: 1/2;
     margin-bottom: 10rem;
+    @media only screen and (max-width: 44em) {
+      margin-bottom: 5rem;
+    }
     opacity: 0;
     &--visible {
       animation: fadeUp 0.8s ease-in-out;
-      animation-delay: 1.5s;
+      // animation-delay: s;
       animation-fill-mode: both;
       opacity: 1;
     }
     &--2 {
       grid-column: 2/3;
+      @media only screen and (max-width: 44em) {
+        grid-column: 1/2;
+        grid-row: 4/5;
+      }
     }
   }
   &__icon-section {
     display: grid;
     justify-self: center;
-    width: 100%;
+    // width: 100%;
+    justify-items: center;
     grid-template-columns: repeat(6, minmax(12rem, 1fr));
+    @media only screen and (max-width: 37.5em) {
+      grid-template-columns: repeat(3, minmax(12rem, 20rem));
+      justify-self: center;
+      row-gap: 10%;
+    }
     margin: 0rem 0 0rem 0;
     opacity: 0;
     &--visible {
       animation: fadeUp 0.8s ease-in-out;
-      animation-delay: 0.5s;
+      // animation-delay: 0.5s;
       animation-fill-mode: both;
       opacity: 1;
     }
@@ -277,9 +362,17 @@
     display: grid;
     margin: 12rem 0;
     justify-content: end;
+    @media only screen and (max-width: 54em) {
+      justify-content: center;
+    }
   }
   &__next-button {
     width: 40rem;
+    @media only screen and (max-width: 54em) {
+      width: 30rem;
+      height: 10rem;
+    }
+
     cursor: pointer;
     display: grid;
     height: 14rem;
@@ -308,6 +401,10 @@
   }
   &__next-button-arrow {
     width: 20rem;
+    @media only screen and (max-width: 54em) {
+      width: 15rem;
+      height: 10rem;
+    }
     grid-row: 1/2;
     height: 14rem;
     justify-self: start;

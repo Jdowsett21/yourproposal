@@ -9,8 +9,15 @@ import Icons from '../components/Icons';
 import grivetyLogo from '../img/svg/grivetylogo-1.svg';
 import ImageSlider from '../components/ImageSlider';
 import NextProjectButton from '../common/NextProjectButton';
+import CarouselSection from '../components/Carousel';
+import useWindowDimensions from '../utils/ScreenWidth';
+import GrivetyCarousel from '../components/GrivetyCarousel';
 
 function GrivetyPage({ color }) {
+  function refreshPage() {
+    window.location.reload(true);
+  }
+  const { width } = useWindowDimensions();
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -34,7 +41,7 @@ function GrivetyPage({ color }) {
           adipisicing elit. Quae, ullam ab? Esse possimus perspiciatis sunt
           provident ad, accusantium voluptatibus quisquam.
         </p>
-        <ImageSlider />
+        {width > 770 ? <ImageSlider /> : <GrivetyCarousel />}
         <h2
           className={
             inView
@@ -108,7 +115,10 @@ function GrivetyPage({ color }) {
 
         <h2 className='project__contact-header'>Contact Us</h2>
         <ContactUsProject />
-        <div className='project__next-button-section'>
+        <div
+          className='project__next-button-section'
+          onClick={() => refreshPage()}
+        >
           <Link to='/mediaor' className='project__next-button'>
             <Link to='/mediaor' className='project__next-button--text'>
               Next Project

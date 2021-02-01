@@ -12,6 +12,9 @@ import mediaorImage1 from '../img/svg/mediaorImage1.png';
 import mediaorImage2 from '../img/svg/mediaorImage2.png';
 
 function MediaorPage() {
+  function refreshPage() {
+    window.location.reload(true);
+  }
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -111,7 +114,10 @@ function MediaorPage() {
         <h2 className='project__contact-header'>Contact Us</h2>
         <ContactUsProject />
 
-        <div className='project__next-button-section'>
+        <div
+          className='project__next-button-section'
+          onClick={() => refreshPage()}
+        >
           <Link to='/cleanSoils' className='project__next-button'>
             <Link to='/cleanSoils' className='project__next-button--text'>
               Next Project

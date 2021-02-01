@@ -37,7 +37,7 @@ function ColorPalette({ color, text }) {
           <p
             className={
               inView
-                ? 'project__explanation project__explanation--visible'
+                ? 'project__explanation project__explanation--visible project__explanation__color'
                 : 'project__explanation'
             }
             ref={ref}

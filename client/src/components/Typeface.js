@@ -17,7 +17,7 @@ function Typeface({ font }) {
       >
         Typeface
       </h4>
-      <div className='project__font-heading-section'>
+      <div className='project__font'>
         <div
           className={
             inView
@@ -38,6 +38,7 @@ function Typeface({ font }) {
         >
           Heading
         </h4>
+
         <div
           className={
             inView

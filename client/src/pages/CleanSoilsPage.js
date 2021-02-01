@@ -9,6 +9,9 @@ import Typeface from '../components/Typeface';
 import Icons from '../components/Icons';
 
 function CleanSoilsPage(props) {
+  function refreshPage() {
+    window.location.reload(true);
+  }
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -109,7 +112,10 @@ function CleanSoilsPage(props) {
         <h2 className='project__contact-header'>Contact Us</h2>
         <ContactUsProject />
 
-        <div className='project__next-button-section'>
+        <div
+          className='project__next-button-section'
+          onClick={() => refreshPage()}
+        >
           <Link to='/grivety' className='project__next-button'>
             <Link to='/grivety' className='project__next-button--text'>
               Next Project

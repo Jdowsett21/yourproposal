@@ -7,8 +7,16 @@
   @media only screen and (max-width: 50em) {
     height: 55rem;
   }
+
   @media only screen and (max-width: 43em) {
     height: 45rem;
+  }
+  &--grivety {
+    height: 40rem;
+    width: 100%;
+
+    margin: 0 auto;
+    object-fit: none;
   }
 }
 

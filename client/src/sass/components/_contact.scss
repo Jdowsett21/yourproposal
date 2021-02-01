@@ -159,7 +159,10 @@
     &::placeholder {
       font-weight: 500;
       color: #222;
-      font-size: 2.1rem;
+      font-size: 1.7rem;
+      @media only screen and (max-width: 45em) {
+        font-size: 2.1rem;
+      }
     }
     &--name {
       grid-column: 1/2;
