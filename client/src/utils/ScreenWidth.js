@@ -12,6 +12,10 @@ export default function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
+  console.log(
+    '🚀 ~ file: ScreenWidth.js ~ line 13 ~ useWindowDimensions ~ windowDimensions',
+    windowDimensions
+  );
 
   useEffect(() => {
     function handleResize() {
