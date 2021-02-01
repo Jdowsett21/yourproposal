@@ -1,10 +1,21 @@
 .technical {
   display: grid;
-  grid-template-columns: minmax(20%, 1fr) repeat(2, minmax(50rem, 120rem)) minmax(
-      20%,
+  grid-template-columns: minmax(10%, 1fr) repeat(2, minmax(50rem, 120rem)) minmax(
+      10%,
       1fr
     );
-
+  @media only screen and (max-width: 72em) {
+    grid-template-columns: minmax(20%, 1fr) minmax(50rem, 120rem) minmax(
+        20%,
+        1fr
+      );
+  }
+  @media only screen and (max-width: 46em) {
+    grid-template-columns: minmax(10%, 1fr) minmax(30rem, 120rem) minmax(
+        10%,
+        1fr
+      );
+  }
   &__secondary-header {
     width: 70%;
     font-size: 1.5rem;
@@ -20,6 +31,9 @@
     padding-bottom: 0.5rem;
     font-size: 3rem;
     border-bottom: 5px solid #26a8ff;
+    @media only screen and (max-width: 55em) {
+      border-bottom: 3px solid #26a8ff;
+    }
   }
   &__group {
     grid-column: 2/4;
@@ -27,6 +41,10 @@
     column-gap: 5%;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 5rem;
+    @media only screen and (max-width: 72em) {
+      grid-column: 2/3;
+      grid-template-columns: 1fr;
+    }
   }
   &__item {
     display: grid;
