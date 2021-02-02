@@ -13,7 +13,7 @@ function GrivetyCarousel(props) {
     <>
       <Carousel>
         {/* slide 1 */}
-        <Carousel.Item interval={1000}>
+        <Carousel.Item interval={2000}>
           <img
             className='fit fit--grivety'
             src={moneytrackerImage4}
@@ -21,7 +21,7 @@ function GrivetyCarousel(props) {
             alt='Third slide'
           />
         </Carousel.Item>
-        <Carousel.Item interval={1000}>
+        <Carousel.Item interval={2000}>
           <img
             className='fit fit--grivety'
             src={moneytrackerImage2}
@@ -30,7 +30,7 @@ function GrivetyCarousel(props) {
           />
         </Carousel.Item>
         {/* slide 2 */}
-        <Carousel.Item interval={1000}>
+        <Carousel.Item interval={2000}>
           <img
             className='fit fit--grivety'
             src={moneytrackerImage3}
@@ -39,7 +39,7 @@ function GrivetyCarousel(props) {
           />
         </Carousel.Item>
         {/* slide 3 */}
-        <Carousel.Item interval={100000}>
+        <Carousel.Item interval={200000}>
           <img
             className='fit fit--grivety'
             src={moneytrackerImage5}
@@ -47,7 +47,7 @@ function GrivetyCarousel(props) {
             alt='Third slide'
           />
         </Carousel.Item>
-        <Carousel.Item interval={100000}>
+        <Carousel.Item interval={200000}>
           <img
             className='fit fit--grivety'
             src={moneytrackerImage6}

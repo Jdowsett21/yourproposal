@@ -135,6 +135,7 @@
     width: 100%;
     display: grid;
     position: fixed;
+    display: inline-block;
     background-image: linear-gradient(
       to right,
       rgba(110, 160, 252, 0.74),
