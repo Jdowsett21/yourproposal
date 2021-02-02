@@ -25,13 +25,32 @@
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  @media only screen and (max-width: 56.25em) {
+    grid-template-columns: repeat(2, minmax(35rem, 1fr));
+  }
+  @media only screen and (max-width: 35em) {
+    grid-template-columns: 1fr;
+  }
+  // grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+
   &__item {
     margin: 3rem 0;
     cursor: pointer;
     display: grid;
     background: #fcfcfc;
-    width: 25rem;
+    width: 27rem;
     height: 25rem;
+    @media only screen and (max-width: 56.25em) {
+      width: 35rem;
+      height: 35rem;
+    }
+
+    @media only screen and (max-width: 35em) {
+      width: 45rem;
+      height: 45rem;
+      grid-template-rows: 50% 50%;
+    }
+
     border-radius: 30px;
     position: relative;
     overflow: hidden;
@@ -48,6 +67,9 @@
     &:hover > .heading-4 {
       transition: all 0.3s 0.5s;
       color: #fff;
+      @media only screen and (max-width: 50em) {
+        color: rgb(82, 82, 82);
+      }
     }
     &:hover > &__hover-gradient > &__text {
       opacity: 1;
@@ -114,10 +136,21 @@
       align-self: start;
       line-height: 2.5rem;
       color: #fff;
-      visibility: visible;
-      @include respond(tab-port) {
-        font-size: 1.9rem;
+      @media only screen and (max-width: 50em) {
+        color: rgb(82, 82, 82);
+        grid-row: 1/2;
+        align-self: center;
+        opacity: 1;
+        font-size: 2.3rem;
+        width: 80%;
+        margin-top: 8rem;
+        line-height: 3.5rem;
       }
+
+      visibility: visible;
+      // @include respond(tab-port) {
+      //   font-size: 1.9rem;
+      // }
     }
   }
   &__header {
@@ -163,10 +196,15 @@
     font-weight: 400;
     z-index: 200;
     width: 90%;
+    align-self: start;
+    margin-top: 3rem;
     text-align: center;
-    margin: auto 0;
+
     @include respond(tab-port) {
       font-size: 2.4rem;
+    }
+    @media only screen and (max-width: 35em) {
+      font-size: 2.8rem;
     }
   }
 
@@ -176,5 +214,15 @@
     height: 13.5rem;
     grid-column: 1/3;
     grid-row: 2/3;
+
+    @media only screen and (max-width: 50em) {
+      width: 15.5rem;
+      height: 15.5rem;
+    }
+
+    @media only screen and (max-width: 35em) {
+      width: 18.5rem;
+      height: 18.5rem;
+    }
   }
 }
