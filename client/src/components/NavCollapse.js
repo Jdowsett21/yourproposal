@@ -23,7 +23,7 @@ function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
   };
   const { width } = useWindowDimensions();
   return (
-    <div className='navbar' ref={node}>
+    <div ref={node}>
       <nav className='nav-bar nav-bar--collapse'>
         <img
           className='nav-bar__logo nav-bar__logo--collapse'
@@ -57,11 +57,11 @@ function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
             ref={node}
             style={{
               transform:
-                navOpen && width >= 400
-                  ? 'scale(35, 100)'
-                  : navOpen && width < 400
-                  ? 'scale(1, 100)'
-                  : 'scale(0, 100)',
+                navOpen && width >= 450
+                  ? 'scale(.35, 200%)'
+                  : navOpen && width < 450
+                  ? 'scale(1, 200%)'
+                  : 'scale(0, 200%)',
             }}
           ></div>
           <nav
@@ -69,9 +69,9 @@ function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
             style={{
               opacity: navOpen ? '1' : '0',
               width:
-                navOpen && width >= 400
+                navOpen && width >= 450
                   ? '35rem'
-                  : navOpen && width < 400
+                  : navOpen && width < 450
                   ? '100%'
                   : '0%',
             }}

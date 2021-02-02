@@ -61,7 +61,7 @@ function Portfolio(props) {
                 onClick={() => setApp('mediaor')}
               ></img>
             </div>
-          ) : width <= 600 && width > 400 ? (
+          ) : width <= 600 && width > 450 ? (
             <div className='portfolio__logo-bottom-section'>
               {app1 === 'cleanSoils' ? (
                 <>
