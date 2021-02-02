@@ -13,6 +13,10 @@ function Footer(props) {
             Directory
           </h3>
           <div className='footer__link-section'>
+            <Link to='/' className='footer__text footer__text--link'>
+              Home
+            </Link>
+
             <Link to='/services' className='footer__text footer__text--link'>
               Services
             </Link>

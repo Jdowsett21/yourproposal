@@ -19,6 +19,10 @@
   &__secondary-header {
     width: 70%;
     font-size: 1.5rem;
+    @media only screen and (max-width: 46em) {
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
     grid-row: 2/3;
     margin: 2rem 0 8rem 0;
     grid-column: 2/3;
@@ -31,6 +35,9 @@
     padding-bottom: 0.5rem;
     font-size: 3rem;
     border-bottom: 5px solid #26a8ff;
+    @media only screen and (max-width: 46em) {
+      font-size: 4.5rem;
+    }
     @media only screen and (max-width: 55em) {
       border-bottom: 3px solid #26a8ff;
     }
@@ -70,6 +77,10 @@
     font-weight: 500;
     color: #26a8ff;
     margin: 1rem 0;
+    @media only screen and (max-width: 46em) {
+      font-size: 2.7rem;
+      font-weight: 500;
+    }
   }
   &__item-paragraph {
     grid-column: 2/3;
@@ -77,5 +88,9 @@
     font-size: 1.2rem;
     align-self: start;
     margin-bottom: 4rem;
+    @media only screen and (max-width: 46em) {
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
   }
 }

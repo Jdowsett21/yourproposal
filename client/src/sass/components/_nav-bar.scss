@@ -36,12 +36,16 @@
   }
   &__item {
     border-top: 5px solid rgba(255, 255, 255, 0);
-    font-size: 1.4rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+
     margin: 0 0.2rem;
     width: 100%;
     text-transform: uppercase;
     padding: 3.2rem 1.5rem;
+    @media only screen and (max-width: 40em) {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
     &--active {
       border-top: 5px solid $color-primary-one;
       color: $color-primary-one;
