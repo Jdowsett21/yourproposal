@@ -37,9 +37,9 @@ function GrivetyPage({ color }) {
         <p className='project__description'>
           Grivety is a modern banking web application that displays the power of
           using a database in unison with your web server. Grivety displays data
-          in every imaginable... Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Quae, ullam ab? Esse possimus perspiciatis sunt
-          provident ad, accusantium voluptatibus quisquam.
+          in every imaginable way. Grivety was an extremely exciting project to
+          create as it showed how powerful web development can be for advanced
+          applications.
         </p>
         {width > 770 ? <ImageSlider /> : <GrivetyCarousel />}
         <h2
@@ -65,8 +65,8 @@ function GrivetyPage({ color }) {
           color={['#48b461', '#e15361', '#44a2a3']}
           text='Grivety is a prototype budgeting app that is designed to show the
             possibilites that can be created using a full scale application with
-            a database on the backend. With Grivety it can be seen that any
-            system that your business needs to create is possible. Whether you
+            a database on the backend. In observing Grivety it can be seen that any
+            system that your business needs is possible. Whether you
             need to be track inventory or manage deliveries, Smarter Web
             Solutions can create your system.'
         />
@@ -81,7 +81,7 @@ function GrivetyPage({ color }) {
             '#credit',
             '#graph',
           ]}
-          text='It is essential that Grivety had advanced security features to protect sensitive information.  Smarter Web Solutions ensures with every application we create that the highest level of security is used to protect user data, your data'
+          text='It is essential that Grivety had advanced security features to protect sensitive information.  Smarter Web Solutions ensures with every application we create that the highest level of security is used to protect user data and your data.'
         />
         {/* <h2 className='project__large-header'>
         Final

@@ -46,7 +46,7 @@ function CleanSoilsPage(props) {
           }
           ref={ref}
         >
-          Styles
+          Style
           <span
             className={
               inView
@@ -59,7 +59,7 @@ function CleanSoilsPage(props) {
         </h2>
         <ColorPalette
           color={['#25a7f4', '#77b609', '#264977']}
-          text='Clean Soils wanted to quickly display all of its services so that the site immediately grabbed the users attention.  We made sure to encorperate the Clean Soils color palette to leave a lasting reminder of the Clean Soils brand '
+          text='Clean Soils wanted to quickly display all of its services so that the site immediately grabbed the users attention.  We made sure to incorporate the Clean Soils color palette to leave a lasting reminder of the Clean Soils brand.'
         />
         <Typeface font='Montserrat' />
         <Icons
