@@ -53,16 +53,22 @@ function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
             ></div>
           </div>
           <div
-            className='navigation__background'
+            className={
+              navOpen && width >= 450
+                ? 'navigation__background navigation__background__active'
+                : navOpen && width < 450
+                ? 'navigation__background__active-2 navigation__background'
+                : 'navigation__background'
+            }
             ref={node}
-            style={{
-              transform:
-                navOpen && width >= 450
-                  ? 'scale(.35, 200%)'
-                  : navOpen && width < 450
-                  ? 'scale(1, 200%)'
-                  : 'scale(0, 200%)',
-            }}
+            // style={{
+            //   display: 'inline-block',
+            //   transform:
+            //       ? 'scale(.35, 200%)'
+            //       :
+            //       ? 'scale(1, 200%)'
+            //       : 'scale(0, 200%)',
+            // }}
           ></div>
           <nav
             className='navigation__nav'
@@ -70,7 +76,7 @@ function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
               opacity: navOpen ? '1' : '0',
               width:
                 navOpen && width >= 450
-                  ? '35rem'
+                  ? '35%'
                   : navOpen && width < 450
                   ? '100%'
                   : '0%',

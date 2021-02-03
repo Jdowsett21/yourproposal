@@ -16,7 +16,7 @@
     margin-bottom: 5rem;
     width: 80%;
     transform: translateX(13%);
-    object-fit: none;
+    object-fit: contain;
   }
 }
 
@@ -38,8 +38,9 @@
     text-align: center;
     display: grid;
     align-items: center;
+    align-content: center;
     z-index: 1;
-    grid-template-columns: minmax(11%, 1fr) minmax(45rem, 105rem) minmax(
+    grid-template-columns: minmax(11%, 1fr) minmax(10rem, 105rem) minmax(
         11%,
         1fr
       );
@@ -60,7 +61,8 @@
   }
   &__inner-container {
     grid-column: 2/3;
-    transform: translateY(3rem);
+    grid-row: 2/3;
+    transform: translateY(2rem);
   }
 
   &__header-1-background {
@@ -143,9 +145,9 @@
       font-size: 1.6rem;
       font-weight: 700;
     }
-    // @media only screen and (max-width: 25em) {
-    //   font-size: 1.5rem;
-    // }
+    @media only screen and (max-width: 25em) {
+      font-size: 1.5rem;
+    }
 
     color: rgb(240, 238, 238);
     &--2 {
@@ -210,42 +212,38 @@
 
   .carousel-control {
     &-next {
-      margin-right: 5rem;
+      margin-right: 2rem;
       padding-left: 0.2rem;
       @media only screen and (max-width: 29em) {
-        margin-right: 2rem;
+        margin-right: 0.5rem;
       }
     }
     &-prev {
-      margin-left: 5rem;
+      margin-left: 3rem;
       padding-right: 0.2rem;
       @media only screen and (max-width: 29em) {
-        margin-left: 2rem;
+        margin-left: 1rem;
       }
     }
 
     &-prev,
     &-next {
-      padding-top: 1.4rem;
-      display: grid;
-      align-content: center;
-      justify-items: center;
-      top: 53%;
-      background-color: rgba(38, 168, 255, 0.801);
-      height: 3rem;
-      width: 3rem;
-      border-radius: 5rem;
+      opacity: 0.7;
     }
   }
   .carousel-control {
     &-next-icon,
     &-prev-icon {
-      width: 2rem;
-      height: 2rem;
+      width: 3rem;
+      height: 3rem;
+      @media only screen and (max-width: 29em) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
     }
   }
   .carousel-control-next-icon {
-    // margin-left: 3rem;
+    margin-left: 3rem;
   }
   .carousel-indicators li {
     width: 3rem;

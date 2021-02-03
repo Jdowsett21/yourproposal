@@ -36,7 +36,7 @@ function Portfolio(props) {
         <div className='portfolio__bottom-menu'>
           <button className='portfolio__start-project'>
             <Link className='portfolio__link' to='/contact'>
-              {width}
+              Start Project{' '}
             </Link>
           </button>
           {width > 600 ? (

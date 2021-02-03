@@ -23,8 +23,10 @@ function Services(props) {
           <svg className='service__icon'>
             <use href={sprite + '#ux-design'}></use>
           </svg>
-          <h4 className='heading-4'>Modern UI/UX Design</h4>
-          {width > 5609 ? (
+          <div className='heading-4__section'>
+            <h4 className='heading-4'>Modern UI/UX Design</h4>
+          </div>
+          {width > 560 ? (
             <div className='service__item__hover-gradient'>
               <p className='service__item__text'>
                 Get the professional site you've always wanted.
@@ -53,8 +55,10 @@ function Services(props) {
           <svg className='service__icon'>
             <use href={sprite + '#coding'}></use>
           </svg>
-          <h4 className='heading-4'>Responsive Design</h4>
-          {width > 5609 ? (
+          <div className='heading-4__section'>
+            <h4 className='heading-4'>Responsive Design</h4>
+          </div>
+          {width > 560 ? (
             <div className='service__item__hover-gradient'>
               <p className='service__item__text'>
                 Your website, looking great, on any device.
@@ -83,8 +87,10 @@ function Services(props) {
           <svg className='service__icon'>
             <use href={sprite + '#ecommerce'}></use>
           </svg>
-          <h4 className='heading-4'>Profit Online</h4>
-          {width > 5609 ? (
+          <div className='heading-4__section'>
+            <h4 className='heading-4'>Profit Online</h4>
+          </div>
+          {width > 560 ? (
             <div className='service__item__hover-gradient'>
               <p className='service__item__text'>
                 Get your customers shopping you your site, safely and securely.
@@ -113,8 +119,10 @@ function Services(props) {
           <svg className='service__icon'>
             <use href={sprite + '#dashboard'}></use>
           </svg>
-          <h4 className='heading-4'>Customized Systems</h4>
-          {width > 5609 ? (
+          <div className='heading-4__section'>
+            <h4 className='heading-4'>Customized Systems</h4>
+          </div>
+          {width > 560 ? (
             <div className='service__item__hover-gradient'>
               <p className='service__item__text'>
                 Create a custom system for your business.
@@ -144,8 +152,10 @@ function Services(props) {
           <svg className='service__icon'>
             <use href={sprite + '#api'}></use>
           </svg>
-          <h4 className='heading-4'>Technology Integration</h4>
-          {width > 5609 ? (
+          <div className='heading-4__section'>
+            <h4 className='heading-4'>Technology Integration</h4>
+          </div>
+          {width > 560 ? (
             <div className='service__item__hover-gradient'>
               <p className='service__item__text'>
                 Combine technologies to improve your users experiences.
@@ -192,10 +202,12 @@ function Services(props) {
           >
             <use href={sprite + '#apple'}></use>
           </svg>
-          <h4 className='heading-4' style={{ marginTop: '2.5rem' }}>
-            Mobile Flexibility
-          </h4>
-          {width > 5609 ? (
+          <div className='heading-4__section'>
+            <h4 className='heading-4' style={{ marginTop: '2.5rem' }}>
+              Mobile Flexibility
+            </h4>
+          </div>
+          {width > 560 ? (
             <div className='service__item__hover-gradient'>
               <Link
                 style={{ textDecoration: 'none' }}
