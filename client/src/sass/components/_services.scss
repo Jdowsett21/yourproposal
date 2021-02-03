@@ -136,6 +136,11 @@
       align-self: start;
       line-height: 2.5rem;
       color: #fff;
+      &--twoIcons {
+        @media only screen and (max-width: 35em) {
+          align-self: flex-end;
+        }
+      }
       @media only screen and (max-width: 50em) {
         color: rgb(82, 82, 82);
         grid-row: 1/2;

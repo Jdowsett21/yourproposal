@@ -116,6 +116,7 @@ function Services(props) {
           to='/services#customized'
           className=' service__item'
         >
+          c
           <svg className='service__icon'>
             <use href={sprite + '#dashboard'}></use>
           </svg>
@@ -138,8 +139,7 @@ function Services(props) {
             </div>
           ) : (
             <p className='service__item__text'>
-              Create a custom system for your business. Optimize and add
-              efficiency to your business
+              Create custom systems and optimize your business.
             </p>
           )}
         </Link>
@@ -209,6 +209,10 @@ function Services(props) {
           </div>
           {width > 560 ? (
             <div className='service__item__hover-gradient'>
+              <p className='service__item__text'>
+                Save the expense of building two applications!
+              </p>
+
               <Link
                 style={{ textDecoration: 'none' }}
                 smooth
@@ -219,7 +223,7 @@ function Services(props) {
               </Link>
             </div>
           ) : (
-            <p className='service__item__text' style={{ marginTop: '3rem' }}>
+            <p className='service__item__text service__item__text--twoIcons '>
               Save the expense of building two applications!
             </p>
           )}

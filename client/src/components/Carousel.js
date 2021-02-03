@@ -71,8 +71,8 @@ function CarouselSection() {
               </div>
               <div className='carousel__header-5-background carousel__header-5-background--2'>
                 <h5 className='carousel__header-5 carousel__header-5--2'>
-                  Our portfolio will give you an idea of the quality you will
-                  receive when you work with Smarter Web Development
+                  Take a look at how we've helped other businesses build their
+                  dream
                 </h5>
               </div>
 
