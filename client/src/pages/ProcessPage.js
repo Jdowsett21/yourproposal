@@ -85,7 +85,7 @@ function ProcessPage(props) {
             series of 'Sprints'. At the end of each sprint we will present the
             website to you to ensure that you are happy with its progress. Agile
             web development involves a thorough testing process to ensure that
-            the website is running perfectly, before deployment.{' '}
+            the website is running perfectly, before deployment.
           </p>
         </div>
         <img
@@ -103,12 +103,12 @@ function ProcessPage(props) {
           <h4 className='process-page__section-header'>Deployment</h4>
           <p className='process-page__section-paragraph'>
             Once the application is complete, it is reviewed and approved by our
-            project manager and QA team and the client. With your website
+            project manager and QA team and the client. Now that your website is
             complete it is time to show it to the world! There are lots of
             different options for deploying your website, from running it on a
             client side server, basic web hosting or a cloud hosted provider. We
             will counsel you on this final step and determine what is your best
-            option
+            option.
           </p>
         </div>
       </div>

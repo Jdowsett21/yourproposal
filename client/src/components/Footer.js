@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../img/svg/logo3.svg';
+import logo from '../img/svg/logo.svg';
 import { Link } from 'react-router-dom';
 import sprite from '../img/svg/sprite.svg';
 
@@ -7,8 +7,8 @@ function Footer(props) {
   return (
     <section className='footer'>
       <div className='footer__main'>
+        <img src={logo} alt='Logo' className='footer__logo' />
         <div className='footer__column footer__column--1'>
-          <img src={logo} alt='Logo' className='footer__logo' />
           <h3 className='footer__column-header footer__column-header--modifier'>
             Directory
           </h3>
