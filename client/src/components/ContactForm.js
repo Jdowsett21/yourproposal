@@ -46,7 +46,7 @@ function ContactForm({ email: { emailSuccess, emailError }, submitEmail }) {
             <div className='contact-info__form' id='contact-form'>
               <h2 className='contact-info__form-header'>Contact Us Today</h2>
               <h2 className='contact-info__form-header--secondary'>
-                We would be delighted to hear your idea and discuss how we can
+                We would be delighted to hear your ideas and discuss how we can
                 help you!
               </h2>
 
