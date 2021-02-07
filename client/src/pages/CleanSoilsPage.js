@@ -20,11 +20,9 @@ function CleanSoilsPage(props) {
   return (
     <>
       <div className='project'>
-        <div className='project__company-logo-section'>
-          <svg className='portfolio__company-logo'>
-            <use href={sprite + '#cleanSoils'}></use>
-          </svg>
-        </div>
+        <svg className='portfolio__company-logo'>
+          <use href={sprite + '#cleanSoils'}></use>
+        </svg>
         <p className='project__description'>
           Clean Soils was looking to upgrade their site to professional look so
           they could compete with their competition. They received a website

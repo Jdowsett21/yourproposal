@@ -132,7 +132,7 @@
 
   &__background {
     height: 100%;
-    width: 100%;
+    width: 100rem;
     display: grid;
     position: fixed;
     display: inline-block;
@@ -150,9 +150,11 @@
     grid-column: 3/4;
     &__active {
       transform: scale(0.35, 200);
+      width: 100%;
     }
     &__active-2 {
       transform: scale(1, 200);
+      width: 100%;
     }
 
     @media only screen and (max-width: 29.9em) {
