@@ -47,15 +47,18 @@ function Portfolio(props) {
               >
                 <use href={sprite + '#cleanSoils'}></use>
               </svg>
-              <svg className='portfolio__company-logo' alt='grivety logo'>
-        <use href={sprite + '#grivety'}></use>
-      </svg>              <img
+              <img
+                className='portfolio__logo--bottom'
+                alt='grivety logo'
+                src={grivetyLogo}
+              />
+              <img
                 src={mediaor}
                 className='portfolio__logo--bottom portfolio__logo--bottom--mediaor'
                 style={{ paddingRight: '1rem' }}
                 alt='mediaor'
                 onClick={() => setApp('mediaor')}
-              ></img>
+              />
             </div>
           ) : width <= 600 && width > 450 ? (
             <div className='portfolio__logo-bottom-section'>

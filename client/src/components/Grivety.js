@@ -7,9 +7,11 @@ import { Link } from 'react-router-dom';
 function Grivety(props) {
   return (
     <>
-      <svg className='portfolio__company-logo' alt='grivety logo'>
-        <use href={sprite + '#grivety'}></use>
-      </svg>
+      <img
+        src={grivetyLogo}
+        className='portfolio__company-logo'
+        alt='grivety logo'
+      />
       <p className='portfolio__description'>
         Grivety is a modern banking web application that displays the power of
         using a database in unison with your web server. Grivety displays data
