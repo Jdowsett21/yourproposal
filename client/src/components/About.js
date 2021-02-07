@@ -8,7 +8,7 @@ function About(props) {
       <p className='about__text'>
         It is our belief at Smarter Web Solutions that every company, no matter
         the size deserves a website they are proud of at a price they can
-        afford. Our #1 commitment is customer satisfaction and we pledge to to
+        afford. Our #1 commitment is customer satisfaction and we pledge to
         ensure you are 100% satisfied with the result.
       </p>
       <img

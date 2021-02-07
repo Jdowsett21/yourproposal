@@ -61,13 +61,13 @@
     &:hover {
       box-shadow: 0 1rem 5rem rgb(241, 238, 238);
     }
-    &:not(:hover) > .heading-4 {
+    &:not(:hover) > .heading-4__section > .heading-4 {
       transition: all 0.3s;
     }
-    &:hover > .heading-4 {
+    &:hover > .heading-4__section > .heading-4 {
       transition: all 0.3s 0.5s;
       color: #fff;
-      @media only screen and (max-width: 50em) {
+      @media only screen and (max-width: 35em) {
         color: rgb(82, 82, 82);
       }
     }
@@ -138,7 +138,7 @@
       color: #fff;
       &--twoIcons {
         @media only screen and (max-width: 35em) {
-          align-self: flex-end;
+          align-self: end;
         }
       }
       @media only screen and (max-width: 50em) {

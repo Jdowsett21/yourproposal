@@ -11,8 +11,8 @@ function Services(props) {
         <h2 className='service__header--heading'>Our Services</h2>
       </div>
       <p className='service__header--secondary'>
-        We offer all services related to web development and will ensure every
-        idea you have is realized
+        We offer all services related to web development and will ensure all
+        your ideas are realized.
       </p>
       <div className='service'>
         <Link
@@ -93,7 +93,7 @@ function Services(props) {
           {width > 560 ? (
             <div className='service__item__hover-gradient'>
               <p className='service__item__text'>
-                Get your customers shopping you your site, safely and securely.
+                Get your customers shopping on your site, safely and securely.
               </p>
               <Link
                 style={{ textDecoration: 'none' }}
@@ -203,9 +203,7 @@ function Services(props) {
             <use href={sprite + '#apple'}></use>
           </svg>
           <div className='heading-4__section'>
-            <h4 className='heading-4' style={{ marginTop: '2.5rem' }}>
-              Mobile Flexibility
-            </h4>
+            <h4 className='heading-4'>Mobile Flexibility</h4>
           </div>
           {width > 560 ? (
             <div className='service__item__hover-gradient'>

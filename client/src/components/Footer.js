@@ -2,8 +2,9 @@ import React from 'react';
 import logo from '../img/svg/logo.svg';
 import { Link } from 'react-router-dom';
 import sprite from '../img/svg/sprite.svg';
-
+import useWindowDimensions from '../utils/ScreenWidth';
 function Footer(props) {
+  const { width } = useWindowDimensions();
   return (
     <section className='footer'>
       <div className='footer__main'>
@@ -49,9 +50,17 @@ function Footer(props) {
                 <svg className='footer__info-icon'>
                   <use href={sprite + '#location'}></use>{' '}
                 </svg>
-                <p className='footer__text footer__contact-info'>
-                  1960 Queen Street E, Toronto, ON M4L 1H8
-                </p>
+                {width >= 600 ? (
+                  <p className='footer__text footer__contact-info'>
+                    1960 Queen Street E, Toronto, ON M4L 1H8
+                  </p>
+                ) : (
+                  <p className='footer__text footer__contact-info'>
+                    1960 Queen St,
+                    <br /> Toronto,
+                    <br /> ON M4L 1H8
+                  </p>
+                )}
               </div>
 
               <div className='footer__info-header-section'>
@@ -76,7 +85,11 @@ function Footer(props) {
                   rel='noopener noreferrer'
                   className='footer__text footer__contact-info'
                 >
-                  contact@smarterwebsolutions.ca
+                  contact@
+                  <br />
+                  smarter
+                  <br />
+                  websolutions.ca
                 </a>
               </div>
             </div>
@@ -84,6 +97,33 @@ function Footer(props) {
         </div>
         <div className='footer__column footer__column--4'>
           <h3 className='footer__column-header'>Social Media</h3>
+          <a
+            className='footer__social-icon-section'
+            href='https://www.facebook.com/smarterwebsolution/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <svg className='footer__social-icon'>
+              <use href={sprite + '#facebook'}></use>
+            </svg>
+          </a>
+
+          <a
+            className='footer__social-icon-section'
+            href='https://www.instagram.com/smarterwebsolutions/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <svg className='footer__social-icon'>
+              <use href={sprite + '#instagram'}></use>
+            </svg>
+          </a>
+
+          <a className='footer__social-icon-section' href='/'>
+            <svg className='footer__social-icon'>
+              <use href={sprite + '#linkedin'}></use>
+            </svg>
+          </a>
         </div>
 
         <p className='footer__copyright'>

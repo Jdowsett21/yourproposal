@@ -44,14 +44,14 @@ function Process(props) {
       </div>
       <div className='process__paragraph'>
         <h3 className='process__secondary-header'>
-          We follow the same 5 step process for every project to ensuring that
-          our clients are involved every step of the way
+          We follow the same 5 step process for every project to ensure that our
+          clients are involved every step of the way
         </h3>
         <p2 className='process__secondary-text'>
           Every single website that is created by Smarter Web Solution goes
           through the same 5 step process. We only move onto the next step once
           the client provides final approval. We continue to review the product
-          to ensure all functionality is preserved at every step.
+          to guarantee all functionality is preserved at every step.
         </p2>
       </div>
     </div>
