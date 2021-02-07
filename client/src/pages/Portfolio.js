@@ -47,13 +47,9 @@ function Portfolio(props) {
               >
                 <use href={sprite + '#cleanSoils'}></use>
               </svg>
-              <img
-                src={grivetyLogo}
-                className='portfolio__logo--bottom'
-                alt='grivety'
-                onClick={() => setApp('grivety')}
-              ></img>
-              <img
+              <svg className='portfolio__company-logo' alt='grivety logo'>
+        <use href={sprite + '#grivety'}></use>
+      </svg>              <img
                 src={mediaor}
                 className='portfolio__logo--bottom portfolio__logo--bottom--mediaor'
                 style={{ paddingRight: '1rem' }}

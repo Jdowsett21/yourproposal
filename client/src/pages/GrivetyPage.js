@@ -29,9 +29,9 @@ function GrivetyPage({ color }) {
       <div className='project'>
         <div className='project__company-logo-section'>
           <img
-            className='portfolio__company-logo portfolio__company-logo--mediaor'
             src={grivetyLogo}
-            alt='mediaor'
+            className='portfolio__company-logo portfolio__company-logo--grivety'
+            alt='grivety logo'
           />
         </div>
         <p className='project__description'>
