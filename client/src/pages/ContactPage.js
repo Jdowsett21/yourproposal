@@ -7,7 +7,7 @@ import toronto from '../img/toronto.jpg';
 function ContactPage(props) {
   return (
     <>
-      <Banner img={contact} text='Contact' />
+      <Banner img={contact} text='Contact' modifier='--contact' />
       <div className='contact-page'>
         <div className='contact-page__col-1'>
           <h3 className='contact-page__header'>Get In Touch</h3>
