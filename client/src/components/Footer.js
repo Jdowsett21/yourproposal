@@ -119,11 +119,11 @@ function Footer(props) {
             </svg>
           </a>
 
-          <a className='footer__social-icon-section' href='/'>
+          {/* <a className='footer__social-icon-section' href='/'>
             <svg className='footer__social-icon'>
               <use href={sprite + '#linkedin'}></use>
             </svg>
-          </a>
+          </a> */}
         </div>
 
         <p className='footer__copyright'>
