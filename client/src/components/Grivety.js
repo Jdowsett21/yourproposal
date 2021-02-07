@@ -1,16 +1,15 @@
 import React from 'react';
 import moneytrackerImage from '../img/svg/grivety.svg';
 import grivetyLogo from '../img/svg/grivetylogo-1.svg';
+import sprite from '../img/svg/sprite.svg';
 import { Link } from 'react-router-dom';
 
 function Grivety(props) {
   return (
     <>
-      <img
-        className='portfolio__company-logo'
-        src={grivetyLogo}
-        alt='grivety logo'
-      />
+      <svg className='portfolio__company-logo' alt='grivety logo'>
+        <use href={sprite + '#grivety'}></use>
+      </svg>
       <p className='portfolio__description'>
         Grivety is a modern banking web application that displays the power of
         using a database in unison with your web server. Grivety displays data

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../img/svg/logo.svg';
+import logo from '../img/svg/logo.png';
 import { Link } from 'react-router-dom';
 import sprite from '../img/svg/sprite.svg';
 import useWindowDimensions from '../utils/ScreenWidth';
