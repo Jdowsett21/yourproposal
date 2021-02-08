@@ -8,10 +8,10 @@ function Home(props) {
   return (
     <div>
       <Carousel />
-      {/* <About />
+      <About />
       <Services />
       <Process />
-      <ContactForm /> */}
+      <ContactForm />
     </div>
   );
 }
