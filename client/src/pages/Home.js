@@ -7,7 +7,7 @@ import Process from '../components/Process';
 function Home(props) {
   return (
     <div>
-      <Carousel />
+      {/* <Carousel /> */}
       {/* <About />
       <Services />
       <Process />

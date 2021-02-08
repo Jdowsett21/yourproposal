@@ -11,7 +11,7 @@ function CarouselSection() {
     <>
       <Carousel>
         {/* slide 1 */}
-        <Carousel.Item interval={1000000}>
+        <Carousel.Item interval={3000}>
           <div className='carousel__container carousel__container--1'>
             <div className='carousel__inner-container'>
               <div className='carousel__header-1-background'>
@@ -39,7 +39,7 @@ function CarouselSection() {
           />
         </Carousel.Item>
         {/* slide 2 */}
-        <Carousel.Item interval={10000000}>
+        <Carousel.Item interval={3000}>
           <div className='carousel__container carousel__container--2'>
             <div className=' carousel__inner-container'>
               <div className='carousel__header-1-background carousel__header-1-background--1'>
@@ -63,7 +63,7 @@ function CarouselSection() {
           <img className='fit' src={coding} loading='lazy' alt='Third slide' />
         </Carousel.Item>
         {/* slide 3 */}
-        <Carousel.Item interval={100000}>
+        <Carousel.Item interval={3000}>
           <div className='carousel__container carousel__container--3'>
             <div className=' carousel__inner-container'>
               <div className='carousel__header-1-background carousel__header-1-background--2'>
