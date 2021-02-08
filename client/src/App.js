@@ -71,7 +71,7 @@ const AppRoutes = () => {
           <Redirect from='/*' to='/' />
         </Switch>
         {/* </Suspense> */}
-        {/* <Footer /> */}
+        <Footer />
       </ToTopPageOnReload>
     </>
   );
