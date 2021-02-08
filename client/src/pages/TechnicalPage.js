@@ -10,7 +10,8 @@ function TechnicalPage(props) {
       <div className='technical'>
         <h3 className='technical__header'>Technical Aptitude</h3>
         <p className='technical__secondary-header'>
-          We have technical expertise in many aspects of web development
+          We have technical expertise in many aspects of web development. Check
+          out our skills below!
         </p>
 
         <div className='technical__group'>
@@ -41,7 +42,7 @@ function TechnicalPage(props) {
             </svg>
             <h4 className='technical__item-header'>CSS</h4>
             <p className='technical__item-paragraph'>
-              Css is the engine behind the design of any great website. With new
+              CSS is the engine behind the design of any great website. With new
               features coming out often, CSS 3 is the face of any modern website
             </p>
           </div>
@@ -98,7 +99,7 @@ function TechnicalPage(props) {
               className='technical__item-paragraph'
               style={{ paddingBottom: '3.1rem' }}
             >
-              Sass is a Css pre-compiler that allows us to easily build highly
+              Sass is a CSS pre-compiler that allows us to easily build highly
               designed website in an efficient manner.
             </p>
           </div>

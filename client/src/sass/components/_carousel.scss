@@ -40,10 +40,7 @@
     align-items: center;
     align-content: center;
     z-index: 1;
-    grid-template-columns: minmax(11%, 1fr) minmax(10rem, 105rem) minmax(
-        11%,
-        1fr
-      );
+    grid-template-columns: minmax(5%, 1fr) minmax(1rem, 105rem) minmax(5%, 1fr);
     &--1 {
       justify-content: center;
       // justify-items: center;

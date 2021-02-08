@@ -55,7 +55,7 @@ function ServicesPage(props) {
         </div>
         <p className='services__text services__text--odd'>
           Are you in the need of a customized database, crm or any other
-          personalized systems but are unable to afford th extremely high price
+          personalized systems but are unable to afford the extremely high price
           of a building your own desktop application. We are able to build any
           system you would like on a web application. Allow staff to sign in
           from anywhere to track orders, update delivery information or track
@@ -92,11 +92,11 @@ function ServicesPage(props) {
         <p className='services__text'>
           One of the greatest benefits of a web application is that you can save
           a lot of money as it only has to be built once. Mobile/Desktop
-          applications that need to be built on Android and Apple in order to
-          reach all your customers. Furthermore web applications do not rely on
-          native mobile settings they rely on browser settings which are much
-          more stable and will lead to your website lasting much longer before
-          it is in need of updating.
+          applications need to be built on Android and Apple in order to reach
+          all your customers. Furthermore web applications do not rely on native
+          mobile settings they rely on browser settings which are much more
+          stable and will lead to your website lasting much longer before it
+          needs to be updated.
         </p>
         <img
           src={mobile}
@@ -109,12 +109,11 @@ function ServicesPage(props) {
           <h3 className='services__title'>Technology Integration</h3>
         </div>
         <p className='services__text'>
-          Out of the box websites lack functionality and you aren't always able
-          to add exactly what you want. Whether you want to add Google Maps or
-          your Twitter feed within the site, we can embed any programs you would
-          like to make the user experience more enjoyable. We would be add the
-          data and communication with other API's so that you can track
-          inventory or display stats for your users.
+          Out of the box websites lack functionality. Whether you want to add
+          Google Maps or your Twitter feed within the site, we can embed any
+          programs you would like to make the user experience more enjoyable. We
+          can link data and communication with other services so that you can
+          track inventory or display information for your users.
         </p>
       </div>
     </div>

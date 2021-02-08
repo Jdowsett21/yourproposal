@@ -1,7 +1,7 @@
 .about {
   display: grid;
-  grid-template-columns: minmax(8%, 1fr) repeat(2, minmax(20rem, 60rem)) minmax(
-      8%,
+  grid-template-columns: minmax(5%, 1fr) repeat(2, minmax(10rem, 60rem)) minmax(
+      5%,
       1fr
     );
   align-items: center;

@@ -15,6 +15,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@percy/script": "^1.1.0",
     "concurrently": "^5.3.0",
     "env-cmd": "^10.1.0",
     "nodemon": "^2.0.6"
