@@ -24,7 +24,7 @@ function ContactSuccess({ resetContactRedirect }) {
             color: '#fff',
           }}
         >
-          Return To Hoome Page
+          Return To Home Page
         </Link>
       </button>
     </div>
