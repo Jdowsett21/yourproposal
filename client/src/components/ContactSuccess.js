@@ -18,13 +18,13 @@ function ContactSuccess({ resetContactRedirect }) {
         }}
       >
         <Link
-          to='/contact'
+          to='/'
           style={{
             textDecoration: 'none',
             color: '#fff',
           }}
         >
-          Return To Contact Page
+          Return To Hoome Page
         </Link>
       </button>
     </div>
