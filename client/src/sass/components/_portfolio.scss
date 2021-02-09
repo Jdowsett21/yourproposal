@@ -3,9 +3,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   max-height: 100vh;
-  height: 80vh;
   @media only screen and (max-width: 40em) {
-    max-height: 99vh;
+    height: 100vh;
   }
   justify-items: center;
   overflow: hidden;
@@ -31,7 +30,10 @@
     animation: fadeDown1 0.8s ease-in-out;
     animation-delay: 0.5s;
     animation-fill-mode: both;
-
+    @media only screen and (max-width: 40em) {
+      width: 40rem;
+      height: 16rem;
+    }
     &--grivety {
       width: 27rem;
     }
@@ -77,9 +79,9 @@
       margin-bottom: 2rem;
     }
     @media only screen and (max-width: 40em) {
-      width: 90%;
-      font-size: 1.8rem;
-
+      width: 95%;
+      font-size: 2.8rem;
+      line-height: 3.3rem;
       margin-bottom: 5rem;
     }
   }
@@ -88,13 +90,12 @@
     grid-column: 1/2;
     height: 30rem;
     margin-bottom: 10rem;
-    // @media only screen and (min-width: 82em) {
-    //   height: 40rem;
-
-    //   margin-bottom: 20rem;
-    // }
     @media only screen and (max-width: 75em) {
       height: 22rem;
+    }
+    @media only screen and (max-width: 40em) {
+      margin-top: 10rem;
+      height: 40rem;
     }
 
     animation: fadeDown 0.8s ease-in-out;
