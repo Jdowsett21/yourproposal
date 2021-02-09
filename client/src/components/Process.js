@@ -47,12 +47,12 @@ function Process(props) {
           We follow the same 5 step process for every project to ensure that our
           clients are involved every step of the way
         </h3>
-        <p2 className='process__secondary-text'>
+        <p className='process__secondary-text'>
           Every single website that is created by Smarter Web Solution goes
           through the same 5 step process. We only move onto the next step once
           the client provides final approval. We continue to review the product
           to guarantee all functionality is preserved at every step.
-        </p2>
+        </p>
       </div>
     </div>
   );

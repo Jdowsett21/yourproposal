@@ -25,6 +25,7 @@ import MediaorPage from './pages/MediaorPage';
 import GrivetyPage from './pages/GrivetyPage';
 import CleanSoilsPage from './pages/CleanSoilsPage';
 import NavCollapse from './components/NavCollapse';
+import ContactSuccess from './components/ContactSuccess';
 
 const LoadingFallback = () => (
   <AppShell>
@@ -65,6 +66,10 @@ const AppRoutes = () => {
           <Route exact path='/technical'>
             <TechnicalPage />
           </Route>
+          <Route exact path='/contactSuccess'>
+            <ContactSuccess />
+          </Route>
+
           <Route exact path='/'>
             <Home />
           </Route>

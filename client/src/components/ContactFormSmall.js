@@ -1,10 +1,11 @@
-// import React from 'react';
+import React, { useEffect } from 'react';
 import { Form, Formik, useField } from 'formik';
 import * as Yup from 'yup';
 import { connect } from 'react-redux';
 import { Redirect, Link } from 'react-router-dom';
 import { submitEmail } from '../actions/EmailActions.js';
 import FormInput from '../common/FormInput.js';
+import { toast, ToastContainer } from 'react-toastify';
 
 const MyTextField = ({ placeholder, ...props }) => {
   const [field, meta] = useField(props);
@@ -23,7 +24,7 @@ const MyTextField = ({ placeholder, ...props }) => {
 };
 
 function ContactFormSmall({
-  email: { emailSuccess, emailError },
+  email: { emailSuccess, emailFailure, contactRedirect },
   submitEmail,
 }) {
   const ContactSchema = Yup.object().shape({
@@ -36,61 +37,66 @@ function ContactFormSmall({
   });
 
   return (
-    <Formik
-      initialValues={{ email: '', name: '', subject: '', message: '' }}
-      onSubmit={(values) => {
-        submitEmail(values);
-      }}
-      validationSchema={ContactSchema}
-    >
-      {() => (
-        <Form>
-          <div
-            className='contact-info__form--small contact-info__form'
-            id='contact-form'
-          >
-            <MyTextField
-              ariaLabel='name'
-              name='name'
-              type='text'
-              required
-              placeholder='Name'
-            />
-            <MyTextField
-              id='email'
-              name='email'
-              type='email'
-              placeholder='Email'
-              ariaLabel='Email'
-              required
-            />
-            <MyTextField
-              ariaLabel='Subject'
-              name='subject'
-              type='text'
-              placeholder='Subject'
-              required
-            />
+    <>
+      {contactRedirect && <Redirect to='/contactSuccess' />}
 
-            <MyTextField
-              id='message'
-              name='message'
-              placeholder='Message'
-              type='text-box'
-              ariaLabel='Message'
-              required
-            />
-            <button
-              type='submit'
-              text='Submit'
-              className='contact-info__button'
+      <Formik
+        initialValues={{ email: '', name: '', subject: '', message: '' }}
+        onSubmit={(values) => {
+          submitEmail(values);
+        }}
+        validationSchema={ContactSchema}
+      >
+        {() => (
+          <Form>
+            <div
+              className='contact-info__form--small contact-info__form'
+              id='contact-form'
             >
-              Submit
-            </button>
-          </div>
-        </Form>
-      )}
-    </Formik>
+              <MyTextField
+                ariaLabel='name'
+                name='name'
+                type='text'
+                required
+                placeholder='Name'
+              />
+              <MyTextField
+                id='email'
+                name='email'
+                type='email'
+                placeholder='Email'
+                ariaLabel='Email'
+                required
+              />
+              <MyTextField
+                ariaLabel='Subject'
+                name='subject'
+                type='text'
+                placeholder='Subject'
+                required
+              />
+
+              <MyTextField
+                id='message'
+                name='message'
+                placeholder='Message'
+                type='text-box'
+                ariaLabel='Message'
+                required
+              />
+              <button
+                type='submit'
+                text='Submit'
+                className='contact-info__button'
+              >
+                Submit
+              </button>
+              <ToastContainer />
+            </div>
+          </Form>
+        )}
+      </Formik>
+    </>
   );
 }
 

@@ -23,9 +23,9 @@ router.post('/', async (req, res) => {
   // Attempt to send the email
   smtpTrans.sendMail(mailOpts, (error, response) => {
     if (error) {
-      res.render('contact-failure'); // Show a page indicating failure
+      res.send('contact-failure'); // Show a page indicating failure
     } else {
-      res.render('contact-success'); // Show a page indicating success
+      res.send('contact-success'); // Show a page indicating success
     }
   });
 });
@@ -53,9 +53,9 @@ router.post('/application', async (req, res) => {
   // Attempt to send the email
   smtpTrans.sendMail(mailOpts, (error, response) => {
     if (error) {
-      res.render('contact-failure'); // Show a page indicating failure
+      res.send('contact-failure'); // Show a page indicating failure
     } else {
-      res.render('contact-success'); // Show a page indicating success
+      res.send('contact-success'); // Show a page indicating success
     }
   });
 });
