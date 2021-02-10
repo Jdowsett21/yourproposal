@@ -106,7 +106,7 @@ function Services(props) {
             </div>
           ) : (
             <p className='service__item__text'>
-              Get your customers shopping you your site, safely and securely.
+              Get your customers shopping you your site today.
             </p>
           )}
         </Link>
@@ -116,7 +116,6 @@ function Services(props) {
           to='/services#customized'
           className=' service__item'
         >
-          c
           <svg className='service__icon'>
             <use href={sprite + '#dashboard'}></use>
           </svg>
@@ -171,7 +170,7 @@ function Services(props) {
             </div>
           ) : (
             <p className='service__item__text'>
-              Combine technologies to improve your users experiences.
+              Combine technologies, improve your site.
             </p>
           )}
         </Link>

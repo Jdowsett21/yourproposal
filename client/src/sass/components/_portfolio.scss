@@ -32,10 +32,11 @@
     animation-fill-mode: both;
     @media only screen and (max-width: 40em) {
       width: 40rem;
-      height: 19rem;
+      height: 14rem;
     }
     &--grivety {
       width: 27rem;
+      margin-bottom: 2rem;
     }
     &--mediaor {
       width: 30rem;
@@ -49,6 +50,8 @@
       height: 6rem;
     }
     @media only screen and (max-width: 37.5em) {
+      width: 110%;
+
       animation: inRight 1s;
     }
   }
@@ -84,6 +87,10 @@
       line-height: 3.3rem;
       margin-bottom: 5rem;
     }
+    @media only screen and (max-width: 22em) {
+      margin-bottom: 3rem;
+      margin-top: 1rem;
+    }
   }
   &__image {
     grid-row: 1/2;
@@ -96,6 +103,10 @@
     @media only screen and (max-width: 40em) {
       // margin-top: 10rem;
       height: 50rem;
+    }
+    @media only screen and (max-width: 22em) {
+      margin-bottom: 1rem;
+      height: 40rem;
     }
 
     animation: fadeDown 0.8s ease-in-out;
@@ -121,6 +132,11 @@
       @media only screen and (max-width: 40em) {
         height: 50rem;
       }
+      @media only screen and (max-width: 22em) {
+        margin-bottom: 3rem;
+
+        height: 35rem;
+      }
     }
     &--mediaor {
       height: 25rem;
@@ -129,8 +145,8 @@
       @media only screen and (max-width: 40em) {
         height: 30rem;
       }
-      @media only screen and (max-width: 26em) {
-        height: 25rem;
+      @media only screen and (max-width: 22em) {
+        height: 24rem;
       }
       // @media only screen and (max-width: 25em) {
       //   height: 15rem;
@@ -142,6 +158,10 @@
         @media only screen and (max-width: 40em) {
           margin-top: 20rem;
         }
+        @media only screen and (max-width: 22em) {
+          margin-top: 10rem;
+        }
+
         z-index: 100;
         @media only screen and (max-width: 29em) {
           margin-left: 15rem;
