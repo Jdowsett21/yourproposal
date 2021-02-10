@@ -118,13 +118,19 @@
       height: 35rem;
       width: 70rem;
       margin-bottom: 8rem;
+      @media only screen and (max-width: 40em) {
+        height: 50rem;
+      }
     }
     &--mediaor {
       height: 25rem;
       margin-bottom: 8rem;
       margin-top: 2rem;
-      @media only screen and (max-width: 29em) {
-        height: 20rem;
+      @media only screen and (max-width: 40em) {
+        height: 30rem;
+      }
+      @media only screen and (max-width: 26em) {
+        height: 25rem;
       }
       // @media only screen and (max-width: 25em) {
       //   height: 15rem;
@@ -133,6 +139,9 @@
       &--1 {
         margin-left: 25rem;
         margin-top: 10rem;
+        @media only screen and (max-width: 40em) {
+          margin-top: 20rem;
+        }
         z-index: 100;
         @media only screen and (max-width: 29em) {
           margin-left: 15rem;
