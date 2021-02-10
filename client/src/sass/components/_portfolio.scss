@@ -4,27 +4,8 @@
   grid-template-rows: 1fr;
   max-height: 100vh;
   @media only screen and (max-width: 40em) {
-    height: 94vh;
+    height: 95vh;
   }
-  @media only screen and (max-width: 37em) {
-    height: 93vh;
-  }
-  @media only screen and (max-width: 34em) {
-    height: 92vh;
-  }
-  @media only screen and (max-width: 30em) {
-    height: 91vh;
-  }
-  @media only screen and (max-width: 27em) {
-    height: 90vh;
-  }
-  @media only screen and (max-width: 24em) {
-    height: 89vh;
-  }
-  @media only screen and (max-width: 20em) {
-    height: 88vh;
-  }
-
   justify-items: center;
   overflow: hidden;
   &__grid {
