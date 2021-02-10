@@ -26,6 +26,7 @@ import GrivetyPage from './pages/GrivetyPage';
 import CleanSoilsPage from './pages/CleanSoilsPage';
 import NavCollapse from './components/NavCollapse';
 import ContactSuccess from './components/ContactSuccess';
+import ReactGA from 'react-ga';
 
 const LoadingFallback = () => (
   <AppShell>
@@ -83,6 +84,8 @@ const AppRoutes = () => {
 };
 
 function App() {
+  ReactGA.initialize('UA-189418529-1');
+  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <Router>
       <Provider store={store}>
