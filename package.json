@@ -1,7 +1,7 @@
 {
   "name": "templateApp",
   "version": "1.0.0",
-  "description": "Website for clean Soils",
+  "description": "Smarter Web Solutions",
   "main": "index.js",
   "dependencies": {
     "axios": "^0.21.1",
