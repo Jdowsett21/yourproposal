@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { button } from 'react-scroll';
-import peopleMeeting from '../img/peopleMeeting.jpg';
+import peopleMeeting from '../img/webdesign.jpg';
 import coding from '../img/codingCloseUp.jpg';
 import teamWork from '../img/teamwork.jpg';
 import { Link } from 'react-router-dom';
@@ -15,7 +15,7 @@ function CarouselSection() {
           <div className='carousel__container carousel__container--1'>
             <div className='carousel__inner-container'>
               <div className='carousel__header-1-background'>
-                <h1 className='carousel__header-1'>Web Development Experts</h1>
+                <h1 className='carousel__header-1'>Web Design Experts</h1>
               </div>
               <div className='carousel__header-5-background'>
                 <h5 className={`carousel__header-5`}>
@@ -35,7 +35,7 @@ function CarouselSection() {
             className='fit'
             src={peopleMeeting}
             loading='lazy'
-            alt='First slide'
+            alt='Web Design'
           />
         </Carousel.Item>
         {/* slide 2 */}
@@ -60,7 +60,12 @@ function CarouselSection() {
             </div>
           </div>
 
-          <img className='fit' src={coding} loading='lazy' alt='Third slide' />
+          <img
+            className='fit'
+            src={coding}
+            loading='lazy'
+            alt='Web Development'
+          />
         </Carousel.Item>
         {/* slide 3 */}
         <Carousel.Item interval={8000}>
