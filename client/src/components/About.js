@@ -14,7 +14,7 @@ function About(props) {
         development company for you.
       </p>
       <img
-        srcset={`${happyCustomer} 600w, ${happyCustomerSmall}1000w'`}
+        srcset={`${happyCustomerSmall} 600w, ${happyCustomer}1000w'`}
         src={happyCustomer}
         alt='website design'
         className='about__img'
