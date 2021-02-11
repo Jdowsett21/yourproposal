@@ -4,6 +4,7 @@ import planning from '../img/planning.jpg';
 import wireframing from '../img/wireframing.jpg';
 import design from '../img/design.jpg';
 import coding from '../img/coding.jpg';
+import codingSmall from '../img/rsz_coding.jpg';
 import deployment from '../img/deployment.jpg';
 import ContactForm from '../components/ContactForm';
 import Process from '../components/Process';
@@ -88,8 +89,9 @@ function ProcessPage(props) {
           </p>
         </div>
         <img
-          src={coding}
-          alt=''
+          src={codingSmall}
+          srcSet={`${codingSmall} 300w, ${coding} 600w`}
+          alt='coding'
           className='process-page__image process-page__image--4'
         />
         <img

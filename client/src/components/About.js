@@ -9,7 +9,9 @@ function About(props) {
         It is our belief as web design experts that every company, no matter the
         size deserves a website they are proud of at a price they can afford.
         Our #1 commitment is customer satisfaction and we pledge to ensure you
-        are 100% satisfied with the result.
+        are 100% satisfied with the result. Whether you are looking for a web
+        application, e-commerce site or mobile site design we are the web
+        development company for you.
       </p>
       <img
         // srcset='img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w'
