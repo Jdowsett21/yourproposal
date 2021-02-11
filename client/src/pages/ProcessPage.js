@@ -17,7 +17,11 @@ import processSmall from '../img/processSmall.jpg';
 function ProcessPage(props) {
   return (
     <div>
-      <Banner img={process} text='Web Development Process' />
+      <Banner
+        img={process}
+        imgSmall={processSmall}
+        text='Web Development Process'
+      />
 
       <div className='process-page__intro-section'>
         <h3 className='process-page__header'>The Web Development Process</h3>
