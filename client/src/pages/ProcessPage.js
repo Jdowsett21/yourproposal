@@ -1,14 +1,19 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import planning from '../img/planning.jpg';
+import planningSmall from '../img/planningSmall.jpg';
 import wireframing from '../img/wireframing.jpg';
+import wireframingSmall from '../img/wireframingSmall.jpg';
 import design from '../img/design.jpg';
+import designSmall from '../img/designSmall.jpg';
 import coding from '../img/coding.jpg';
-import codingSmall from '../img/rsz_coding.jpg';
+import codingSmall from '../img/codingSmall.jpg';
 import deployment from '../img/deployment.jpg';
+import deploymentSmall from '../img/deploymentSmall.jpg';
 import ContactForm from '../components/ContactForm';
 import Process from '../components/Process';
-import process from '../img/processHome1.jpg';
+import process from '../img/process.jpg';
+import processSmall from '../img/processSmall.jpg';
 function ProcessPage(props) {
   return (
     <div>
@@ -27,6 +32,7 @@ function ProcessPage(props) {
       </div>
       <div className='process-page__section'>
         <img
+          srcSet={`${planningSmall} 600w, ${planning}`}
           src={planning}
           alt=''
           className='process-page__image process-page__image--1'
@@ -55,13 +61,15 @@ function ProcessPage(props) {
           </p>
         </div>
         <img
+          srcSet={`${wireframingSmall} 600w, ${wireframing}`}
           src={wireframing}
           alt=''
           className='process-page__image process-page__image--2'
         />
         <img
+          srcSet={`${designSmall} 600w, ${design}`}
           src={design}
-          alt=''
+          alt='design'
           className='process-page__image process-page__image--3'
         />
 
@@ -90,11 +98,12 @@ function ProcessPage(props) {
         </div>
         <img
           src={codingSmall}
-          srcSet={`${codingSmall} 300w, ${coding} 600w`}
+          srcSet={`${codingSmall} 600w, ${coding}`}
           alt='coding'
           className='process-page__image process-page__image--4'
         />
         <img
+          srcSet={`${deploymentSmall} 600w, ${deployment}`}
           src={deployment}
           alt=''
           className='process-page__image process-page__image--5'

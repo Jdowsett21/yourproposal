@@ -1,6 +1,6 @@
 import React from 'react';
 import happyCustomer from '../img/pledge.jpg';
-import happyCustomerSmall from '../img/rsz_pledge.jpg';
+import happyCustomerSmall from '../img/pledgeSmall.jpg';
 function About(props) {
   return (
     <div className='about'>
@@ -14,7 +14,7 @@ function About(props) {
         development company for you.
       </p>
       <img
-        srcset={`${happyCustomerSmall} 600w, ${happyCustomer}1000w'`}
+        srcSet={`${happyCustomerSmall} 600w, ${happyCustomer}`}
         src={happyCustomer}
         alt='website design'
         className='about__img'

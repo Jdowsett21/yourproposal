@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarList from '../common/NavBarList';
-import logo from '../img/svg/logo.png';
+import logo from '../img/logo.png';
 
 function NavBar() {
   return (

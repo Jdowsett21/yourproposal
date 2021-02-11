@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import { button } from 'react-scroll';
 import peopleMeeting from '../img/Web Design.jpg';
-import peopleMeetingSmall from '../img/rsz_1web_design.jpg';
+import peopleMeetingSmall from '../img/Web Design Small.jpg';
 import coding from '../img/codingCloseUp.jpg';
+import codingSmall from '../img/codingCloseUpSmall.jpg';
 import teamWork from '../img/teamwork.jpg';
+import teamWorkSmall from '../img/teamworkSmall.jpg';
 import { Link } from 'react-router-dom';
 
 function CarouselSection() {
@@ -35,7 +36,7 @@ function CarouselSection() {
           <img
             className='fit'
             src={peopleMeeting}
-            srcSet={`${peopleMeetingSmall} 500w, ${peopleMeeting} 1200w`}
+            srcSet={`${peopleMeetingSmall} 600w, ${peopleMeeting} `}
             loading='lazy'
             alt='Web Design'
           />
@@ -65,6 +66,7 @@ function CarouselSection() {
           <img
             className='fit'
             src={coding}
+            srcSet={`${coding} 600w, ${codingSmall} `}
             loading='lazy'
             alt='Web Development'
           />
@@ -96,6 +98,7 @@ function CarouselSection() {
           <img
             className='fit'
             src={teamWork}
+            srcSet={`${teamWork} 600w, ${teamWorkSmall} `}
             loading='lazy'
             alt='Third slide'
           />

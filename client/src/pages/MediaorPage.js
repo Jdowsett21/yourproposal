@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import cleanSoilsFan from '../img/svg/cleanSoilsFan.svg';
 import sprite from '../img/svg/sprite.svg';
 import ContactUsProject from '../components/ContactUsProject';
 import ColorPalette from '../components/ColorPalette';
@@ -8,8 +7,10 @@ import { useInView } from 'react-intersection-observer';
 import Typeface from '../components/Typeface';
 import Icons from '../components/Icons';
 import mediaor from '../img/svg/mediaor.svg';
-import mediaorImage1 from '../img/svg/mediaorImage1.png';
-import mediaorImage2 from '../img/svg/mediaorImage2.png';
+import mediaorImage1 from '../img/mediaorImage1.png';
+import mediaorImage1Small from '../img/mediaorImage1Small.png';
+import mediaorImage2 from '../img/mediaorImage2.png';
+import mediaorImage2Small from '../img/mediaorImage2Small.png';
 
 function MediaorPage() {
   function refreshPage() {
@@ -40,11 +41,12 @@ function MediaorPage() {
 
         <img
           src={mediaorImage1}
+          srcSet={`${mediaorImage1Small} 600w, ${mediaorImage1}`}
           alt='Mediaor Screenshot'
           className='project__image project__image--mediaor  project__image--mediaor--1'
         />
         <img
-          src={mediaorImage2}
+          srcSet={`${mediaorImage2Small} 600w, ${mediaorImage2}`}
           alt='Mediaor Screenshot'
           className='project__image project__image--mediaor  project__image--mediaor--2'
         />

@@ -1,7 +1,10 @@
 import React from 'react';
 import mediaor from '../img/svg/mediaor.svg';
-import mediaorImage1 from '../img/svg/mediaorImage1.png';
-import mediaorImage2 from '../img/svg/mediaorImage2.png';
+import mediaorImage1 from '../img/mediaorImage1.png';
+import mediaorImage1Small from '../img/mediaorImage1Small.png';
+import mediaorImage2 from '../img/mediaorImage2.png';
+import mediaorImage2Small from '../img/mediaorImage2Small.png';
+
 import { Link } from 'react-router-dom';
 function Mediaor(props) {
   return (
@@ -27,11 +30,13 @@ function Mediaor(props) {
       <div className='portfolio__image-section'>
         <img
           src={mediaorImage1}
+          srcSet={`${mediaorImage1Small} 600w, ${mediaorImage1}`}
           alt='Mediaor Screenshot'
           className='portfolio__image portfolio__image--mediaor  portfolio__image--mediaor--1'
         />
         <img
           src={mediaorImage2}
+          srcSet={`${mediaorImage2Small} 600w, ${mediaorImage2}`}
           alt='Mediaor Screenshot'
           className='portfolio__image portfolio__image--mediaor  portfolio__image--mediaor--2'
         />

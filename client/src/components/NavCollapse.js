@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setNavOpen } from '../actions/InViewActions';
-import navbarButton from '../img/svg/hexagonal.svg';
-import logo from '../img/svg/logo3.svg';
+import navbarButton from '../img/svg/navBarButton.svg';
+import logo from '../img/logo.png';
 import useWindowDimensions from '../utils/ScreenWidth';
 
 function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
