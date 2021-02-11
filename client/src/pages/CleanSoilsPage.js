@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import cleanSoilsFan from '../img/cleansoilsfan.png';
-import cleanSoilsFanSmall from '../img/cleansoilsfanSmall.png';
+import cleanSoilsFan from '../img/cleansoilsfan-min.png';
+import cleanSoilsFanSmall from '../img/cleansoilsfanSmall-min.png';
 import sprite from '../img/svg/sprite.svg';
 import ContactUsProject from '../components/ContactUsProject';
 import ColorPalette from '../components/ColorPalette';
