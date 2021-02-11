@@ -1,6 +1,6 @@
 import React from 'react';
 import happyCustomer from '../img/pledge.jpg';
-import happyCustomer2 from '../img/pledge-800.jpg';
+import happyCustomerSmall from '../img/rsz_pledge.jpg';
 function About(props) {
   return (
     <div className='about'>
@@ -14,8 +14,7 @@ function About(props) {
         development company for you.
       </p>
       <img
-        // srcset='img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w'
-        // sizes='(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px'
+        srcset={`${happyCustomer} 600w, ${happyCustomerSmall}1000w'`}
         src={happyCustomer}
         alt='website design'
         className='about__img'
