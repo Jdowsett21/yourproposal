@@ -1,7 +1,6 @@
 import React from 'react';
-import moneytrackerImage from '../img/svg/grivety.svg';
+import moneytrackerImage from '../img/svg/grivetyImage4.svg';
 import grivetyLogo from '../img/svg/grivetylogo-1.svg';
-import sprite from '../img/svg/sprite.svg';
 import { Link } from 'react-router-dom';
 
 function Grivety(props) {

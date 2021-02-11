@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import cleanSoilsFan from '../img/cleanSoilsFan.jpg';
+import cleanSoilsFan from '../img/cleansoilsfan.png';
+import cleanSoilsFanSmall from '../img/cleansoilsfanSmall.png';
 import sprite from '../img/svg/sprite.svg';
 import ContactUsProject from '../components/ContactUsProject';
 import ColorPalette from '../components/ColorPalette';
@@ -35,6 +36,7 @@ function CleanSoilsPage(props) {
           src={cleanSoilsFan}
           alt='grivety Screenshot'
           className='project__image'
+          srcSet={`${cleanSoilsFanSmall} 600w, ${cleanSoilsFan}`}
         />
         <h2
           className={

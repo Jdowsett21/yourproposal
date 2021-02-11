@@ -1,9 +1,9 @@
 import React from 'react';
-import moneytrackerImage3 from '../img/svg/grivetyimage3.svg';
-import moneytrackerImage2 from '../img/svg/grivetyImage2.svg';
+import moneytrackerImage3 from '../img/svg/grivetyimage3-min.png';
+import moneytrackerImage2 from '../img/svg/grivetyImage2-min.png';
 import moneytrackerImage4 from '../img/svg/grivetyImage4.svg';
-import moneytrackerImage5 from '../img/svg/grivetyImage5.svg';
-import moneytrackerImage6 from '../img/svg/grivetyImage6.svg';
+import moneytrackerImage5 from '../img/svg/grivetyImage5-min.png';
+import moneytrackerImage6 from '../img/svg/grivetyImage6-min.png';
 
 function ImageSlider(props) {
   var a = document.getElementsByTagName('button');

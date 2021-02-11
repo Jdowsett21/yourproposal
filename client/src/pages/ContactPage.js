@@ -3,11 +3,18 @@ import Banner from '../components/Banner';
 import sprite from '../img/svg/sprite.svg';
 import ContactFormSmall from '../components/ContactFormSmall';
 import contact from '../img/contact.jpg';
+import contactSmall from '../img/contactSmall.jpg';
 import toronto from '../img/toronto.jpg';
+import torontoSmall from '../img/torontoSmall.jpg';
 function ContactPage(props) {
   return (
     <>
-      <Banner img={contact} text='Contact' modifier='--contact' />
+      <Banner
+        img={contact}
+        imgSmall={contactSmall}
+        text='Contact'
+        modifier='--contact'
+      />
       <div className='contact-page'>
         <div className='contact-page__col-1'>
           <h3 className='contact-page__header'>Get In Touch</h3>
@@ -22,6 +29,7 @@ function ContactPage(props) {
           </h3>
           <img
             src={toronto}
+            srcSet={`${torontoSmall} 600w, ${toronto}`}
             alt='Toronto'
             className='contact-page__location-image'
           />

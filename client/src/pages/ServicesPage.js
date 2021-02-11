@@ -1,14 +1,15 @@
 import React from 'react';
 import teamwork from '../img/teamwork.jpg';
+import teamworkSmall from '../img/teamworkSmall.jpg';
 import Banner from '../components/Banner';
 import monitor from '../img/svg/mobile friendly.svg';
 import mobile from '../img/svg/mobilePhone.svg';
 import responsive from '../img/file.png';
-// import responsiveSmall from '../img/file.jpg';
+
 function ServicesPage(props) {
   return (
     <div>
-      <Banner img={teamwork} text='Services' />
+      <Banner img={teamwork} imgSmall={teamworkSmall} text='Services' />
       <div className='services__section services__section--split'>
         <div className='services__title-section' id='responsive'>
           <h3 className='services__title'>Responsive Design</h3>
@@ -67,7 +68,6 @@ function ServicesPage(props) {
           alt='monitor '
           className='services__image services__image--1'
           src={responsive}
-          // srcSet={`${responsiveSmall} 600w, ${responsive}`}
         ></img>
       </div>
       <div className='services__section ' id='profit'>

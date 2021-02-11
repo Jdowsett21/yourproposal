@@ -1,6 +1,8 @@
 import React from 'react';
-import cleanSoils from '../img/cleansoils1.jpg';
-import cleanSoils1 from '../img/cleansoils2.jpg';
+import cleanSoils from '../img/cleanSoils1.png';
+import cleanSoilsSmall from '../img/cleanSoils1Small.png';
+import cleanSoils1 from '../img/cleanSoils2.png';
+import cleanSoils1Small from '../img/cleanSoils2Small.png';
 import sprite from '../img/svg/sprite.svg';
 import { Link } from 'react-router-dom';
 
