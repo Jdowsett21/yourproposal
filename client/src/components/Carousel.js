@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { button } from 'react-scroll';
-import peopleMeeting from '../img/webdesign.jpg';
+import peopleMeeting from '../img/Web Design.jpg';
 import coding from '../img/codingCloseUp.jpg';
 import teamWork from '../img/teamwork.jpg';
 import { Link } from 'react-router-dom';
