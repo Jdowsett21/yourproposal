@@ -1,5 +1,4 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
 import peopleMeeting from '../img/Web Design.jpg';
 import peopleMeetingSmall from '../img/Web Design Small.jpg';
 import peopleMeetingwebSmall from '../img/Web Design Small.webp';
@@ -13,6 +12,8 @@ import teamWorkSmall from '../img/teamworkSmall.jpg';
 import teamWorkweb from '../img/teamwork.webp';
 import teamWorkwebSmall from '../img/teamworkSmall.webp';
 import { Link } from 'react-router-dom';
+
+const { Carousel } = require('react');
 
 function CarouselSection() {
   return (

@@ -5,13 +5,19 @@ import { connect } from 'react-redux';
 import { Redirect, Link } from 'react-router-dom';
 import { submitEmail } from '../actions/EmailActions.js';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import MyTextField from '../common/MyTextField';
+import withRouter from '../common/NavBarList';
 
 function ContactForm({
   email: { emailSuccess, emailFailure, contactRedirect },
   submitEmail,
 }) {
+  useEffect(() => {
+    async function toastFunction() {
+      await require('react-toastify/dist/ReactToastify.css');
+    }
+    toastFunction();
+  });
   const ContactSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),
     email: Yup.string()
@@ -101,4 +107,6 @@ function ContactForm({
 const mapStateToProps = (state) => ({
   email: state.email,
 });
-export default connect(mapStateToProps, { submitEmail })(ContactForm);
+export default withRouter(
+  connect(mapStateToProps, { submitEmail })(ContactForm)
+);
