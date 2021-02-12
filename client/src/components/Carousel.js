@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import peopleMeeting from '../img/Web Design.jpg';
 import peopleMeetingSmall from '../img/Web Design Small.jpg';
 import peopleMeetingwebSmall from '../img/Web Design Small.webp';
@@ -13,12 +13,12 @@ import teamWorkweb from '../img/teamwork.webp';
 import teamWorkwebSmall from '../img/teamworkSmall.webp';
 import { Link } from 'react-router-dom';
 
-// const { Carousel } = require('react-bootstrap');
-
 function CarouselSection() {
+  const { Carousel } = require('react-bootstrap');
+
   return (
     <>
-      {/* <Carousel>
+      <Carousel>
         <Carousel.Item interval={8000}>
           <div className='carousel__container carousel__container--1'>
             <div className='carousel__inner-container'>
@@ -56,7 +56,7 @@ function CarouselSection() {
             />
           </picture>
         </Carousel.Item>
-    
+
         <Carousel.Item interval={8000}>
           <div className='carousel__container carousel__container--2'>
             <div className=' carousel__inner-container'>
@@ -94,7 +94,7 @@ function CarouselSection() {
             />
           </picture>
         </Carousel.Item>
-     
+
         <Carousel.Item interval={8000}>
           <div className='carousel__container carousel__container--3'>
             <div className=' carousel__inner-container'>
@@ -135,7 +135,7 @@ function CarouselSection() {
             />
           </picture>
         </Carousel.Item>
-      </Carousel> */}
+      </Carousel>
     </>
   );
 }
