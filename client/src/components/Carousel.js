@@ -39,7 +39,7 @@ function CarouselSection() {
               </div>
             </div>
           </div>
-          <picture className='fit'>
+          <picture>
             <source
               srcSet={`${peopleMeetingwebSmall} 600w, ${peopleMeetingweb}`}
               type='image/webp'
@@ -77,7 +77,7 @@ function CarouselSection() {
               </div>
             </div>
           </div>
-          <picture className='fit'>
+          <picture>
             <source
               srcSet={`${codingwebSmall} 600w, ${codingweb}`}
               type='image/webp'
@@ -117,7 +117,7 @@ function CarouselSection() {
               </div>
             </div>
           </div>
-          <picture className='fit'>
+          <picture>
             <source
               srcSet={`${teamWorkwebSmall} 600w, ${teamWorkweb}`}
               type='image/webp'

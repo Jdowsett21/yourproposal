@@ -33,7 +33,7 @@ function CleanSoilsPage(props) {
           they mean business. Keeping the website clean and concise was their #1
           priority and Smarter Web Solutions delivered on their ask.
         </p>
-        <picture className='project__image   '>
+        <picture className='project__image'>
           <source
             srcSet={`${cleanSoilsFanSmallweb} 600w, ${cleanSoilsFanweb}`}
             type='image/webp'
