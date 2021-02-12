@@ -26,11 +26,6 @@ function NavCollapse({ inView: { navOpen }, setNavOpen }) {
   return (
     <div ref={node}>
       <nav className='nav-bar nav-bar--collapse'>
-        <img
-          className='nav-bar__logo nav-bar__logo--collapse'
-          src={logo}
-          alt='logo'
-        />
         <picture className='nav-bar__logo nav-bar__logo--collapse'>
           <source srcSet={logoweb} type='image/webp' />
           <source srcSet={logo} type='image/jpeg' />
