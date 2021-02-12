@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setNavOpen } from '../actions/InViewActions';
-import hello from '../img/svg/navBarButton.png';
+import hello from '../img/svg/navBarButton.svg';
 import logo from '../img/logo.png';
 import logoweb from '../img/logo.webp';
 import useWindowDimensions from '../utils/ScreenWidth';
