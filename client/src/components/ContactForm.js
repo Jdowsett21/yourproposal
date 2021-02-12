@@ -107,6 +107,4 @@ function ContactForm({
 const mapStateToProps = (state) => ({
   email: state.email,
 });
-export default withRouter(
-  connect(mapStateToProps, { submitEmail })(ContactForm)
-);
+export default connect(mapStateToProps, { submitEmail })(ContactForm);
