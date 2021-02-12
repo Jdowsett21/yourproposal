@@ -1,6 +1,8 @@
 import React from 'react';
 import teamwork from '../img/teamwork.jpg';
 import teamworkSmall from '../img/teamworkSmall.jpg';
+import teamworkweb from '../img/teamwork.webp';
+import teamworkwebSmall from '../img/teamworkSmall.webp';
 import Banner from '../components/Banner';
 import monitor from '../img/svg/mobile friendly.svg';
 import mobile from '../img/svg/mobilePhone.svg';
@@ -9,7 +11,13 @@ import responsive from '../img/file.png';
 function ServicesPage(props) {
   return (
     <div>
-      <Banner img={teamwork} imgSmall={teamworkSmall} text='Services' />
+      <Banner
+        img={teamwork}
+        imgSmall={teamworkSmall}
+        web={teamworkweb}
+        webSmall={teamworkwebSmall}
+        text='Services'
+      />
       <div className='services__section services__section--split'>
         <div className='services__title-section' id='responsive'>
           <h3 className='services__title'>Responsive Design</h3>

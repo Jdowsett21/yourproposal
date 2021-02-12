@@ -14,12 +14,16 @@ import ContactForm from '../components/ContactForm';
 import Process from '../components/Process';
 import process from '../img/process.jpg';
 import processSmall from '../img/processSmall.jpg';
+import processweb from '../img/process.webp';
+import processwebSmall from '../img/processSmall.webp';
 function ProcessPage(props) {
   return (
     <div>
       <Banner
         img={process}
         imgSmall={processSmall}
+        web={processweb}
+        webSmall={processwebSmall}
         text='Web Development Process'
       />
 

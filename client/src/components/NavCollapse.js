@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setNavOpen } from '../actions/InViewActions';
-import navbarButton from '../img/svg/navBarButton.svg';
-import logo from '../img/logo.png';
+// import navbarButton from '../img/svg/navBarButton.svg';
+import logo from '../img/logo.webp';
 import useWindowDimensions from '../utils/ScreenWidth';
 
 function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
@@ -34,7 +34,7 @@ function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
           <div className='navigation__icon-section'>
             <img
               className='navigation__icon--1'
-              src={navbarButton}
+              // src={navbarButton}
               alt='navbar button'
               onClick={() => setNavOpen(!navOpen)}
               style={{ transform: navOpen ? 'rotate(150deg)' : 'rotate(0)' }}

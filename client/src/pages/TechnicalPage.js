@@ -3,11 +3,18 @@ import Banner from '../components/Banner';
 import technical from '../img/codingCloseUp.jpg';
 import technicalSmall from '../img/codingCloseUpSmall.jpg';
 import sprite from '../img/svg/sprite.svg';
-
+import technical1 from '../img/codingCloseUp.webp';
+import technical1Small from '../img/codingCloseUpSmall.webp';
 function TechnicalPage(props) {
   return (
     <>
-      <Banner img={technical} imgSmall={technicalSmall} text='Technical' />
+      <Banner
+        img={technical}
+        imgSmall={technicalSmall}
+        web={technical1}
+        webSmall={technical1Small}
+        text='Technical'
+      />
       <div className='technical'>
         <h3 className='technical__header'>Technical Aptitude</h3>
         <p className='technical__secondary-header'>

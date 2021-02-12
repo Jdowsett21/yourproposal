@@ -11,6 +11,10 @@ import mediaorImage1 from '../img/mediaorImage1.png';
 import mediaorImage1Small from '../img/mediaorImage1Small.png';
 import mediaorImage2 from '../img/mediaorImage2.png';
 import mediaorImage2Small from '../img/mediaorImage2Small.png';
+import mediaorImageweb1 from '../img/mediaorImage1.webp';
+import mediaorImagewebSmall1 from '../img/mediaorImage1Small.webp';
+import mediaorImageweb2 from '../img/mediaorImage2.webp';
+import mediaorImageweb2Small from '../img/mediaorImage1Small.webp';
 
 function MediaorPage() {
   function refreshPage() {
@@ -38,18 +42,38 @@ function MediaorPage() {
           front and center. Mediaor is a digital media application that displays
           blog posts, image galleries and videos.
         </p>
-
-        <img
-          src={mediaorImage1}
-          srcSet={`${mediaorImage1Small} 600w, ${mediaorImage1}`}
-          alt='Mediaor Screenshot'
-          className='project__image project__image--mediaor  project__image--mediaor--1'
-        />
-        <img
-          srcSet={`${mediaorImage2Small} 600w, ${mediaorImage2}`}
-          alt='Mediaor Screenshot'
-          className='project__image project__image--mediaor  project__image--mediaor--2'
-        />
+        <picture className='project__image project__image--mediaor'>
+          <source
+            srcSet={`${mediaorImagewebSmall1} 600w, ${mediaorImageweb1}`}
+            type='image/webp'
+          />
+          <source
+            srcSet={`${mediaorImage1} 600w, ${mediaorImage1Small}`}
+            type='image/jpeg'
+          />
+          <img
+            src={mediaorImage1}
+            alt='Mediaor Screenshot'
+            className='project__image project__image--mediaor  project__image--mediaor--1'
+            loading='lazy'
+          />
+        </picture>
+        <picture className='project__image project__image--mediaor  '>
+          <source
+            srcSet={`${mediaorImageweb2Small} 600w, ${mediaorImageweb2}`}
+            type='image/webp'
+          />
+          <source
+            srcSet={`${mediaorImage2} 600w, ${mediaorImage2Small}`}
+            type='image/jpeg'
+          />
+          <img
+            src={mediaorImage2}
+            alt='Mediaor Screenshot'
+            className='project__image project__image--mediaor  project__image--mediaor--2'
+            loading='lazy'
+          />
+        </picture>
         <h2
           className={
             inView

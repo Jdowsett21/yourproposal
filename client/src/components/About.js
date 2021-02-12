@@ -1,6 +1,8 @@
 import React from 'react';
 import happyCustomer from '../img/pledge.jpg';
 import happyCustomerSmall from '../img/pledgeSmall.jpg';
+import happyCustomerweb from '../img/pledge.webp';
+import happyCustomerwebSmall from '../img/pledgeSmall.webp';
 function About(props) {
   return (
     <div className='about'>
@@ -13,12 +15,22 @@ function About(props) {
         application, e-commerce site or mobile site design we are the web
         development company for you.
       </p>
-      <img
-        srcSet={`${happyCustomerSmall} 600w, ${happyCustomer}`}
-        src={happyCustomer}
-        alt='website design'
-        className='about__img'
-      />
+      <picture className='fit'>
+        <source
+          srcSet={`${happyCustomerwebSmall} 600w, ${happyCustomerweb}`}
+          type='image/webp'
+        />
+        <source
+          srcSet={`${happyCustomer} 600w, ${happyCustomerSmall}`}
+          type='image/jpeg'
+        />
+        <img
+          src={happyCustomer}
+          alt='First slide'
+          className='fit'
+          loading='lazy'
+        />
+      </picture>
     </div>
   );
 }

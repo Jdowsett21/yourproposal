@@ -2,10 +2,16 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import peopleMeeting from '../img/Web Design.jpg';
 import peopleMeetingSmall from '../img/Web Design Small.jpg';
+import peopleMeetingwebSmall from '../img/Web Design Small.webp';
+import peopleMeetingweb from '../img/Web Design.webp';
 import coding from '../img/codingCloseUp.jpg';
 import codingSmall from '../img/codingCloseUpSmall.jpg';
+import codingwebSmall from '../img/codingCloseUpSmall.webp';
+import codingweb from '../img/codingCloseUp.webp';
 import teamWork from '../img/teamwork.jpg';
 import teamWorkSmall from '../img/teamworkSmall.jpg';
+import teamWorkweb from '../img/teamwork.webp';
+import teamWorkwebSmall from '../img/teamworkSmall.webp';
 import { Link } from 'react-router-dom';
 
 function CarouselSection() {
@@ -33,13 +39,22 @@ function CarouselSection() {
               </div>
             </div>
           </div>
-          <img
-            className='fit'
-            src={peopleMeeting}
-            srcSet={`${peopleMeetingSmall} 600w, ${peopleMeeting} `}
-            loading='lazy'
-            alt='Web Design'
-          />
+          <picture className='fit'>
+            <source
+              srcSet={`${peopleMeetingwebSmall} 600w, ${peopleMeetingweb}`}
+              type='image/webp'
+            />
+            <source
+              srcSet={`${peopleMeeting} 600w, ${peopleMeetingSmall}`}
+              type='image/jpeg'
+            />
+            <img
+              src={peopleMeeting}
+              alt='First slide'
+              className='fit'
+              loading='lazy'
+            />
+          </picture>
         </Carousel.Item>
         {/* slide 2 */}
         <Carousel.Item interval={8000}>
@@ -62,14 +77,22 @@ function CarouselSection() {
               </div>
             </div>
           </div>
-
-          <img
-            className='fit'
-            src={coding}
-            srcSet={`${coding} 600w, ${codingSmall} `}
-            loading='lazy'
-            alt='Web Development'
-          />
+          <picture className='fit'>
+            <source
+              srcSet={`${codingwebSmall} 600w, ${codingweb}`}
+              type='image/webp'
+            />
+            <source
+              srcSet={`${coding} 600w, ${codingSmall}`}
+              type='image/jpeg'
+            />
+            <img
+              src={coding}
+              alt='First slide'
+              className='fit'
+              loading='lazy'
+            />
+          </picture>
         </Carousel.Item>
         {/* slide 3 */}
         <Carousel.Item interval={8000}>
@@ -94,14 +117,23 @@ function CarouselSection() {
               </div>
             </div>
           </div>
-
-          <img
-            className='fit'
-            src={teamWork}
-            srcSet={`${teamWork} 600w, ${teamWorkSmall} `}
-            loading='lazy'
-            alt='Third slide'
-          />
+          <picture className='fit'>
+            <source
+              srcSet={`${teamWorkwebSmall} 600w, ${teamWorkweb}`}
+              type='image/webp'
+            />
+            <source
+              srcSet={`${teamWork} 600w, ${teamWorkSmall}`}
+              type='image/jpeg'
+            />
+            <img
+              src={teamWork}
+              alt='First slide'
+              className='fit'
+              loading='lazy'
+              alt='Third slide'
+            />
+          </picture>
         </Carousel.Item>
       </Carousel>
     </>
