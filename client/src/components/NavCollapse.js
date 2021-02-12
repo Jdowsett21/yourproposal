@@ -3,10 +3,11 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setNavOpen } from '../actions/InViewActions';
 // import navbarButton from '../img/svg/navBarButton.svg';
-import logo from '../img/logo.webp';
+import logo from '../img/logo.png';
+import logoweb from '../img/logo.webp';
 import useWindowDimensions from '../utils/ScreenWidth';
 
-function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
+function NavCollapse({ inView: { navOpen }, setNavOpen }) {
   const node = useRef();
   useEffect(() => {
     // add when mounted
@@ -30,6 +31,17 @@ function NavCollapse({ inView: { banner, navOpen }, setNavOpen }) {
           src={logo}
           alt='logo'
         />
+        <picture className='nav-bar__logo nav-bar__logo--collapse'>
+          <source srcSet={logoweb} type='image/webp' />
+          <source srcSet={logo} type='image/jpeg' />
+          <img
+            className='nav-bar__logo nav-bar__logo--collapse'
+            src={logo}
+            alt='logo'
+            loading='lazy'
+          />
+        </picture>
+
         <div className='navigation'>
           <div className='navigation__icon-section'>
             <img

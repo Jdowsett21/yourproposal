@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../img/logo.webp';
+import logo from '../img/logo.png';
+import logoweb from '../img/logo.webp';
 import { Link } from 'react-router-dom';
 import sprite from '../img/svg/sprite.svg';
 import useWindowDimensions from '../utils/ScreenWidth';
@@ -8,7 +9,13 @@ function Footer(props) {
   return (
     <section className='footer'>
       <div className='footer__main'>
-        <img src={logo} alt='Logo' className='footer__logo' />
+        <picture className='footer__logo'>
+          <source srcSet={logoweb} type='image/webp' />
+
+          <source srcSet={logo} type='image/jpeg' />
+
+          <img src={logo} alt='Logo' className='footer__logo' />
+        </picture>
         <div className='footer__column footer__column--1'>
           <h3 className='footer__column-header footer__column-header--modifier'>
             Directory

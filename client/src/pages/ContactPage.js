@@ -6,12 +6,18 @@ import contact from '../img/contact.jpg';
 import contactSmall from '../img/contactSmall.jpg';
 import toronto from '../img/toronto.jpg';
 import torontoSmall from '../img/torontoSmall.jpg';
+import contactweb from '../img/contact.webp';
+import contactwebSmall from '../img/contactSmall.webp';
+import torontoweb from '../img/toronto.webp';
+import torontowebSmall from '../img/torontoSmall.webp';
 function ContactPage(props) {
   return (
     <>
       <Banner
         img={contact}
         imgSmall={contactSmall}
+        web={contactweb}
+        webSmall={contactwebSmall}
         text='Contact'
         modifier='--contact'
       />
@@ -27,12 +33,22 @@ function ContactPage(props) {
           <h3 className='contact-page__header contact-page__header--1'>
             Our Contact Info
           </h3>
-          <img
-            src={toronto}
-            srcSet={`${torontoSmall} 600w, ${toronto}`}
-            alt='Toronto'
-            className='contact-page__location-image'
-          />
+          <picture className='fit'>
+            <source
+              srcSet={`${torontowebSmall} 600w, ${torontoweb}`}
+              type='image/webp'
+            />
+            <source
+              srcSet={`${toronto} 600w, ${torontoSmall}`}
+              type='image/jpeg'
+            />
+            <img
+              src={toronto}
+              alt='Toronto'
+              className='contact-page__location-image'
+              loading='lazy'
+            />
+          </picture>
           <h5 className='contact-page__location-name'>Toronto</h5>
 
           <div className='contact-page__info-section'>

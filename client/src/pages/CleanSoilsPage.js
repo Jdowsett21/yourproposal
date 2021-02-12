@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import cleanSoilsFan from '../img/cleansoilsfan-min.png';
 import cleanSoilsFanSmall from '../img/cleansoilsfanSmall-min.png';
+import cleanSoilsFanweb from '../img/cleansoilsfan-min.webp';
+import cleanSoilsFanSmallweb from '../img/cleansoilsfanSmall-min.webp';
 import sprite from '../img/svg/sprite.svg';
 import ContactUsProject from '../components/ContactUsProject';
 import ColorPalette from '../components/ColorPalette';
@@ -31,6 +33,22 @@ function CleanSoilsPage(props) {
           they mean business. Keeping the website clean and concise was their #1
           priority and Smarter Web Solutions delivered on their ask.
         </p>
+        <picture className='project__image project__image--mediaor  '>
+          <source
+            srcSet={`${cleanSoilsFanSmallweb} 600w, ${cleanSoilsFanweb}`}
+            type='image/webp'
+          />
+          <source
+            srcSet={`${cleanSoilsFan} 600w, ${cleanSoilsFanSmall}`}
+            type='image/jpeg'
+          />
+          <img
+            src={cleanSoilsFan}
+            alt='Mediaor Screenshot'
+            className='project__image project__image--mediaor  project__image--mediaor--2'
+            loading='lazy'
+          />
+        </picture>
 
         <img
           src={cleanSoilsFan}

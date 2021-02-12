@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import ColorNumber from './ColorNumber';
 import ColorHeader from './ColorHeader';
-import Grivety from './Grivety';
 
 function ColorPalette({ color, text }) {
   const { ref, inView } = useInView({
