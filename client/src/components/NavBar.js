@@ -7,11 +7,11 @@ function NavBar() {
   return (
     <div className='navbar'>
       <nav className='nav-bar'>
-        <picture className=''>
+        <picture className='nav-bar__logo-picture'>
           <source srcSet={logoweb} type='image/webp' />
           <source srcSet={logo} type='image/jpeg' />
           <img
-            className='nav-bar__logo nav-bar__logo--collapse'
+            className='nav-bar__logo '
             src={logo}
             alt='logo'
             loading='lazy'
