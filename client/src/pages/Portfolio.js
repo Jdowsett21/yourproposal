@@ -51,6 +51,7 @@ function Portfolio(props) {
                 className='portfolio__logo--bottom'
                 alt='grivety logo'
                 src={grivetyLogo}
+                onClick={() => setApp('grivety')}
               />
               <img
                 src={mediaor}

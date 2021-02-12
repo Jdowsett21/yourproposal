@@ -15,7 +15,8 @@ function About(props) {
         application, e-commerce site or mobile site design we are the web
         development company for you.
       </p>
-      <picture className='fit'>
+
+      <picture className='about__img'>
         <source
           srcSet={`${happyCustomerwebSmall} 600w, ${happyCustomerweb}`}
           type='image/webp'
@@ -27,7 +28,7 @@ function About(props) {
         <img
           src={happyCustomer}
           alt='First slide'
-          className='fit'
+          className='about__img'
           loading='lazy'
         />
       </picture>

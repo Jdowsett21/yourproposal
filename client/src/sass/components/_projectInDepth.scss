@@ -63,6 +63,10 @@
       font-weight: 500;
     }
   }
+  &__image-picture {
+    grid-row: 3/4;
+    justify-self: center;
+  }
   &__image {
     height: 60rem;
     @media only screen and (max-width: 46em) {
@@ -78,9 +82,8 @@
     animation-fill-mode: both;
     justify-self: center;
     &--mediaor {
-      justify-items: center;
       height: 30rem;
-      grid-row: 3/4;
+
       &--2 {
         margin-left: 20rem;
         margin-top: 15rem;

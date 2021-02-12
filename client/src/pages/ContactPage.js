@@ -33,7 +33,7 @@ function ContactPage(props) {
           <h3 className='contact-page__header contact-page__header--1'>
             Our Contact Info
           </h3>
-          <picture className='fit'>
+          <picture className='contact-page__location-picture'>
             <source
               srcSet={`${torontowebSmall} 600w, ${torontoweb}`}
               type='image/webp'

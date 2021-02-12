@@ -92,10 +92,20 @@
       margin-top: 1rem;
     }
   }
-  &__image {
+  &__image-section {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 3/4;
+    justify-items: start;
+    height: 40rem;
+    margin-bottom: 10rem;
+  }
+  &__image-picture {
     grid-row: 1/2;
     grid-column: 1/2;
-    height: 30rem;
+  }
+  &__image {
+    height: 40rem;
     margin-bottom: 10rem;
     @media only screen and (max-width: 75em) {
       height: 22rem;
@@ -168,12 +178,6 @@
         }
       }
     }
-  }
-  &__image-section {
-    display: grid;
-    grid-column: 1/4;
-    grid-row: 3/4;
-    justify-items: start;
   }
   &__bottom-menu {
     grid-row: 5/6;

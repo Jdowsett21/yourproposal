@@ -30,7 +30,7 @@ function CleanSoils(props) {
         </span>
       </p>
       <div className='portfolio__image-section'>
-        <picture>
+        <picture className='portfolio__image-picture '>
           <source
             srcSet={`${cleanSoils1Smallweb} 600w, ${cleanSoils1web}`}
             type='image/webp'
@@ -46,7 +46,7 @@ function CleanSoils(props) {
             loading='lazy'
           />
         </picture>
-        <picture>
+        <picture className='portfolio__image-picture '>
           <source
             srcSet={`${cleanSoilsSmallweb} 600w, ${cleanSoilsweb}`}
             type='image/webp'
