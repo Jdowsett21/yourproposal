@@ -50,12 +50,6 @@ function CleanSoilsPage(props) {
           />
         </picture>
 
-        <img
-          src={cleanSoilsFan}
-          alt='grivety Screenshot'
-          className='project__image'
-          srcSet={`${cleanSoilsFanSmall} 600w, ${cleanSoilsFan}`}
-        />
         <h2
           className={
             inView
