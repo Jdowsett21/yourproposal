@@ -1,9 +1,8 @@
 const express = require('express');
-const app = express();
 const winston = require('winston');
-require('./startup/routes')(app);
-
+const app = express();
 const port = process.env.PORT || 5000;
+require('./startup/routes')(app);
 
 const server = app.listen(port, () => winston.info(`Connected to ${port}`));
 

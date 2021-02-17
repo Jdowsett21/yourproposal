@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { connect } from 'react-redux';
 import { Redirect, Link } from 'react-router-dom';
 import { submitEmail } from '../actions/EmailActions.js';
-import { toast, ToastContainer } from 'react-toastify';
+// import { toast, ToastContainer } from 'react-toastify';
 import MyTextField from '../common/MyTextField';
 import withRouter from '../common/NavBarList';
 
@@ -12,12 +12,12 @@ function ContactForm({
   email: { emailSuccess, emailFailure, contactRedirect },
   submitEmail,
 }) {
-  useEffect(() => {
-    async function toastFunction() {
-      await require('react-toastify/dist/ReactToastify.css');
-    }
-    toastFunction();
-  });
+  // useEffect(() => {
+  //   async function toastFunction() {
+  //     await require('react-toastify/dist/ReactToastify.css');
+  //   }
+  //   toastFunction();
+  // });
   const ContactSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),
     email: Yup.string()
@@ -27,12 +27,12 @@ function ContactForm({
     message: Yup.string().required('Message is required'),
   });
 
-  useEffect(() => {
-    emailFailure &&
-      toast.error('Contact Form Was Not Sent !', {
-        position: toast.POSITION.TOP_LEFT,
-      });
-  }, [emailFailure]);
+  // useEffect(() => {
+  //   emailFailure &&
+  //     toast.error('Contact Form Was Not Sent !', {
+  //       position: toast.POSITION.TOP_LEFT,
+  //     });
+  // }, [emailFailure]);
 
   return (
     <>
@@ -94,7 +94,7 @@ function ContactForm({
                 >
                   Submit
                 </button>
-                <ToastContainer />
+                {/* <ToastContainer /> */}
               </div>
             </Form>
           )}

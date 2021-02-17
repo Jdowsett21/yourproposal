@@ -25,13 +25,13 @@ function ServicesPage(props) {
         <p className='services__text'>
           With each passing day the percentage of individuals browsing on their
           mobile application increases. You need a website that looks just as
-          amazing on your computer as it does on any other device be it a phone
-          or tablet. Building a website with Smarter Web Solutions means you are
-          receiving a beautiful site for every device. We have the skills to
-          create an intuitive experience and a headache free process for you.
-          Allow your users to shop on their phone, easily view your inventory or
-          allow your staff to manage orders. We make sure you are not limited no
-          matter what device you are on.
+          amazing on your computer, as it does on any other device. Building a
+          website with Smarter Web Solutions means you are receiving a beautiful
+          site for every device. We have the skills to create an intuitive
+          experience and a headache free process for you. Allow your users to
+          shop on their phone, easily view your inventory or allow your staff to
+          manage orders. We make sure you are not limited, no matter what device
+          you are using.
         </p>
         <img className='services__image  ' alt='monitor ' src={monitor}></img>
       </div>
@@ -45,13 +45,13 @@ function ServicesPage(props) {
           digital storefront. A professionally designed website goes a long way
           to inform your customers that they are interacting with a state of the
           art business. We are constantly keeping an eye on the latest trends
-          and technologies that are developing each and every day allowing
-          websites to be more interactive, attractive and user friendly. Many
-          out of the box web design sites leave a lot to be desired. It is very
-          frustrating when there are some features that are unfortunately
-          unavailable. That is not the case with Smarter Web Solutions, whatever
-          idea, design or markup you have in mind we can create any
-          customization to ensure your website looks exactly how you desire.
+          and technologies that are developing daily, allowing websites to be
+          more interactive, attractive and user friendly. Many cookie cutter web
+          design sites leave a lot to be desired. It is very frustrating when
+          there are some features that are unfortunately unavailable. That is
+          not the case with Smarter Web Solutions. Whatever idea, design or
+          markup you have in mind, we can create any customization to ensure
+          your website looks exactly how you desire.
         </p>
       </div>
       <div
@@ -64,9 +64,9 @@ function ServicesPage(props) {
           </h3>
         </div>
         <p className='services__text services__text--odd'>
-          Are you in the need of a customized database, crm or any other
+          Are you in the need of a customized database, CRM or any other
           personalized systems but are unable to afford the extremely high price
-          of a building your own desktop application. We are able to build any
+          of a building your own desktop application? We are able to build any
           system you would like on a web application. Allow staff to sign in
           from anywhere to track orders, update delivery information or track
           inventory. Link your customized software to your website so that your
@@ -100,13 +100,12 @@ function ServicesPage(props) {
           <h3 className='services__title'>Mobile Flexibility</h3>
         </div>
         <p className='services__text'>
-          One of the greatest benefits of a web application is that you can save
-          a lot of money as it only has to be built once. Mobile/Desktop
-          applications need to be built on Android and Apple in order to reach
-          all your customers. Furthermore web applications do not rely on native
-          mobile settings they rely on browser settings which are much more
-          stable and will lead to your website lasting much longer before it
-          needs to be updated.
+          One of the greatest benefits of a web application is cost savings, as
+          it only has to be built once. Mobile/Desktop applications need to be
+          built on Android and Apple in order to reach all your customers.
+          Furthermore, web applications do not rely on native mobile settings,
+          they rely on browser settings, which are much more stable. This will
+          reduce the frequency of updates required for your website.
         </p>
         <img
           src={mobile}
@@ -119,9 +118,9 @@ function ServicesPage(props) {
           <h3 className='services__title'>Technology Integration</h3>
         </div>
         <p className='services__text'>
-          Out of the box websites lack functionality. Whether you want to add
+          Website builders can often lack functionality. Whether you want to add
           Google Maps or your Twitter feed within the site, we can embed any
-          programs you would like to make the user experience more enjoyable. We
+          programs of your choice to make the user experience more enjoyable. We
           can link data and communication with other services so that you can
           track inventory or display information for your users.
         </p>

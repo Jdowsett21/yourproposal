@@ -1,7 +1,7 @@
 {
-  "name": "templateApp",
+  "name": "smarterwebsolutions",
   "version": "1.0.0",
-  "description": "Website for clean Soils",
+  "description": "Website for Smarter Web Solutions",
   "main": "index.js",
   "dependencies": {
     "axios": "^0.21.1",
@@ -9,7 +9,9 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "next": "^10.0.7",
     "nodemailer": "^6.4.17",
+    "react": "^17.0.1",
     "react-ga": "^3.3.0",
     "react-imgix": "^9.0.3",
     "react-intersection-observer": "^8.31.0",
@@ -35,12 +37,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jdowsett21/CleanSolutions.git"
+    "url": "git+https://github.com/Jdowsett21/smarterwebsolutions.git"
   },
   "author": "James Dowsett-Cooper",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jdowsett21/CleanSolutions/issues"
+    "url": "https://github.com/Jdowsett21/smarterwebsolutions/issues"
   },
-  "homepage": "https://github.com/Jdowsett21/CleanSolutions#readme"
+  "homepage": "https://github.com/Jdowsett21/smarterwebsolutions#readme"
 }

@@ -105,23 +105,23 @@ function Footer(props) {
         <div className='footer__column footer__column--4'>
           <h3 className='footer__column-header'>Social Media</h3>
           <a
-            className='footer__social-icon-section'
+            className='footer__social-icon-section  footer__social-icon-section--1'
             href='https://www.facebook.com/smarterwebsolution/'
             target='_blank'
             rel='noreferrer'
           >
-            <svg className='footer__social-icon'>
+            <svg className='footer__social-icon footer__social-icon--1'>
               <use href={sprite + '#facebook'}></use>
             </svg>
           </a>
 
           <a
-            className='footer__social-icon-section'
+            className='footer__social-icon-section footer__social-icon-section--2'
             href='https://www.instagram.com/smarterwebsolutions/'
             target='_blank'
             rel='noreferrer'
           >
-            <svg className='footer__social-icon'>
+            <svg className='footer__social-icon  footer__social-icon--2'>
               <use href={sprite + '#instagram'}></use>
             </svg>
           </a>

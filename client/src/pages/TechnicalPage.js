@@ -37,9 +37,9 @@ function TechnicalPage(props) {
             <svg className='technical__icon'>
               <use href={sprite + '#node'}></use>
             </svg>
-            <h4 className='technical__item-header'>Node JS</h4>
+            <h4 className='technical__item-header'>Node.js</h4>
             <p className='technical__item-paragraph'>
-              Node Js is an open source Javscript runtime environement, that
+              Node.js is an open source Javascript runtime environment that
               executes server side code. It is extremely efficient and
               eliminates the bottleneck other server side languages create.
             </p>
@@ -51,7 +51,8 @@ function TechnicalPage(props) {
             <h4 className='technical__item-header'>CSS</h4>
             <p className='technical__item-paragraph'>
               CSS is the engine behind the design of any great website. With new
-              features coming out often, CSS 3 is the face of any modern website
+              features coming out often, CSS 3 is the face of any modern
+              website.
             </p>
           </div>
           <div className='technical__item'>
@@ -93,7 +94,7 @@ function TechnicalPage(props) {
             </svg>
             <h4 className='technical__item-header'>MongoDB</h4>
             <p className='technical__item-paragraph'>
-              MongoDB is a database that is used to flexibly stored data sent
+              MongoDB is a database that is used to flexibly store data sent
               from your website. MongoDB is a very powerful tool that allows
               websites to save and display data in a myriad of ways.
             </p>
@@ -108,7 +109,7 @@ function TechnicalPage(props) {
               style={{ paddingBottom: '3.1rem' }}
             >
               Sass is a CSS pre-compiler that allows us to easily build highly
-              designed website in an efficient manner.
+              designed websites in an efficient manner.
             </p>
           </div>
         </div>

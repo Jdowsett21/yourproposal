@@ -16,6 +16,7 @@ import NavCollapse from './components/NavCollapse';
 import ContactSuccess from './components/ContactSuccess';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import NotFoundPage from './components/NotFoundPage';
 function AppRoutes() {
   const { width } = useWindowDimensions();
   return (
@@ -57,7 +58,10 @@ function AppRoutes() {
           <Route exact path='/'>
             <Home />
           </Route>
-          <Redirect from='/*' to='/' />
+          <Route exact path='/404'>
+            <NotFoundPage />
+          </Route>
+          <Redirect to='/404' />
         </Switch>
         {/* </Suspense> */}
         <Footer />

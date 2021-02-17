@@ -3,6 +3,7 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 
 router.post('/', async (req, res) => {
+  console.log('hello');
   const smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
@@ -12,7 +13,6 @@ router.post('/', async (req, res) => {
       pass: process.env.GMAIL_PASS,
     },
   });
-
   const mailOpts = {
     from: 'Your sender info here', // This is ignored by Gmail
     to: process.env.GMAIL_USER,
