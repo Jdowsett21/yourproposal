@@ -11,7 +11,6 @@ import ColorPalette from '../components/ColorPalette';
 import { useInView } from 'react-intersection-observer';
 import Typeface from '../components/Typeface';
 import Icons from '../components/Icons';
-import Prefetch from '@xdn/react/Prefetch';
 
 function CleanSoilsPage(props) {
   const { ref, inView } = useInView({
@@ -123,21 +122,17 @@ function CleanSoilsPage(props) {
         <ContactUsProject />
 
         <div className='project__next-button-section'>
-          <Link passHref href='/grivety'>
-            <Prefetch>
-              <button className='project__next-button'>
-                <a className='project__next-button--text'>Next Project</a>
-              </button>
-            </Prefetch>
+          <Link href='/grivety'>
+            <button className='project__next-button'>
+              <a className='project__next-button--text'>Next Project</a>
+            </button>
           </Link>
-          <Link passHref href='/grivety'>
-            <Prefetch>
-              <a className='project__next-button-arrow'>
-                <svg className='project__next-icon'>
-                  <use href={sprite + '#play'}></use>
-                </svg>
-              </a>
-            </Prefetch>
+          <Link href='/grivety'>
+            <a className='project__next-button-arrow'>
+              <svg className='project__next-icon'>
+                <use href={sprite + '#play'}></use>
+              </svg>
+            </a>
           </Link>
         </div>
       </div>
