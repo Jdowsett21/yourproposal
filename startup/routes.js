@@ -10,14 +10,14 @@ module.exports = function (app) {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
   if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/out'));
+    app.use(express.static('client/build'));
   }
   app.use('/api/emails', emails);
 
   if (process.env.NODE_ENV === 'production') {
     app.get('*', (req, res) => {
       res.sendFile(
-        path.resolve(__dirname, '../client', 'out', 'index.html'),
+        path.resolve(__dirname, '../client', 'build', 'index.html'),
         function (err) {
           if (err) {
             res.status(500).send(err);
