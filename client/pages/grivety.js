@@ -118,7 +118,7 @@ function GrivetyPage({ color }) {
         >
           <Link href='/mediaor'>
             <a className='project__next-button' style={{ cursor: 'pointer' }}>
-              <a className='project__next-button--text'>Next Project</a>
+              <p className='project__next-button--text'>Next Project</p>
             </a>
           </Link>
           <Link href='/mediaor'>

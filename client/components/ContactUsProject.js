@@ -1,11 +1,11 @@
-import React from 'react';
-// import React from 'react';
+import React, { useEffect } from 'react';
 import { Form, Formik, useField } from 'formik';
 import * as Yup from 'yup';
 import { connect } from 'react-redux';
-import { Redirect, Link } from 'react-router-dom';
 import { submitEmail } from '../actions/EmailActions.js';
 import FormInput from '../common/FormInput.js';
+import { toast, ToastContainer } from 'react-toastify';
+import { useRouter } from 'next/router';
 
 const MyTextField = ({ placeholder, ...props }) => {
   const [field, meta] = useField(props);
@@ -14,18 +14,33 @@ const MyTextField = ({ placeholder, ...props }) => {
   return (
     <FormInput
       {...field}
-      helperText={errorText}
+      helpertext={errorText}
       modification='--project'
-      error={!!errorText}
+      error={errorText ? 'true' : 'false'}
       form='project__'
     />
   );
 };
 
 function ContactUsProject({
-  email: { emailSuccess, emailError },
+  email: { contactRedirect, emailFailure },
   submitEmail,
 }) {
+  const router = useRouter();
+  useEffect(() => {
+    async function toastFunction() {
+      await require('react-toastify/dist/ReactToastify.css');
+    }
+    toastFunction();
+  });
+  useEffect(() => {
+    emailFailure &&
+      toast.error('Contact Form Was Not Sent !', {
+        position: toast.POSITION.TOP_LEFT,
+      });
+    contactRedirect && router.push('/contactSuccess');
+  }, [emailFailure, contactRedirect]);
+
   const ContactSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),
     email: Yup.string()
@@ -75,6 +90,7 @@ function ContactUsProject({
                 required
               />
             </div>
+            <ToastContainer />
             <button type='submit' text='Submit' className='project__button'>
               Submit
             </button>

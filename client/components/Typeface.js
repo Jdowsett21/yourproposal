@@ -5,7 +5,6 @@ function Typeface({ font }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
-  console.log(font);
   return (
     <div ref={ref}>
       <h4

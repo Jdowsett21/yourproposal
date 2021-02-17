@@ -1,4 +1,7 @@
 {
+  "cacheDirectories": [
+    ".next/cache"
+  ],
   "scripts": {
     "xdn": "xdn",
     "xdn:dev": "xdn dev",
@@ -46,7 +49,13 @@
     "redux-thunk": "^2.3.0",
     "sass": "^1.32.7",
     "web-vitals": "^1.1.0",
-    "yup": "^0.32.8"
+    "yup": "^0.32.8",
+    "@xdn/cli": "^2.46.3",
+    "@xdn/core": "^2.46.3",
+    "@xdn/devtools": "^2.46.3",
+    "@xdn/next": "^2.46.3",
+    "@xdn/prefetch": "^2.46.3",
+    "@xdn/react": "^2.46.3"
   },
   "browserslist": [
     "since 2010"

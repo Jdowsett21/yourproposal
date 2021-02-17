@@ -7,7 +7,7 @@ function Icons({ icons, text, backgroundColor }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
-  console.log(text);
+
   return (
     <>
       <h3
