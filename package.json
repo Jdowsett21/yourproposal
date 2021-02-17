@@ -28,7 +28,7 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "client": "npm start --prefix client",
+    "client": "npm run dev --prefix client",
     "clientinstall": "npm install --prefix client",
     "dev": " env-cmd -f ./config/.env concurrently \"npm run server\" \"npm run client\"",
     "build": "cd client && npm run build",
