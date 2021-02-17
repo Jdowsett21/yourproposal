@@ -1,15 +1,14 @@
 {
+  "cacheDirectories": [
+    ".next/cache"
+  ],
   "scripts": {
-    "xdn": "xdn",
-    "xdn:dev": "xdn dev",
-    "xdn:build": "xdn build",
-    "xdn:deploy": "xdn deploy",
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "xdn run --prefix client",
     "clientinstall": "npm install --prefix client",
     "dev": " env-cmd -f ./config/.env concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd client && xdn build",
+    "build": "cd client && npm build",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
