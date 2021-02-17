@@ -9,8 +9,6 @@ import mediaorImagewebSmall1 from '../public/img/mediaorImage1Small.webp';
 import mediaorImageweb2 from '../public/img/mediaorImage2.webp';
 import mediaorImageweb2Small from '../public/img/mediaorImage1Small.webp';
 import Link from 'next/link';
-import Prefetch from '@xdn/react/Prefetch';
-
 function Mediaor(props) {
   return (
     <>
@@ -23,18 +21,16 @@ function Mediaor(props) {
         Mediaor represents the modern company looking to attract new young
         clientele with attractive and captivating styles within the website. The
         use of photo galleries, icons and...{' '}
-        <Link passHref href='/mediaor'>
-          <Prefetch>
-            <span
-              style={{
-                textDecoration: 'none',
-                color: '#5db9f7',
-                cursor: 'pointer',
-              }}
-            >
-              Learn More
-            </span>
-          </Prefetch>
+        <Link href='/mediaor'>
+          <span
+            style={{
+              textDecoration: 'none',
+              color: '#5db9f7',
+              cursor: 'pointer',
+            }}
+          >
+            Learn More
+          </span>
         </Link>
       </p>
       <div className='portfolio__image-section'>

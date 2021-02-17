@@ -6,14 +6,15 @@ import { useRouter } from 'next/router';
 import { submitEmail } from '../actions/EmailActions.js';
 import { toast, ToastContainer } from 'react-toastify';
 import MyTextField from '../common/MyTextField';
-import 'react-toastify/dist/ReactToastify.css';
 
 function ContactForm({
   email: { emailFailure, contactRedirect },
   submitEmail,
 }) {
   useEffect(() => {
-    async function toastFunction() {}
+    async function toastFunction() {
+      await require('react-toastify/dist/ReactToastify.css');
+    }
     toastFunction();
   });
   const router = useRouter();
