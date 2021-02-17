@@ -10,7 +10,7 @@
     "dev": " env-cmd -f ./config/.env concurrently \"npm run server\" \"npm run client\"",
     "build": "cd client && xdn build",
     "install-client": "cd client && npm install",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false  \"npm  run install-client\" \"npm run build\""
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false concurrently \"npm  run install-client\" \"npm run build\""
   },
   "name": "smarterwebsolutions",
   "version": "1.0.0",
