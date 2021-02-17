@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 function NotFoundPage(props) {
   return (
@@ -46,11 +46,11 @@ function NotFoundPage(props) {
               Uh oh! Looks like you got lost. <br />
               Go back to the homepage if you dare!
             </p>
-            <button style={{ outline: 'none' }}>
-              <Link class='jello' to='/'>
+            <Link href='/'>
+              <button class='jello' style={{ outline: 'none' }}>
                 i dare!
-              </Link>
-            </button>
+              </button>
+            </Link>
           </article>
         </div>
       </div>

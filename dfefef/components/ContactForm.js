@@ -9,7 +9,7 @@ import MyTextField from '../common/MyTextField';
 import 'react-toastify/dist/ReactToastify.css';
 
 function ContactForm({
-  email: { emailSuccess, emailFailure, contactRedirect },
+  email: { emailFailure, contactRedirect },
   submitEmail,
 }) {
   useEffect(() => {
@@ -33,11 +33,12 @@ function ContactForm({
       toast.error('Contact Form Was Not Sent !', {
         position: toast.POSITION.TOP_LEFT,
       });
-  }, [emailFailure]);
+    contactRedirect && router.push('/contactSuccess');
+  }, [emailFailure, contactRedirect]);
 
   return (
     <>
-      {contactRedirect && router.push('/contactSuccess')}
+      {}
       <div className='contact'>
         <div className=''></div>
 

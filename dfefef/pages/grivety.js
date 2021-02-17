@@ -2,56 +2,51 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Link from 'next/link';
 
-import cleanSoilsFan from '../public/img/cleansoilsfan-min.png';
-import cleanSoilsFanSmall from '../public/img/cleansoilsfanSmall-min.png';
-import cleanSoilsFanweb from '../public/img/cleansoilsfan-min.webp';
-import cleanSoilsFanSmallweb from '../public/img/cleansoilsfanSmall-min.webp';
 import sprite from '../public/img/svg/sprite.svg';
 import ContactUsProject from '../components/ContactUsProject';
 import ColorPalette from '../components/ColorPalette';
 import { useInView } from 'react-intersection-observer';
 import Typeface from '../components/Typeface';
 import Icons from '../components/Icons';
+import grivetyLogo from '../public/img/svg/grivetylogo-1.svg';
+import ImageSlider from '../components/ImageSlider';
+import NextProjectButton from '../common/NextProjectButton';
+import CarouselSection from '../components/Carousel';
+import GrivetyCarousel from '../components/GrivetyCarousel';
+import { useMediaQuery } from '../utils/ScreenWidth';
+import dynamic from 'next/dynamic';
 
-function CleanSoilsPage(props) {
-  // function refreshPage() {
-  //   window.location.reload(true);
-  // }
+const DynamicComponent = dynamic(() => import('../components/ImageSlider'), {
+  ssr: false,
+});
+function GrivetyPage({ color }) {
+  function refreshPage() {
+    window.location.reload(true);
+  }
   const { ref, inView } = useInView({
-    // triggerOnce: true,
+    triggerOnce: true,
   });
-  // const location = useLocation();
+  const mediaQuery = useMediaQuery(770);
+  const location = useLocation();
 
   return (
     <>
       <div className='project'>
-        <svg className='portfolio__company-logo'>
-          <use href={sprite + '#cleanSoils'}></use>
-        </svg>
-        <p className='project__description'>
-          Clean Soils was looking to upgrade their site to professional look so
-          they could compete with their competition. They received a website
-          with the latest features and styles, letting their customers know that
-          they mean business. Keeping the website clean and concise was their #1
-          priority and Smarter Web Solutions delivered on their ask.
-        </p>
-        <picture className='project__image'>
-          <source
-            srcSet={`${cleanSoilsFanSmallweb} 600w, ${cleanSoilsFanweb}`}
-            type='image/webp'
-          />
-          <source
-            srcSet={`${cleanSoilsFan} 600w, ${cleanSoilsFanSmall}`}
-            type='image/jpeg'
-          />
+        <div className='project__company-logo-section'>
           <img
-            src={cleanSoilsFan}
-            alt='Mediaor Screenshot'
-            className='project__image'
-            loading='lazy'
+            src={grivetyLogo}
+            className='portfolio__company-logo portfolio__company-logo--grivety'
+            alt='grivety logo'
           />
-        </picture>
-
+        </div>
+        <p className='project__description'>
+          Grivety is a modern banking web application that displays the power of
+          using a database in unison with your web server. Grivety displays data
+          in every imaginable way. Grivety was an extremely exciting project to
+          create as it showed how powerful web development can be for advanced
+          applications.
+        </p>
+        {!mediaQuery ? <DynamicComponent /> : <GrivetyCarousel />}
         <h2
           className={
             inView
@@ -72,27 +67,27 @@ function CleanSoilsPage(props) {
           </span>
         </h2>
         <ColorPalette
-          color={['#25a7f4', '#77b609', '#264977']}
-          text='Clean Soils wanted to quickly display all of its services so that the site immediately grabbed the users attention.  We made sure to incorporate the Clean Soils color palette to leave a lasting reminder of the Clean Soils brand.'
+          color={['#48b461', '#e15361', '#44a2a3']}
+          text='Grivety is a prototype budgeting app that is designed to show the
+            possibilites that can be created using a full scale application with
+            a database on the backend. In observing Grivety it can be seen that any
+            system that your business needs is possible. Whether you
+            need to be track inventory or manage deliveries, Smarter Web
+            Solutions can create your system.'
         />
-        <Typeface font='Montserrat' />
+        <Typeface font='Segoe UI' />
         <Icons
-          backgroundColor='#25a7f4'
+          backgroundColor='#44a2a3'
           icons={[
-            '#construction',
-            '#icon-utilities',
-            '#icon-municipal',
-            '#icon-tree',
-            '#icon-fire',
-            '#icon-lab',
+            '#piggy',
+            '#wallet',
+            '#funnel',
+            '#money',
+            '#credit',
+            '#graph',
           ]}
-          text='We wanted to create a user interface that was easy to use on any device,
-          whether a laptop or mobile device. The website has creative animations to
-          capture the audiences attention and unique icons to visually demonstrate
-          the basics of Clean Soils. Users will leave the Clean Soils site fully
-          understanding what Clean Soils represents.'
+          text='It is essential that Grivety had advanced security features to protect sensitive information.  Smarter Web Solutions ensures with every application we create that the highest level of security is used to protect user data and your data.'
         />
-
         {/* <h2 className='project__large-header'>
         Final
         <span className='project__large-header project__large-header--1'>
@@ -125,18 +120,21 @@ function CleanSoilsPage(props) {
 
         <h2 className='project__contact-header'>Contact Us</h2>
         <ContactUsProject />
-
         <div
           className='project__next-button-section'
-          // onClick={() => refreshPage()}
+          onClick={() => refreshPage()}
+          style={{ cursor: 'default' }}
         >
-          <Link href='/grivety'>
-            <button className='project__next-button'>
+          <Link href='/mediaor'>
+            <a className='project__next-button' style={{ cursor: 'pointer' }}>
               <a className='project__next-button--text'>Next Project</a>
-            </button>
+            </a>
           </Link>
-          <Link href='/grivety'>
-            <a className='project__next-button-arrow'>
+          <Link href='/mediaor'>
+            <a
+              className='project__next-button-arrow'
+              style={{ cursor: 'pointer' }}
+            >
               <svg className='project__next-icon'>
                 <use href={sprite + '#play'}></use>
               </svg>
@@ -148,4 +146,4 @@ function CleanSoilsPage(props) {
   );
 }
 
-export default CleanSoilsPage;
+export default GrivetyPage;

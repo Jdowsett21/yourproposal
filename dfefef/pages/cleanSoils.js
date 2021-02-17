@@ -1,80 +1,53 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Link from 'next/link';
 
+import cleanSoilsFan from '../public/img/cleansoilsfan-min.png';
+import cleanSoilsFanSmall from '../public/img/cleansoilsfanSmall-min.png';
+import cleanSoilsFanweb from '../public/img/cleansoilsfan-min.webp';
+import cleanSoilsFanSmallweb from '../public/img/cleansoilsfanSmall-min.webp';
 import sprite from '../public/img/svg/sprite.svg';
 import ContactUsProject from '../components/ContactUsProject';
 import ColorPalette from '../components/ColorPalette';
 import { useInView } from 'react-intersection-observer';
 import Typeface from '../components/Typeface';
 import Icons from '../components/Icons';
-import mediaor from '../public/img/svg/mediaor.svg';
-import mediaorImage1 from '../public/img/mediaorImage1.png';
-import mediaorImage1Small from '../public/img/mediaorImage1Small.png';
-import mediaorImage2 from '../public/img/mediaorImage2.png';
-import mediaorImage2Small from '../public/img/mediaorImage2Small.png';
-import mediaorImageweb1 from '../public/img/mediaorImage1.webp';
-import mediaorImagewebSmall1 from '../public/img/mediaorImage1Small.webp';
-import mediaorImageweb2 from '../public/img/mediaorImage2.webp';
-import mediaorImageweb2Small from '../public/img/mediaorImage1Small.webp';
 
-// function refreshPage() {
-//   if (window !== undefined) {
-//     window.location.reload(true);
-//   }
-//   return window.location
-// }
-
-function MediaorPage() {
+function CleanSoilsPage(props) {
+  function refreshPage() {
+    window.location.reload(true);
+  }
   const { ref, inView } = useInView({
-    // triggerOnce: true,
+    triggerOnce: true,
   });
+  const location = useLocation();
 
   return (
     <>
       <div className='project'>
-        <div className='project__company-logo-section'>
-          <img
-            className='portfolio__company-logo portfolio__company-logo--mediaor'
-            src={mediaor}
-            alt='mediaor'
-          />
-        </div>
+        <svg className='portfolio__company-logo'>
+          <use href={sprite + '#cleanSoils'}></use>
+        </svg>
         <p className='project__description'>
-          Mediaor shows the possibilites of how media can be creatively
-          displayed, especially for a business that needs their content to be
-          front and center. Mediaor is a digital media application that displays
-          blog posts, image galleries and videos.
+          Clean Soils was looking to upgrade their site to professional look so
+          they could compete with their competition. They received a website
+          with the latest features and styles, letting their customers know that
+          they mean business. Keeping the website clean and concise was their #1
+          priority and Smarter Web Solutions delivered on their ask.
         </p>
-
-        <picture className=' project__image-picture'>
+        <picture className='project__image'>
           <source
-            srcSet={`${mediaorImagewebSmall1} 600w, ${mediaorImageweb1}`}
+            srcSet={`${cleanSoilsFanSmallweb} 600w, ${cleanSoilsFanweb}`}
             type='image/webp'
           />
           <source
-            srcSet={`${mediaorImage1} 600w, ${mediaorImage1Small}`}
+            srcSet={`${cleanSoilsFan} 600w, ${cleanSoilsFanSmall}`}
             type='image/jpeg'
           />
           <img
-            src={mediaorImage1}
+            src={cleanSoilsFan}
             alt='Mediaor Screenshot'
-            className='project__image project__image--mediaor project__image--mediaor--1 '
-            loading='lazy'
-          />
-        </picture>
-        <picture className=' project__image-picture  '>
-          <source
-            srcSet={`${mediaorImageweb2Small} 600w, ${mediaorImageweb2}`}
-            type='image/webp'
-          />
-          <source
-            srcSet={`${mediaorImage2} 600w, ${mediaorImage2Small}`}
-            type='image/jpeg'
-          />
-          <img
-            src={mediaorImage2}
-            alt='Mediaor Screenshot'
-            className='project__image project__image--mediaor project__image--mediaor--2  '
+            className='project__image'
             loading='lazy'
           />
         </picture>
@@ -98,20 +71,28 @@ function MediaorPage() {
             Zone
           </span>
         </h2>
-        <ColorPalette color={['#ffba40', '#dc3545', '#343a40']} />
-        <Typeface font='Helvetica Neue' />
-        <Icons
-          backgroundColor='#dc3545'
-          icons={[
-            '#bullhorn',
-            '#cloud-solid',
-            '#cog',
-            '#comment',
-            '#building',
-            '#cart',
-          ]}
-          text='Mediaor is able to take any content and turn it into something innovative and captivating so that users are engaged in all areas of the site.  Smarter Web Solutions design worked tirelessly to create a unique layout, with essential wireframe as the foundation'
+        <ColorPalette
+          color={['#25a7f4', '#77b609', '#264977']}
+          text='Clean Soils wanted to quickly display all of its services so that the site immediately grabbed the users attention.  We made sure to incorporate the Clean Soils color palette to leave a lasting reminder of the Clean Soils brand.'
         />
+        <Typeface font='Montserrat' />
+        <Icons
+          backgroundColor='#25a7f4'
+          icons={[
+            '#construction',
+            '#icon-utilities',
+            '#icon-municipal',
+            '#icon-tree',
+            '#icon-fire',
+            '#icon-lab',
+          ]}
+          text='We wanted to create a user interface that was easy to use on any device,
+          whether a laptop or mobile device. The website has creative animations to
+          capture the audiences attention and unique icons to visually demonstrate
+          the basics of Clean Soils. Users will leave the Clean Soils site fully
+          understanding what Clean Soils represents.'
+        />
+
         {/* <h2 className='project__large-header'>
         Final
         <span className='project__large-header project__large-header--1'>
@@ -147,14 +128,14 @@ function MediaorPage() {
 
         <div
           className='project__next-button-section'
-          // onClick={() => setValue(true)}
+          onClick={() => refreshPage()}
         >
-          <Link href='/cleanSoils'>
+          <Link href='/grivety'>
             <button className='project__next-button'>
               <a className='project__next-button--text'>Next Project</a>
             </button>
           </Link>
-          <Link href='/cleanSoils'>
+          <Link href='/grivety'>
             <a className='project__next-button-arrow'>
               <svg className='project__next-icon'>
                 <use href={sprite + '#play'}></use>
@@ -167,4 +148,4 @@ function MediaorPage() {
   );
 }
 
-export default MediaorPage;
+export default CleanSoilsPage;
