@@ -97,7 +97,7 @@
     grid-column: 1/4;
     grid-row: 3/4;
     justify-items: start;
-    height: 40rem;
+    height: 30rem;
     margin-bottom: 10rem;
   }
   &__image-picture {
@@ -105,10 +105,11 @@
     grid-column: 1/2;
   }
   &__image {
-    height: 40rem;
-    margin-bottom: 10rem;
-    @media only screen and (max-width: 75em) {
-      height: 22rem;
+    height: 30rem;
+    // margin-bottom: 10rem;
+
+    @media only screen and (max-width: 112em) {
+      height: 40rem;
     }
     @media only screen and (max-width: 40em) {
       // margin-top: 10rem;
