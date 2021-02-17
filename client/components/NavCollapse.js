@@ -6,6 +6,7 @@ import hello from '../public/img/svg/navBarButton.svg';
 import logo from '../public/img/logo.png';
 import logoweb from '../public/img/logo.webp';
 import { useMediaQuery } from '../utils/ScreenWidth';
+import Prefetch from '@xdn/react/Prefetch';
 
 function NavCollapse({ inView: { navOpen }, setNavOpen }) {
   const node = useRef();
@@ -95,8 +96,10 @@ function NavCollapse({ inView: { navOpen }, setNavOpen }) {
                 smooth='true'
                 onClick={() => setNavOpen(false)}
               >
-                <Link href='/'>
-                  <a className='navigation__link '>Home</a>
+                <Link href='/' passHref>
+                  <Prefetch>
+                    <a className='navigation__link '>Home</a>
+                  </Prefetch>
                 </Link>
               </li>
               <li
@@ -104,8 +107,10 @@ function NavCollapse({ inView: { navOpen }, setNavOpen }) {
                 smooth='true'
                 onClick={() => setNavOpen(false)}
               >
-                <Link href='/services'>
-                  <a className='navigation__link'>Services</a>
+                <Link passHref href='/services'>
+                  <Prefetch>
+                    <a className='navigation__link'>Services</a>
+                  </Prefetch>
                 </Link>
               </li>
               <li
@@ -113,8 +118,10 @@ function NavCollapse({ inView: { navOpen }, setNavOpen }) {
                 smooth='true'
                 onClick={() => setNavOpen(false)}
               >
-                <Link href='/process'>
-                  <a className='navigation__link'>Process</a>
+                <Link passHref href='/process'>
+                  <Prefetch>
+                    <a className='navigation__link'>Process</a>
+                  </Prefetch>
                 </Link>
               </li>
               <li
@@ -122,8 +129,10 @@ function NavCollapse({ inView: { navOpen }, setNavOpen }) {
                 smooth='true'
                 onClick={() => setNavOpen(false)}
               >
-                <Link href='/portfolio'>
-                  <a className='navigation__link'>Portfolio</a>
+                <Link passHref href='/portfolio'>
+                  <Prefetch>
+                    <a className='navigation__link'>Portfolio</a>
+                  </Prefetch>
                 </Link>
               </li>
               <li
@@ -131,8 +140,10 @@ function NavCollapse({ inView: { navOpen }, setNavOpen }) {
                 smooth='true'
                 onClick={() => setNavOpen(false)}
               >
-                <Link href='/technical'>
-                  <a className='navigation__link'>Technical</a>
+                <Link passHref href='/technical'>
+                  <Prefetch>
+                    <a className='navigation__link'>Technical</a>
+                  </Prefetch>
                 </Link>
               </li>
               <li
@@ -140,8 +151,10 @@ function NavCollapse({ inView: { navOpen }, setNavOpen }) {
                 smooth='true'
                 onClick={() => setNavOpen(false)}
               >
-                <Link href='/contact'>
-                  <a className='navigation__link'>Contact</a>
+                <Link passHref href='/contact'>
+                  <Prefetch>
+                    <a className='navigation__link'>Contact</a>
+                  </Prefetch>
                 </Link>
               </li>
             </ul>

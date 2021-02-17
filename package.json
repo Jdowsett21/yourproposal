@@ -1,4 +1,18 @@
 {
+  "scripts": {
+    "xdn": "xdn",
+    "xdn:dev": "xdn dev",
+    "xdn:build": "xdn build",
+    "xdn:deploy": "xdn deploy",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run dev --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": " env-cmd -f ./config/.env concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
   "name": "smarterwebsolutions",
   "version": "1.0.0",
   "description": "Website for Smarter Web Solutions",
@@ -24,16 +38,6 @@
     "concurrently": "^5.3.0",
     "env-cmd": "^10.1.0",
     "nodemon": "^2.0.6"
-  },
-  "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js",
-    "client": "npm run dev --prefix client",
-    "clientinstall": "npm install --prefix client",
-    "dev": " env-cmd -f ./config/.env concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",

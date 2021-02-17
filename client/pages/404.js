@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import Prefetch from '@xdn/react/Prefetch';
 function NotFoundPage(props) {
   return (
     <section className='wrapper'>
@@ -46,10 +46,12 @@ function NotFoundPage(props) {
               Uh oh! Looks like you got lost. <br />
               Go back to the homepage if you dare!
             </p>
-            <Link href='/'>
-              <button className='jello' style={{ outline: 'none' }}>
-                i dare!
-              </button>
+            <Link href='/' passHref>
+              <Prefetch>
+                <button className='jello' style={{ outline: 'none' }}>
+                  i dare!
+                </button>
+              </Prefetch>
             </Link>
           </article>
         </div>

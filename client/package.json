@@ -1,12 +1,16 @@
 {
-  "name": "smarter-web-solutions",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
+    "xdn": "xdn",
+    "xdn:dev": "xdn dev",
+    "xdn:build": "xdn build",
+    "xdn:deploy": "xdn deploy",
     "dev": "NODE_ENV='development' node server.js",
     "build": "next build && next export",
     "start": "next start"
   },
+  "name": "smarter-web-solutions",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
@@ -47,5 +51,13 @@
   "browserslist": [
     "since 2010"
   ],
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "@xdn/cli": "^2.46.3",
+    "@xdn/core": "^2.46.3",
+    "@xdn/devtools": "^2.46.3",
+    "@xdn/next": "^2.46.3",
+    "@xdn/prefetch": "^2.46.3",
+    "@xdn/react": "^2.46.3"
+  }
 }

@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 import Link from 'next/link';
 
 import cleanSoilsFan from '../public/img/cleansoilsfan-min.png';
@@ -12,6 +11,7 @@ import ColorPalette from '../components/ColorPalette';
 import { useInView } from 'react-intersection-observer';
 import Typeface from '../components/Typeface';
 import Icons from '../components/Icons';
+import Prefetch from '@xdn/react/Prefetch';
 
 function CleanSoilsPage(props) {
   const { ref, inView } = useInView({
@@ -123,17 +123,21 @@ function CleanSoilsPage(props) {
         <ContactUsProject />
 
         <div className='project__next-button-section'>
-          <Link href='/grivety'>
-            <button className='project__next-button'>
-              <a className='project__next-button--text'>Next Project</a>
-            </button>
+          <Link passHref href='/grivety'>
+            <Prefetch>
+              <button className='project__next-button'>
+                <a className='project__next-button--text'>Next Project</a>
+              </button>
+            </Prefetch>
           </Link>
-          <Link href='/grivety'>
-            <a className='project__next-button-arrow'>
-              <svg className='project__next-icon'>
-                <use href={sprite + '#play'}></use>
-              </svg>
-            </a>
+          <Link passHref href='/grivety'>
+            <Prefetch>
+              <a className='project__next-button-arrow'>
+                <svg className='project__next-icon'>
+                  <use href={sprite + '#play'}></use>
+                </svg>
+              </a>
+            </Prefetch>
           </Link>
         </div>
       </div>

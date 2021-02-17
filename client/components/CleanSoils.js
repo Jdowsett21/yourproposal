@@ -9,6 +9,7 @@ import cleanSoils1web from '../public/img/cleanSoils2.webp';
 import cleanSoils1Smallweb from '../public/img/cleanSoils2Small.webp';
 import sprite from '../public/img/svg/sprite.svg';
 import Link from 'next/link';
+import Prefetch from '@xdn/react/Prefetch';
 
 function CleanSoils(props) {
   return (
@@ -20,16 +21,18 @@ function CleanSoils(props) {
         Clean Soils wanted to build a modern website to rival their competitors.
         The minimalistic animation effects and sharp design provide users with a
         exceptional experience and...{' '}
-        <Link href='/cleanSoils'>
-          <span
-            style={{
-              textDecoration: 'none',
-              color: '#5db9f7',
-              cursor: 'pointer',
-            }}
-          >
-            Learn More
-          </span>
+        <Link passHref href='/cleanSoils'>
+          <Prefetch>
+            <span
+              style={{
+                textDecoration: 'none',
+                color: '#5db9f7',
+                cursor: 'pointer',
+              }}
+            >
+              Learn More
+            </span>
+          </Prefetch>
         </Link>
       </p>
       <div className='portfolio__image-section'>

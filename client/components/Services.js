@@ -133,7 +133,6 @@ function Services(props) {
                 <a
                   style={{ textDecoration: 'none' }}
                   className='service__item__button'
-                  smooth
                 >
                   <p className='service__button-text'>Learn More</p>
                 </a>
@@ -166,7 +165,6 @@ function Services(props) {
                 <a
                   style={{ textDecoration: 'none' }}
                   className='service__item__button'
-                  smooth
                 >
                   <p className='service__button-text'>Learn More</p>
                 </a>
@@ -217,7 +215,6 @@ function Services(props) {
 
                 <a
                   style={{ textDecoration: 'none' }}
-                  smooth
                   className='service__item__button'
                 >
                   <p className='service__button-text'>Learn More</p>

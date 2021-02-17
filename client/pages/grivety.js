@@ -1,7 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import Link from 'next/link';
-
 import sprite from '../public/img/svg/sprite.svg';
 import ContactUsProject from '../components/ContactUsProject';
 import ColorPalette from '../components/ColorPalette';
@@ -9,9 +7,6 @@ import { useInView } from 'react-intersection-observer';
 import Typeface from '../components/Typeface';
 import Icons from '../components/Icons';
 import grivetyLogo from '../public/img/svg/grivetylogo-1.svg';
-import ImageSlider from '../components/ImageSlider';
-import NextProjectButton from '../common/NextProjectButton';
-import CarouselSection from '../components/Carousel';
 import GrivetyCarousel from '../components/GrivetyCarousel';
 import { useMediaQuery } from '../utils/ScreenWidth';
 import dynamic from 'next/dynamic';
@@ -20,14 +15,10 @@ const DynamicComponent = dynamic(() => import('../components/ImageSlider'), {
   ssr: false,
 });
 function GrivetyPage({ color }) {
-  // function refreshPage() {
-  //   window.location.reload(true);
-  // }
   const { ref, inView } = useInView({
     // triggerOnce: true,
   });
   const mediaQuery = useMediaQuery(770);
-  // const location = useLocation();
 
   return (
     <>

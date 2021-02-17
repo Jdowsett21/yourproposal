@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import moneytrackerImage3 from '../public/img/svg/grivetyimage3-min.png';
 import moneytrackerImage2 from '../public/img/svg/grivetyImage2-min.png';
 import moneytrackerImage4 from '../public/img/svg/grivetyImage4.svg';
@@ -8,9 +8,7 @@ import moneytrackerImage3web from '../public/img/svg/grivetyimage3-min.webp';
 import moneytrackerImage2web from '../public/img/svg/grivetyImage2-min.webp';
 import moneytrackerImage5web from '../public/img/svg/grivetyImage5-min.webp';
 import moneytrackerImage6web from '../public/img/svg/grivetyImage6-min.webp';
-
 import { Carousel } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 function GrivetyCarousel(props) {
   return (

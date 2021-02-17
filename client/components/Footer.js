@@ -4,6 +4,8 @@ import logoweb from '../public/img/logo.webp';
 import Link from 'next/link';
 import sprite from '../public/img/svg/sprite.svg';
 import { useMediaQuery } from '../utils/ScreenWidth';
+import Prefetch from '@xdn/react/Prefetch';
+
 function Footer(props) {
   const mediaQuery = useMediaQuery(600);
 
@@ -22,24 +24,36 @@ function Footer(props) {
             Directory
           </h3>
           <div className='footer__link-section'>
-            <Link href='/'>
-              <a className='footer__text footer__text--link'>Home</a>
+            <Link passHref href='/'>
+              <Prefetch>
+                <a className='footer__text footer__text--link'>Home</a>
+              </Prefetch>
             </Link>
 
-            <Link href='/services'>
-              <a className='footer__text footer__text--link'>Services</a>
+            <Link passHref href='/services'>
+              <Prefetch>
+                <a className='footer__text footer__text--link'>Services</a>
+              </Prefetch>
             </Link>
-            <Link href='/process'>
-              <a className='footer__text footer__text--link'>Process</a>
+            <Link passHref href='/process'>
+              <Prefetch>
+                <a className='footer__text footer__text--link'>Process</a>
+              </Prefetch>
             </Link>
-            <Link href='/portfolio'>
-              <a className='footer__text footer__text--link'>Portfolio</a>
+            <Link passHref href='/portfolio'>
+              <Prefetch>
+                <a className='footer__text footer__text--link'>Portfolio</a>
+              </Prefetch>
             </Link>
-            <Link href='/technical'>
-              <a className='footer__text footer__text--link'>Technical</a>
+            <Link passHref href='/technical'>
+              <Prefetch>
+                <a className='footer__text footer__text--link'>Technical</a>
+              </Prefetch>
             </Link>
-            <Link href='/contact'>
-              <a className='footer__text footer__text--link'>Contact</a>
+            <Link passHref href='/contact'>
+              <Prefetch>
+                <a className='footer__text footer__text--link'>Contact</a>
+              </Prefetch>
             </Link>
           </div>
         </div>

@@ -13,9 +13,7 @@ function ContactForm({
   submitEmail,
 }) {
   useEffect(() => {
-    async function toastFunction() {
-      await require('react-toastify/dist/ReactToastify.css');
-    }
+    async function toastFunction() {}
     toastFunction();
   });
   const router = useRouter();
@@ -59,7 +57,6 @@ function ContactForm({
                 </h2>
 
                 <MyTextField
-                  ariaLabel='name'
                   name='name'
                   type='text'
                   required
@@ -70,12 +67,10 @@ function ContactForm({
                   id='email'
                   name='email'
                   type='email'
-                  ariaLabel='Email'
                   required
                 />
                 <MyTextField
                   placeholder='Subject'
-                  ariaLabel='Subject'
                   name='subject'
                   type='text'
                   required
@@ -86,7 +81,6 @@ function ContactForm({
                   id='message'
                   name='message'
                   type='text-box'
-                  ariaLabel='Message'
                   required
                 />
                 <button

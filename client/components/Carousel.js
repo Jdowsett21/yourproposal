@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import peopleMeeting from '../public/img/Web Design.jpg';
-import peopleMeetingSmall from '../public/img/Web Design Small.jpg';
-import peopleMeetingwebSmall from '../public/img/Web Design Small.webp';
-import peopleMeetingweb from '../public/img/Web Design.webp';
+import peopleMeeting from '../public/img/WebDesign.jpg';
+import peopleMeetingSmall from '../public/img/WebDesignSmall.jpg';
+import peopleMeetingwebSmall from '../public/img/WebDesignSmall.webp';
+import peopleMeetingweb from '../public/img/WebDesign.webp';
 import coding from '../public/img/codingCloseUp.jpg';
 import codingSmall from '../public/img/codingCloseUpSmall.jpg';
 import codingwebSmall from '../public/img/codingCloseUpSmall.webp';
@@ -12,6 +12,7 @@ import teamWorkSmall from '../public/img/teamworkSmall.jpg';
 import teamWorkweb from '../public/img/teamwork.webp';
 import teamWorkwebSmall from '../public/img/teamworkSmall.webp';
 import Link from 'next/link';
+import Prefetch from '@xdn/react/Prefetch';
 
 function CarouselSection() {
   const { Carousel } = require('react-bootstrap');
@@ -31,10 +32,12 @@ function CarouselSection() {
                 </h5>
               </div>
               <div className='carousel__button-container'>
-                <Link href='/contact'>
-                  <button className='carousel__button carousel__button--text'>
-                    Contact Us
-                  </button>
+                <Link passHref href='/contact'>
+                  <Prefetch>
+                    <button className='carousel__button carousel__button--text'>
+                      Contact Us
+                    </button>
+                  </Prefetch>
                 </Link>
               </div>
             </div>
@@ -69,13 +72,15 @@ function CarouselSection() {
                 </h5>
               </div>
               <div className='carousel__button-container'>
-                <Link href='services'>
-                  <button
-                    href='/services'
-                    className='carousel__button--text carousel__button'
-                  >
-                    Learn More
-                  </button>
+                <Link passHref href='services'>
+                  <Prefetch>
+                    <button
+                      href='/services'
+                      className='carousel__button--text carousel__button'
+                    >
+                      Learn More
+                    </button>
+                  </Prefetch>
                 </Link>
               </div>
             </div>
@@ -112,10 +117,12 @@ function CarouselSection() {
               </div>
 
               <div className='carousel__button-container'>
-                <Link href='/portfolio'>
-                  <button className='carousel__button carousel__button--text'>
-                    Learn More
-                  </button>
+                <Link passHref href='/portfolio'>
+                  <Prefetch>
+                    <button className='carousel__button carousel__button--text'>
+                      Learn More
+                    </button>
+                  </Prefetch>
                 </Link>
               </div>
             </div>

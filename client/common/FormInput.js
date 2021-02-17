@@ -6,7 +6,7 @@ const FormInput = (props) => {
       className={`${props.form}input--${props.name} ${props.form}input--${props.name}${props.modification} `}
       style={{
         marginBottom:
-          props.helperText === '' && props.name !== 'message'
+          props.helpertext === '' && props.name !== 'message'
             ? '3rem'
             : props.name === 'message'
             ? '2.5rem'
@@ -21,11 +21,11 @@ const FormInput = (props) => {
       ) : (
         <input {...props} type={'text'} className={` ${props.form}input`} />
       )}
-      {props.helperText !== '' ? (
+      {props.helpertext !== '' ? (
         <p
           className={`${props.form}form-error ${props.form}form-error--${props.name}`}
         >
-          {props.helperText}
+          {props.helpertext}
         </p>
       ) : (
         <p className='form-no-error'></p>

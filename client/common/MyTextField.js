@@ -10,8 +10,8 @@ function MyTextField({ placeholder, ...props }) {
     <FormInput
       {...field}
       placeholder={placeholder}
-      helperText={errorText}
-      error={!!errorText}
+      helpertext={errorText}
+      error={errorText ? 'true' : 'false'}
       form='contact-info__'
     />
   );

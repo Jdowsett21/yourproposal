@@ -15,16 +15,15 @@ const MyTextField = ({ placeholder, ...props }) => {
     <FormInput
       {...field}
       placeholder={placeholder}
-      helperText={errorText}
-      // modification='--small'
-      error={!!errorText}
+      helpertext={errorText}
+      error={errorText ? 'true' : 'false'}
       form='contact-info__'
     />
   );
 };
 
 function ContactFormSmall({
-  email: { emailSuccess, emailFailure, contactRedirect },
+  email: { emailFailure, contactRedirect },
   submitEmail,
 }) {
   const router = useRouter();
