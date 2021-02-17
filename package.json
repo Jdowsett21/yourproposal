@@ -1,16 +1,17 @@
 {
-  "cacheDirectories": [
-    ".next/cache"
-  ],
   "scripts": {
+    "xdn": "xdn",
+    "xdn:dev": "xdn dev",
+    "xdn:build": "xdn build",
+    "xdn:deploy": "xdn deploy",
     "start": "node index.js",
     "server": "nodemon index.js",
-    "client": "cd client && npm install && xdn run",
+    "client": "npm run dev --prefix client",
     "clientinstall": "npm install --prefix client",
     "dev": " env-cmd -f ./config/.env concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd client && xdn build",
+    "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install  && npm run xdn deploy"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "name": "smarterwebsolutions",
   "version": "1.0.0",
