@@ -4,5 +4,6 @@ const withSass = require('@zeit/next-sass');
 
 module.exports = withImages(
   { responsive: { adapter: require('responsive-loader/sharp') } },
-  withSass({ minified: true }, withCss())
+  withSass({ minified: true }, withCss()),
+  { exportTrailingSlash: true }
 );
