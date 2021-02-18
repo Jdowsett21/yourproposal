@@ -9,6 +9,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { StaticRouter as Router } from 'react-router-dom';
 import { useMediaQuery } from '../utils/ScreenWidth';
+import Head from 'next/head';
 const MyApp = ({ Component, pageProps }) => {
   const mediaQuery = useMediaQuery(1100);
 
@@ -20,11 +21,26 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <Router>
       <Provider store={store}>
+        <Head>
+          <link rel='icon' href='%PUBLIC_URL%/favicon.ico' />
+          <meta
+            name='keywords'
+            content='web development, web design, e-commerce, website, developer, software'
+          />
+          <meta
+            name='description'
+            content='Web Design Company in Toronto,
+    specializing in custom website design, web development, e-commerce &amp; custom
+    web based software.'
+          ></meta>
+          <meta name='image' content='../src/img/WebDesign.jpg'></meta>
+          <title>Web Design Toronto - Web Development Company Toronto</title>
+        </Head>
         <ToTopPageOnReload>
           {!mediaQuery ? <NavBar /> : <NavCollapse />}
           <Component {...pageProps} />
+          <Footer />
         </ToTopPageOnReload>
-        <Footer />
       </Provider>
     </Router>
   );
