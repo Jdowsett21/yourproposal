@@ -5,9 +5,17 @@ import technicalSmall from '../public/img/codingCloseUpSmall.jpg';
 import sprite from '../public/img/svg/sprite.svg';
 import technical1 from '../public/img/codingCloseUp.webp';
 import technical1Small from '../public/img/codingCloseUpSmall.webp';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 function TechnicalPage(props) {
+  const site = 'https://smarterwebsolutions.ca';
+  const canURL = site + useRouter().pathname;
+
   return (
     <>
+      <Head>
+        <link rel='canonical' href={canURL} />
+      </Head>
       <Banner
         img={technical}
         imgSmall={technicalSmall}

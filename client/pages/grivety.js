@@ -10,7 +10,8 @@ import grivetyLogo from '../public/img/svg/grivetylogo-1.svg';
 import GrivetyCarousel from '../components/GrivetyCarousel';
 import { useMediaQuery } from '../utils/ScreenWidth';
 import dynamic from 'next/dynamic';
-
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 const DynamicComponent = dynamic(() => import('../components/ImageSlider'), {
   ssr: false,
 });
@@ -20,8 +21,14 @@ function GrivetyPage({ color }) {
   });
   const mediaQuery = useMediaQuery(770);
 
+  const site = 'https://smarterwebsolutions.ca';
+  const canURL = site + useRouter().pathname;
+
   return (
     <>
+      <Head>
+        <link rel='canonical' href={canURL} />
+      </Head>
       <div className='project'>
         <div className='project__company-logo-section'>
           <img

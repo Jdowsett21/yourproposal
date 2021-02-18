@@ -16,7 +16,8 @@ import mediaorImageweb1 from '../public/img/mediaorImage1.webp';
 import mediaorImagewebSmall1 from '../public/img/mediaorImage1Small.webp';
 import mediaorImageweb2 from '../public/img/mediaorImage2.webp';
 import mediaorImageweb2Small from '../public/img/mediaorImage1Small.webp';
-
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 function MediaorPage() {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -24,8 +25,14 @@ function MediaorPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+  const site = 'https://smarterwebsolutions.ca';
+  const canURL = site + useRouter().pathname;
+
   return (
     <>
+      <Head>
+        <link rel='canonical' href={canURL} />
+      </Head>
       <div className='project'>
         <div className='project__company-logo-section'>
           <img

@@ -10,9 +10,17 @@ import contactweb from '../public/img/contact.webp';
 import contactwebSmall from '../public/img/contactSmall.webp';
 import torontoweb from '../public/img/toronto.webp';
 import torontowebSmall from '../public/img/torontoSmall.webp';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 function ContactPage(props) {
+  const site = 'https://smarterwebsolutions.ca';
+  const canURL = site + useRouter().pathname;
+
   return (
     <>
+      <Head>
+        <link rel='canonical' href={canURL} />
+      </Head>
       <Banner
         img={contact}
         imgSmall={contactSmall}

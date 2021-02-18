@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps }) => {
     <Router>
       <Provider store={store}>
         <Head>
-          <link rel='icon' href='%PUBLIC_URL%/favicon.ico' />
+          <meta name='robots' content='index' />
           <meta
             name='keywords'
             content='web development, web design, e-commerce, website, developer, software'
@@ -34,7 +34,6 @@ const MyApp = ({ Component, pageProps }) => {
     web based software.'
           ></meta>
           <meta name='image' content='../src/img/WebDesign.jpg'></meta>
-          <title>Web Design Toronto - Web Development Company Toronto</title>
         </Head>
         <ToTopPageOnReload>
           {!mediaQuery ? <NavBar /> : <NavCollapse />}

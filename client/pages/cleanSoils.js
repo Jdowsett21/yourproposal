@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 import cleanSoilsFan from '../public/img/cleansoilsfan-min.png';
 import cleanSoilsFanSmall from '../public/img/cleansoilsfanSmall-min.png';
 import cleanSoilsFanweb from '../public/img/cleansoilsfan-min.webp';
@@ -11,14 +10,21 @@ import ColorPalette from '../components/ColorPalette';
 import { useInView } from 'react-intersection-observer';
 import Typeface from '../components/Typeface';
 import Icons from '../components/Icons';
-
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 function CleanSoilsPage(props) {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
 
+  const site = 'https://smarterwebsolutions.ca';
+  const canURL = site + useRouter().pathname;
+
   return (
     <>
+      <Head>
+        <link rel='canonical' href={canURL} />
+      </Head>{' '}
       <div className='project'>
         <svg className='portfolio__company-logo'>
           <use href={sprite + '#cleanSoils'}></use>
