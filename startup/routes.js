@@ -18,8 +18,9 @@ module.exports = function (app) {
 
   if (process.env.NODE_ENV === 'production') {
     app.get('*', (req, res) => {
+      console.log(path.resolve(__dirname, '../client', 'out', 'index.html'));
       res.sendFile(
-        process.cwd(__dirname, '../client', 'out', 'index.html'),
+        path.resolve(__dirname, '../client', 'out', 'index.html'),
         function (err) {
           if (err) {
             res.status(500).send(err);
