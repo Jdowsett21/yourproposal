@@ -26,6 +26,7 @@
     "express": "^4.17.1",
     "formik": "^2.2.6",
     "http-proxy-middleware": "^1.0.6",
+    "lru-cache": "^6.0.0",
     "next": "10.0.6",
     "next-images": "^1.7.0",
     "next-redux-wrapper": "^6.0.2",
