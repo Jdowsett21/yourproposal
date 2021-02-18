@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
-const sitemap = require('nextjs-sitemap-generator'); // Import the package
+// const sitemap = require('nextjs-sitemap-generator'); // Import the package
 const apiPaths = {
   '/api': {
     target: 'http://localhost:5000',
@@ -15,11 +15,11 @@ const apiPaths = {
     changeOrigin: true,
   },
 };
-sitemap({
-  baseUrl: 'https://smarterwebsolutions.ca',
-  pagesDirectory: __dirname + '/pages',
-  targetDirectory: 'static/',
-});
+// sitemap({
+//   baseUrl: 'https://smarterwebsolutions.ca',
+//   pagesDirectory: __dirname + '/pages',
+//   targetDirectory: 'static/',
+// });
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 app

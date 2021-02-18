@@ -11,7 +11,7 @@ import { StaticRouter as Router } from 'react-router-dom';
 import { useMediaQuery } from '../utils/ScreenWidth';
 import Head from 'next/head';
 const MyApp = ({ Component, pageProps }) => {
-  const sitemap = require('nextjs-sitemap-generator');
+  // const sitemap = require('nextjs-sitemap-generator');
 
   const mediaQuery = useMediaQuery(1100);
 

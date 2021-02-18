@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import navArray from './NavBarArray';
 import NavItem from './NavItem';
-import { withRouter } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
-function NavBarList({ location }) {
+function NavBarList() {
   const [active, setActive] = useState('');
   const [hover, setHoverItem] = useState(false);
-
+  const path = useRouter().pathname.substring(1);
   useEffect(() => {
-    setActive(location.pathname.substring(1));
-  }, [location]);
+    setActive(path);
+  }, [useRouter().pathname]);
   return (
     <ul className='nav-bar__list'>
       {navArray.map((nav, index) => (
@@ -30,4 +30,4 @@ function NavBarList({ location }) {
   );
 }
 
-export default withRouter(NavBarList);
+export default NavBarList;
