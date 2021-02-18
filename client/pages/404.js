@@ -10,6 +10,12 @@ function NotFoundPage(props) {
   return (
     <>
       <Head>
+        <title>404</title>
+        <meta
+          name='description'
+          content='You have reached a broken page, please return home'
+        ></meta>
+
         <link rel='canonical' href={canURL} />
       </Head>
       <section className='wrapper'>

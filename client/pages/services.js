@@ -17,6 +17,13 @@ function ServicesPage(props) {
     <>
       <Head>
         <link rel='canonical' href={canURL} />
+        <title>Services</title>
+        <meta
+          name='description'
+          content='Discover all the services we provide like
+   custom website design, web development, e-commerce &amp; custom
+    web based software.'
+        ></meta>
       </Head>
       <div>
         <Banner

@@ -11,8 +11,6 @@ import { StaticRouter as Router } from 'react-router-dom';
 import { useMediaQuery } from '../utils/ScreenWidth';
 import Head from 'next/head';
 const MyApp = ({ Component, pageProps }) => {
-  // const sitemap = require('nextjs-sitemap-generator');
-
   const mediaQuery = useMediaQuery(1100);
 
   useEffect(() => {
@@ -29,12 +27,6 @@ const MyApp = ({ Component, pageProps }) => {
             name='keywords'
             content='web development, web design, e-commerce, website, developer, software'
           />
-          <meta
-            name='description'
-            content='Web Design Company in Toronto,
-    specializing in custom website design, web development, e-commerce &amp; custom
-    web based software.'
-          ></meta>
           <meta name='image' content='../src/img/WebDesign.jpg'></meta>
         </Head>
         <ToTopPageOnReload>

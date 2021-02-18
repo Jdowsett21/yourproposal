@@ -19,6 +19,12 @@ function ContactPage(props) {
   return (
     <>
       <Head>
+        <title>Contact Us Today</title>
+        <meta
+          name='description'
+          content='Contact us today and let us help you build your website design'
+        ></meta>
+
         <link rel='canonical' href={canURL} />
       </Head>
       <Banner

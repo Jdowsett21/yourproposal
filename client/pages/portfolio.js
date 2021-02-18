@@ -24,6 +24,11 @@ function Portfolio(props) {
     <>
       <Head>
         <link rel='canonical' href={canURL} />
+        <title>Portfolio</title>
+        <meta
+          name='description'
+          content='View some of the great work we have done for other small businesses, building their web applications and their custom web based software.'
+        ></meta>
       </Head>
       <div className='portfolio'>
         <Gradient color='white' />

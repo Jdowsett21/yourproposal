@@ -23,6 +23,13 @@ function CleanSoilsPage(props) {
   return (
     <>
       <Head>
+        <meta
+          name='description'
+          content='Clean Soils is a modern website design with unique features'
+        ></meta>
+
+        <title>Clean Soils</title>
+
         <link rel='canonical' href={canURL} />
       </Head>{' '}
       <div className='project'>

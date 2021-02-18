@@ -27,6 +27,12 @@ function GrivetyPage({ color }) {
   return (
     <>
       <Head>
+        <meta
+          name='description'
+          content='Grivety displays the complexity that we can create, no matter how difficult your projectk'
+        ></meta>
+
+        <title>Grivety - Budgeting App</title>
         <link rel='canonical' href={canURL} />
       </Head>
       <div className='project'>

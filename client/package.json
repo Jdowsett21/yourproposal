@@ -3,10 +3,6 @@
     ".next/cache"
   ],
   "scripts": {
-    "xdn": "xdn",
-    "xdn:dev": "xdn dev",
-    "xdn:build": "xdn build",
-    "xdn:deploy": "xdn deploy",
     "dev": "NODE_ENV='development' node server.js",
     "build": "next build && next export",
     "start": "next start"

@@ -14,6 +14,13 @@ function App() {
     <>
       <Head>
         <link rel='canonical' href={canURL} />
+        <title>Web Design Toronto - Web Development Company Toronto</title>
+        <meta
+          name='description'
+          content='Web Design Company in Toronto,
+    specializing in custom website design, web development, e-commerce &amp; custom
+    web based software.'
+        ></meta>
       </Head>
       <div>
         <Carousel />
