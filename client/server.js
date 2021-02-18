@@ -26,7 +26,12 @@ app
     if (isDevelopment) {
       server.use('/api', createProxyMiddleware(apiPaths['/api']));
     }
-
+    server.use(
+      '/static',
+      express.static(__dirname + '/static', {
+        maxAge: '365d',
+      })
+    );
     server.all('*', (req, res) => {
       return handle(req, res);
     });
