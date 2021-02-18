@@ -1,11 +1,15 @@
-const next = require('next');
-const { createProxyMiddleware } = require('http-proxy-middleware');
 const express = require('express');
+const next = require('next');
+const path = require('path');
+const url = require('url');
+const cluster = require('cluster');
+const numCPUs = require('os').cpus().length;
+const { createProxyMiddleware } = require('http-proxy-middleware');
+// const sitemap = require('nextjs-sitemap-generator'); // Import the package
+
 const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
-const handle = app.getRequestHandler();
-// const sitemap = require('nextjs-sitemap-generator'); // Import the package
+
 const apiPaths = {
   '/api': {
     target: 'http://localhost:5000',
@@ -15,6 +19,10 @@ const apiPaths = {
     changeOrigin: true,
   },
 };
+
+const app = next({ dir: '.', dev });
+const handle = app.getRequestHandler();
+
 // sitemap({
 //   baseUrl: 'https://smarterwebsolutions.ca',
 //   pagesDirectory: __dirname + '/pages',
