@@ -15,7 +15,7 @@ function TechnicalPage(props) {
     <>
       <Head>
         <link rel='canonical' href={canURL} />
-        <title>Technical Skills</title>
+        <title>Web Design Toronto - Technical Skills</title>
         <meta
           name='description'
           content='Check out all the technical skills that make us great web development and web design experts.'

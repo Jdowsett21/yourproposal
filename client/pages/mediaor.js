@@ -32,7 +32,7 @@ function MediaorPage() {
     <>
       <Head>
         <link rel='canonical' href={canURL} />
-        <title>Mediaor</title>
+        <title>Web Design Toronto - Mediaor</title>
         <meta
           name='description'
           content='Mediaor is one of our favourite projects, creating a rich user experience for media display'

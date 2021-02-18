@@ -10,7 +10,7 @@ function NotFoundPage(props) {
   return (
     <>
       <Head>
-        <title>404</title>
+        <title>Web Design Toronto - 404</title>
         <meta
           name='description'
           content='You have reached a broken page, please return home'

@@ -28,7 +28,7 @@ function CleanSoilsPage(props) {
           content='Clean Soils is a modern website design with unique features'
         ></meta>
 
-        <title>Clean Soils</title>
+        <title>Web Design Toronto - Clean Soils</title>
 
         <link rel='canonical' href={canURL} />
       </Head>{' '}

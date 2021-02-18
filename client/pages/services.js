@@ -17,7 +17,7 @@ function ServicesPage(props) {
     <>
       <Head>
         <link rel='canonical' href={canURL} />
-        <title>Services</title>
+        <title>Web Design Toronto - Services</title>
         <meta
           name='description'
           content='Discover all the services we provide like

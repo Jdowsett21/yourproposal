@@ -19,7 +19,7 @@ function ContactPage(props) {
   return (
     <>
       <Head>
-        <title>Contact Us Today</title>
+        <title>Web Design Toronto - Contact Us Today</title>
         <meta
           name='description'
           content='Contact us today and let us help you build your website design'

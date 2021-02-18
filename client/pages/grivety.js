@@ -32,7 +32,7 @@ function GrivetyPage({ color }) {
           content='Grivety displays the complexity that we can create, no matter how difficult your projectk'
         ></meta>
 
-        <title>Grivety - Budgeting App</title>
+        <title>Web Design Toronto - Grivety</title>
         <link rel='canonical' href={canURL} />
       </Head>
       <div className='project'>

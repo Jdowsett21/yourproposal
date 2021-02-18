@@ -26,7 +26,7 @@ function ProcessPage(props) {
     <>
       <Head>
         <link rel='canonical' href={canURL} />
-        <title>Process</title>
+        <title>Web Design Toronto - Process</title>
         <meta
           name='description'
           content='See the process you will go through with our web development experts building
