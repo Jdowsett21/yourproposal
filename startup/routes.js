@@ -17,7 +17,7 @@ module.exports = function (app) {
   app.use('/api/emails', emails);
 
   if (process.env.NODE_ENV === 'production') {
-    app.get('*', (req, res) => {
+    app.get('/', (req, res) => {
       res.sendFile(
         path.resolve(__dirname, '../client', 'out', 'index.html'),
         function (err) {
