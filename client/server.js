@@ -15,24 +15,12 @@ const apiPaths = {
     changeOrigin: true,
   },
 };
-
-const isDevelopment = process.env.NODE_ENV !== 'production';
-
 sitemap({
-  alternateUrls: {
-    en: 'https://example.en',
-    es: 'https://example.es',
-    ja: 'https://example.jp',
-    fr: 'https://example.fr',
-  },
-  baseUrl: 'https://example.com',
-  ignoredPaths: ['admin'],
-  extraPaths: ['/extraPath'],
-  pagesDirectory: __dirname + '\\pages',
+  baseUrl: 'https://smarterwebsolutions.ca',
+  pagesDirectory: __dirname + '/pages',
   targetDirectory: 'static/',
-  sitemapFilename: 'sitemap.xml',
-  nextConfigPath: __dirname + '\\next.config.js',
 });
+const isDevelopment = process.env.NODE_ENV !== 'production';
 
 app
   .prepare()
