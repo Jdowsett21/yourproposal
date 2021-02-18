@@ -12,7 +12,7 @@ module.exports = function (app) {
   app.use(bodyParser.json());
   app.use(helmet());
   if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../my-app/out')));
+    app.use(express.static('client/out'));
   }
   app.use('/api/emails', emails);
 
