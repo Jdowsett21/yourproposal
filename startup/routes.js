@@ -12,13 +12,20 @@ module.exports = function (app) {
   app.use(bodyParser.json());
   app.use(helmet());
   if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../my-app/out')));
+    app.use(express.static('client/out'));
   }
   app.use('/api/emails', emails);
 
   if (process.env.NODE_ENV === 'production') {
-    app.get('/', (req, res) => {
-      res.sendFile(path.join(__dirname, '../my-app/out/index.html'));
+    app.get('*', (req, res) => {
+      res.sendFile(
+        process.cwd(__dirname, '../client', 'out', 'index.html'),
+        function (err) {
+          if (err) {
+            res.status(500).send(err);
+          }
+        }
+      );
     });
   }
 };
