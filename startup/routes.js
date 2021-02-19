@@ -17,9 +17,9 @@ module.exports = function (app) {
   app.use('/api/emails', emails);
 
   if (process.env.NODE_ENV === 'production') {
-    app.get('/service', (req, res) => {
+    app.get('/services', (req, res) => {
       res.sendFile(
-        path.resolve(__dirname, '../client', 'out', 'service.html'),
+        path.resolve(__dirname, '../client', 'out', 'services.html'),
         function (err) {
           if (err) {
             res.status(500).send(err);
