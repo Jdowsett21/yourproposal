@@ -90,10 +90,10 @@ function ContactUsProject({
                 required
               />
             </div>
-            <ToastContainer />
             <button type='submit' text='Submit' className='project__button'>
               Submit
             </button>
+            <ToastContainer />
           </div>
         </Form>
       )}

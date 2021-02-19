@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { resetContactRedirect } from '../actions/EmailActions';
 import { connect } from 'react-redux';
 import Link from 'next/link';
