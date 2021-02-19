@@ -17,7 +17,17 @@ module.exports = function (app) {
   app.use('/api/emails', emails);
 
   if (process.env.NODE_ENV === 'production') {
-    app.get('*', (req, res) => {
+    app.get('/service', (req, res) => {
+      res.sendFile(
+        path.resolve(__dirname, '../client', 'out', 'service.html'),
+        function (err) {
+          if (err) {
+            res.status(500).send(err);
+          }
+        }
+      );
+    });
+    app.get('/contact', (req, res) => {
       res.sendFile(
         path.resolve(__dirname, '../client', 'out', 'contact.html'),
         function (err) {
@@ -26,6 +36,16 @@ module.exports = function (app) {
           }
         }
       );
+      app.get('*', (req, res) => {
+        res.sendFile(
+          path.resolve(__dirname, '../client', 'out', 'contact.html'),
+          function (err) {
+            if (err) {
+              res.status(500).send(err);
+            }
+          }
+        );
+      });
     });
   }
 };
