@@ -27,10 +27,11 @@ const MyApp = ({ Component, pageProps }) => {
     <Router>
       <Provider store={store}>
         <Head>
+          <link rel='shortcut icon' href='/favicon.ico' />
           <meta name='robots' content='index' />
           <meta
             name='keywords'
-            content='web development, web design, e-commerce, website, developer, software'
+            content='web development, web design, e-commerce, website, developer, software, coding, web design toronto, toronto'
           />
           <meta name='image' content='../src/img/WebDesign.jpg'></meta>
         </Head>
