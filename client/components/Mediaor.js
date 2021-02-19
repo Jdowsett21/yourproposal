@@ -46,7 +46,7 @@ function Mediaor(props) {
           <img
             src={mediaorImage1}
             alt='Mediaor Screenshot'
-            className='portfolio__image project__image--mediaor'
+            className='portfolio__image--mediaor'
             loading='lazy'
           />
         </picture>
@@ -62,7 +62,7 @@ function Mediaor(props) {
           <img
             src={mediaorImage2}
             alt='Mediaor Screenshot'
-            className='portfolio__image project__image--mediaor portfolio__image--mediaor--1'
+            className=' portfolio__image--mediaor portfolio__image--mediaor--1'
             loading='lazy'
           />
         </picture>

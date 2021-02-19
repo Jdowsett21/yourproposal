@@ -117,6 +117,7 @@ function Portfolio(props) {
                     <svg
                       className='portfolio__logo--bottom'
                       onClick={() => setApp('cleanSoils')}
+                      style={{ marginLeft: '2rem' }}
                     >
                       <use href={sprite + '#cleanSoils'}></use>
                     </svg>
@@ -134,7 +135,7 @@ function Portfolio(props) {
                     )
                   }
                 >
-                  <use href={sprite + '#arrow'}></use>
+                  <use href={sprite + '#next-button'}></use>
                 </svg>
               </div>
             ) : (
