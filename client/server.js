@@ -31,7 +31,7 @@ app
       server.use('/api', createProxyMiddleware(apiPaths['/api']));
     }
 
-    server.all('*', (req, res) => {
+    server.all('/*', (req, res) => {
       return handle(req, res);
     });
 
