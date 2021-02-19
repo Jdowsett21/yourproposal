@@ -106,16 +106,27 @@ module.exports = function (app) {
           }
         }
       );
-      app.get('*', (req, res) => {
-        res.sendFile(
-          path.resolve(__dirname, '../client', 'out', 'index.html'),
-          function (err) {
-            if (err) {
-              res.status(500).send(err);
-            }
+    });
+    app.get('/process', (req, res) => {
+      res.sendFile(
+        path.resolve(__dirname, '../client', 'out', 'process.html'),
+        function (err) {
+          if (err) {
+            res.status(500).send(err);
           }
-        );
-      });
+        }
+      );
+    });
+
+    app.get('*', (req, res) => {
+      res.sendFile(
+        path.resolve(__dirname, '../client', 'out', 'index.html'),
+        function (err) {
+          if (err) {
+            res.status(500).send(err);
+          }
+        }
+      );
     });
   }
 };
