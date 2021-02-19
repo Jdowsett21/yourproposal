@@ -8,6 +8,9 @@ function ContactSuccess({ resetContactRedirect }) {
   const site = 'https://smarterwebsolutions.ca';
   const canURL = site + useRouter().pathname;
 
+  useEffect(() => {
+    return resetContactRedirect();
+  }, [canURL]);
   return (
     <>
       <Head>
