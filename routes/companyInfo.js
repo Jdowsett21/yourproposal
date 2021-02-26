@@ -33,15 +33,10 @@ router.put('/:companyName', async (req, res) => {
 });
 
 router.get('/download/:companyName', async (req, res) => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
-  await page.goto(`https://yourproposal.ca/${req.params.companyName}`, {
-    waitUntil: 'networkidle0',
-  });
-  // await page.addStyleTag({
-  //   // content:
-  //   //   '.nav { display: none} .navbar { border: 0px} #print-button {display: none}',
-  // });
+  await page.goto(`http://localhost:3000/${req.params.companyName}`);
+
   const pdf = await page.pdf({ path: 'hn.pdf', format: 'a4' });
 
   await browser.close();
@@ -50,6 +45,6 @@ router.get('/download/:companyName', async (req, res) => {
     'Content-Type': 'application/pdf',
     'Content-Length': pdf.length,
   });
-  res.attach(pdf);
+  res.send(pdf);
 });
 module.exports = router;

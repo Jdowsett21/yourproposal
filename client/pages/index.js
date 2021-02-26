@@ -42,38 +42,63 @@ function App({
   // }, [signed]);
 
   return (
-    <div className='main-container'>
-      <NavBar name={name} />
-
-      {page === 'intro' ? (
-        <Intro name={name} color1={color1} color2={color2} />
-      ) : page === 'website' ? (
-        <Website name={name} color1={color1} color2={color2} />
-      ) : page === 'timescale' ? (
-        <Timescale name={name} color1={color1} color2={color2} />
-      ) : page === 'paid' ? (
-        <Paid name={name} color1={color1} color2={color2} />
-      ) : page === 'investment' ? (
-        <Investment name={name} color1={color1} color2={color2} />
-      ) : page === 'guarantee' ? (
-        <Guarantee name={name} color1={color1} color2={color2} />
-      ) : page === 'proposal' ? (
-        <Proposal
-          name={name}
-          color1={color1}
-          color2={color2}
-          signed={signed}
-          ipAddress={ipAddress}
-          dateSigned={dateSigned}
-          signatureImage={signatureImage}
-          signatureText={signatureText}
-          type={type}
-        />
+    <>
+      {signed ? (
+        <>
+          <Intro name={name} color1={color1} color2={color2} />
+          <Website name={name} color1={color1} color2={color2} />
+          <Timescale name={name} color1={color1} color2={color2} />
+          <Paid name={name} color1={color1} color2={color2} />
+          <Investment name={name} color1={color1} color2={color2} />
+          <Guarantee name={name} color1={color1} color2={color2} />
+          <Proposal
+            name={name}
+            color1={color1}
+            color2={color2}
+            signed={signed}
+            ipAddress={ipAddress}
+            dateSigned={dateSigned}
+            signatureImage={signatureImage}
+            signatureText={signatureText}
+            type={type}
+          />
+          <Terms name={name} color1={color1} color2={color2} />
+        </>
       ) : (
-        <Terms name={name} color1={color1} color2={color2} />
+        <div className='main-container'>
+          <NavBar name={name} />
+
+          {page === 'intro' ? (
+            <Intro name={name} color1={color1} color2={color2} />
+          ) : page === 'website' ? (
+            <Website name={name} color1={color1} color2={color2} />
+          ) : page === 'timescale' ? (
+            <Timescale name={name} color1={color1} color2={color2} />
+          ) : page === 'paid' ? (
+            <Paid name={name} color1={color1} color2={color2} />
+          ) : page === 'investment' ? (
+            <Investment name={name} color1={color1} color2={color2} />
+          ) : page === 'guarantee' ? (
+            <Guarantee name={name} color1={color1} color2={color2} />
+          ) : page === 'proposal' ? (
+            <Proposal
+              name={name}
+              color1={color1}
+              color2={color2}
+              signed={signed}
+              ipAddress={ipAddress}
+              dateSigned={dateSigned}
+              signatureImage={signatureImage}
+              signatureText={signatureText}
+              type={type}
+            />
+          ) : (
+            <Terms name={name} color1={color1} color2={color2} />
+          )}
+          <NavButton page={page} />
+        </div>
       )}
-      <NavButton page={page} />
-    </div>
+    </>
   );
 }
 
