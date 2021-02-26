@@ -29,7 +29,7 @@ export const downloadSite = (company) => async (dispatch) => {
   console.log(blob);
   const link = document.createElement('a');
   link.href = window.URL.createObjectURL(blob);
-  link.download = `your-file-name.pdf`;
+  link.download = `${company}_proposal.pdf`;
   link.click();
 };
 export const setPage = (page) => {
