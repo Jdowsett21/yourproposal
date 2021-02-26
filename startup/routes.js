@@ -2,6 +2,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const company = require('../routes/companyInfo');
 const bodyParser = require('body-parser');
+const compression = require('compression');
 const express = require('express');
 const helmet = require('helmet');
 const path = require('path');
@@ -11,6 +12,7 @@ module.exports = function (app) {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
   app.use(helmet());
+  app.use(compression());
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/out'));
   }
