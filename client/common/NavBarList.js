@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import navArray from './NavBarArray';
 import NavItem from './NavItem';
 import { useRouter } from 'next/router';
-
-function NavBarList() {
-  const [active, setActive] = useState('');
+import { setPage } from '../actions/VariableActions';
+import { connect } from 'react-redux';
+function NavBarList({ setPage, company: { page } }) {
   const [hover, setHoverItem] = useState(false);
   const path = useRouter().pathname.substring(1);
-  useEffect(() => {
-    setActive(path);
-  }, [useRouter().pathname]);
+
   return (
     <ul className='nav-bar__list'>
       {navArray.map((nav, index) => (
@@ -17,9 +15,9 @@ function NavBarList() {
           nav={nav}
           index={index}
           key={nav.mainItem}
-          active={active === nav.route}
+          active={page === nav.route}
           onClick={() => {
-            // setActive(location.pathname.substring(1));
+            setPage(nav.route);
           }}
           onMouseEnter={() => setHoverItem(nav.mainItem)}
           hover={hover === nav.mainItem}
@@ -30,4 +28,8 @@ function NavBarList() {
   );
 }
 
-export default NavBarList;
+const mapStatetoProps = (state) => ({
+  company: state.company,
+});
+
+export default connect(mapStatetoProps, { setPage })(NavBarList);

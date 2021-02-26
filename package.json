@@ -1,9 +1,5 @@
 {
   "scripts": {
-    "xdn": "xdn",
-    "xdn:dev": "xdn dev",
-    "xdn:build": "xdn build",
-    "xdn:deploy": "xdn deploy",
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run dev --prefix client",
@@ -23,7 +19,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
-    "nodemailer": "^6.4.17",
+    "mongoose": "^5.11.17",
+    "puppeteer": "^7.1.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {

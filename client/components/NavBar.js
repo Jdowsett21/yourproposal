@@ -1,24 +1,12 @@
 import React from 'react';
 import NavBarList from '../common/NavBarList';
-import logo from '../public/img/logo.png';
-import logoweb from '../public/img/logo.webp';
-
+import logo from '../public/img/Company.png';
 function NavBar() {
   return (
-    <div className='navbar'>
-      <nav className='nav-bar'>
-        <picture className='nav-bar__logo-picture'>
-          <source srcSet={logoweb} type='image/webp' />
-          <source srcSet={logo} type='image/jpeg' />
-          <img
-            className='nav-bar__logo '
-            src={logo}
-            alt='logo'
-            loading='lazy'
-          />
-        </picture>
-        <NavBarList />
-      </nav>
+    <div className='nav-bar'>
+      <img src={logo} alt='logo' className='nav-bar__logo' />
+      <div className='navbar__logo'></div>
+      <NavBarList />
     </div>
   );
 }

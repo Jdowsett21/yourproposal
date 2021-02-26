@@ -1,0 +1,32 @@
+.website {
+  grid-column: 2/3;
+  &__secondary-section {
+    padding: 10rem 20rem;
+    font-size: 2rem;
+    color: #444;
+  }
+  &__content {
+    background-color: rgb(243, 243, 243);
+    padding: 10rem 20rem;
+    color: #444;
+    &-header {
+      font-size: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &__content-item {
+    padding: 2rem 0;
+  }
+  &__item-header {
+    font-size: 1.9rem;
+    font-weight: 300;
+  }
+  &__item-text {
+    font-size: 1.7rem;
+  }
+}
+
+h3 {
+  line-height: 4.5rem;
+  font-weight: 300;
+}

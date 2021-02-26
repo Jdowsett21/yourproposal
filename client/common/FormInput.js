@@ -23,6 +23,7 @@ const FormInput = (props) => {
       )}
       {props.helpertext !== '' ? (
         <p
+          style={{ color: '#333' }}
           className={`${props.form}form-error ${props.form}form-error--${props.name}`}
         >
           {props.helpertext}

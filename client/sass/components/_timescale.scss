@@ -1,0 +1,33 @@
+.timescale {
+  grid-column: 2/3;
+  color: #444;
+  &__content {
+    padding: 10rem 30rem;
+  }
+  &__header-section {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+  }
+
+  &__content-item {
+    padding: 2rem 0;
+  }
+  &__content-header {
+    font-size: 3rem;
+  }
+  &__item-header {
+    grid-column: 2/3;
+    font-size: 2.5rem;
+    font-weight: 300;
+    &--1 {
+      grid-column: 1/2;
+      font-weight: 400;
+      padding-right: 3rem;
+    }
+  }
+  &__item-text {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+}

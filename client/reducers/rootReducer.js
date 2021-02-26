@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import emailReducer from './emailReducer';
 import inViewReducer from './inViewReducer';
+import companyReducer from './companyReducer';
 export default combineReducers({
-  email: emailReducer,
   inView: inViewReducer,
+  company: companyReducer,
 });

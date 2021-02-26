@@ -1,10 +1,12 @@
 const navArray = [
-  { route: '', mainItem: 'Home' },
-  { route: 'services', mainItem: 'Services' },
-  { route: 'process', mainItem: 'Process' },
-  { route: 'portfolio', mainItem: 'Portfolio' },
-  { route: 'technical', mainItem: 'Technical' },
-  { route: 'contact', mainItem: 'Contact Us' },
+  { route: 'intro', mainItem: 'Introduction' },
+  { route: 'website', mainItem: 'Your New Website' },
+  { route: 'timescale', mainItem: 'Process and Timescale' },
+  { route: 'paid', mainItem: 'Paid For itself in the 1st few weeks' },
+  { route: 'investment', mainItem: 'Your Investment' },
+  { route: 'guarantee', mainItem: 'Our Guarantee' },
+  { route: 'proposal', mainItem: 'Approve Proposal' },
+  { route: 'terms', mainItem: 'Term and Conditions' },
 ];
 
 export default navArray;

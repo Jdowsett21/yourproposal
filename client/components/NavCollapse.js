@@ -2,26 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { connect } from 'react-redux';
 import { setNavOpen } from '../actions/InViewActions';
-import hello from '../public/img/svg/navBarButton.svg';
 import logo from '../public/img/logo.png';
 import logoweb from '../public/img/logo.webp';
 import { useMediaQuery } from '../utils/ScreenWidth';
 
 function NavCollapse({ inView: { navOpen }, setNavOpen }) {
-  const node = useRef();
-  useEffect(() => {
-    // add when mounted
-    document.addEventListener('mousedown', handleClick); // return function to be called when unmounted
-    return () => {
-      document.removeEventListener('mousedown', handleClick);
-    };
-  }, []);
-  const handleClick = (e) => {
-    if (node.current.contains(e.target)) {
-      return;
-    } // outside click
-    setNavOpen(false);
-  };
   const mediaQuery = useMediaQuery(450);
   return (
     <div ref={node}>

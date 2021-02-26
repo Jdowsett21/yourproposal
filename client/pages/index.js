@@ -1,36 +1,83 @@
-import React from 'react';
-import Carousel from '../components/Carousel';
-import About from '../components/About';
-import Services from '../components/Services';
-import ContactForm from '../components/ContactForm';
-import Process from '../components/Process';
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { companyInfo } from '../actions/VariableActions';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
-function App() {
-  const site = 'https://smarterwebsolutions.ca';
-  const canURL = site + useRouter().pathname;
+import Intro from '../components/Intro';
+import Website from '../components/Website';
+import NavButton from '../components/NavButton';
+import Terms from '../components/Terms';
+import Proposal from '../components/Proposal';
+import Guarantee from '../components/Guarantee';
+import Investment from '../components/Investment';
+import Paid from '../components/Paid';
+import Timescale from '../components/Timescale';
+import NavBar from '../components/NavBar';
+function App({
+  company: {
+    name,
+    color1,
+    color2,
+    page,
+    signed,
+    ipAddress,
+    signatureText,
+    signatureImage,
+    dateSigned,
+    type,
+  },
+  companyInfo,
+}) {
+  const path = useRouter().pathname;
+  const router = useRouter();
+  useEffect(() => {
+    companyInfo(path.substring(1));
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page]);
+
+  // useEffect(() => {
+  //   signed && router.push('/Accepted');
+  // }, [signed]);
 
   return (
-    <>
-      <Head>
-        <link rel='canonical' href={canURL} />
-        <title>Web Design Toronto - Web Development Company Toronto</title>
-        <meta
-          name='description'
-          content='Web Design Company in Toronto,
-    specializing in custom website design, web development, e-commerce &amp; custom
-    web based software.'
-        ></meta>
-      </Head>
-      <div>
-        <Carousel />
-        <About />
-        <Services />
-        <Process />
-        <ContactForm />
-      </div>
-    </>
+    <div className='main-container'>
+      <NavBar name={name} />
+
+      {page === 'intro' ? (
+        <Intro name={name} color1={color1} color2={color2} />
+      ) : page === 'website' ? (
+        <Website name={name} color1={color1} color2={color2} />
+      ) : page === 'timescale' ? (
+        <Timescale name={name} color1={color1} color2={color2} />
+      ) : page === 'paid' ? (
+        <Paid name={name} color1={color1} color2={color2} />
+      ) : page === 'investment' ? (
+        <Investment name={name} color1={color1} color2={color2} />
+      ) : page === 'guarantee' ? (
+        <Guarantee name={name} color1={color1} color2={color2} />
+      ) : page === 'proposal' ? (
+        <Proposal
+          name={name}
+          color1={color1}
+          color2={color2}
+          signed={signed}
+          ipAddress={ipAddress}
+          dateSigned={dateSigned}
+          signatureImage={signatureImage}
+          signatureText={signatureText}
+          type={type}
+        />
+      ) : (
+        <Terms name={name} color1={color1} color2={color2} />
+      )}
+      <NavButton page={page} />
+    </div>
   );
 }
 
-export default App;
+const mapStatetoProps = (state) => ({
+  company: state.company,
+});
+export default connect(mapStatetoProps, { companyInfo })(App);

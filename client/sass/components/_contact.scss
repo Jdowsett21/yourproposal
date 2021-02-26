@@ -41,10 +41,10 @@
   }
   &__form {
     display: grid;
-    grid-column: 1/2;
+    grid-column: 2/3;
     grid-row: 1/2;
     grid-template-columns: repeat(2, 1fr);
-    margin: 6rem 0 0 0;
+    margin: 6rem 0;
     &--small {
       margin: 0;
     }
