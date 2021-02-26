@@ -42,7 +42,7 @@ router.get('/download/:companyName', async (req, res) => {
     content:
       '.nav { display: none} .navbar { border: 0px} #print-button {display: none}',
   });
-  const pdf = await page.pdf({ path: 'hn.pdf', format: 'a4' });
+  const pdf = await page.pdf({ path: 'hn1.pdf', format: 'a4' });
 
   await browser.close();
 
