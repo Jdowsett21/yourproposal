@@ -35,7 +35,7 @@ router.put('/:companyName', async (req, res) => {
 router.get('/download/:companyName', async (req, res) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto(`http://localhost:3000/${req.params.companyName}`, {
+  await page.goto(`https://yourproposal.ca/${req.params.companyName}`, {
     waitUntil: 'networkidle0',
   });
   // await page.addStyleTag({

@@ -28,7 +28,7 @@ function App({
   companyInfo,
 }) {
   const path = useRouter().pathname;
-  const router = useRouter();
+
   useEffect(() => {
     companyInfo(path.substring(1));
   }, [path]);
