@@ -50,7 +50,7 @@ module.exports = function (app) {
   });
   app.get('/Company', (req, res) => {
     res.sendFile(
-      path.resolve(__dirname, '../client', 'out', 'index.html'),
+      path.resolve(__dirname, '../client', 'out', 'Company.html'),
       function (err) {
         if (err) {
           res.status(500).send(err);
