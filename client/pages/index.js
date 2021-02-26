@@ -31,7 +31,7 @@ function App({
   const router = useRouter();
   useEffect(() => {
     companyInfo(path.substring(1));
-  }, []);
+  }, [path]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
