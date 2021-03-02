@@ -2,21 +2,44 @@
   grid-column: 2/3;
   &__content {
     background-color: rgb(243, 243, 243);
-    padding: 6rem 30rem;
+    padding: 19rem 25% 6rem;
     line-height: 3.5rem;
     color: #444;
-    transform: translateY(-1rem);
+    display: grid;
+    margin-top: -13rem;
+    &--pdf {
+      padding: 5rem 5rem;
+    }
     &--1 {
       background-color: #fff;
+      &--pdf {
+        padding: 5rem 5rem;
+      }
     }
+    &--3 {
+      padding: 19rem 25% 16rem;
+    }
+
     &--2 {
+      margin-top: 3rem;
       background-color: transparent;
-      padding: 6rem 20rem;
+      padding: 6rem 15% 6rem;
       color: #fff;
+      &--pdf {
+        padding: 5rem 5rem;
+      }
+    }
+    &-header-section {
+      display: grid;
+      grid-template-columns: max-content;
     }
     &-header {
       font-size: 3rem;
-      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+
+      &--1 {
+        border-bottom: 5px solid;
+      }
       font-weight: 400;
     }
     &-text {

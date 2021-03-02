@@ -92,7 +92,4 @@ function Signature({ name, widthRatio, setSignature }) {
   );
 }
 
-const mapStateToProps = (state) => ({
-  email: state.email,
-});
-export default connect(mapStateToProps, { setSignature })(Signature);
+export default connect(null, { setSignature })(Signature);

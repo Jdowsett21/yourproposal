@@ -1,6 +1,12 @@
-import { SIGNED, SET_COMPANY_INFO, SET_SIGNATURE, SET_PAGE } from './types';
+import {
+  SIGNED,
+  SET_COMPANY_INFO,
+  SET_SIGNATURE,
+  SET_PAGE,
+  ANALYZE,
+  OPTIONS,
+} from './types';
 import { publicFetch } from '../utils/publicFetch';
-import Modal from 'react-modal';
 
 export const companyInfo = (companyName) => async (dispatch) => {
   const { data } = await publicFetch.get(`/company/${companyName}`);
@@ -14,6 +20,14 @@ export const setCompanyInfo = (id) => async (dispatch) => {
   const { data } = await publicFetch.post('/company', id);
   dispatch({
     type: SET_COMPANY_INFO,
+    payload: data,
+  });
+};
+
+export const setAnalyze = (companyName) => async (dispatch) => {
+  const { data } = await publicFetch.put(`/company/analyze/${companyName}`);
+  dispatch({
+    type: ANALYZE,
     payload: data,
   });
 };
@@ -47,15 +61,13 @@ export const setSigned = () => {
 export const setSignature = (signatureText, signatureImage) => async (
   dispatch
 ) => {
+  const name = signatureText.name.replace(/\s+/g, '_');
   const info = {
     signatureText: signatureText.signature,
     signatureImage,
   };
-  console.log(info);
-  const { data } = await publicFetch.put(
-    `/company/${signatureText.name}`,
-    info
-  );
+
+  const { data } = await publicFetch.put(`/company/${name}`, info);
   dispatch({
     type: SET_SIGNATURE,
     payload: data,

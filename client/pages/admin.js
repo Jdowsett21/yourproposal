@@ -30,6 +30,10 @@ function companyInfo({ setCompanyInfo }) {
           ipAddress: '',
           signatureText: '',
           signatureImage: '',
+          newBiz: '',
+          averageSalePrice: '',
+          conversionRate: '',
+          numberOfSales: '',
         }}
         onSubmit={(values) => {
           setCompanyInfo(values);
@@ -65,6 +69,56 @@ function companyInfo({ setCompanyInfo }) {
                 name='color2'
                 type='text'
                 placeholder='color2'
+                required
+              />
+            </div>
+            <div className='project__form-area'>
+              <label className='project__form-label'>newBiz</label>
+              <MyTextField
+                ariaLabel='newBiz'
+                name='newBiz'
+                type='text'
+                placeholder='newBiz'
+                required
+              />
+            </div>
+            <div className='project__form-area'>
+              <label className='project__form-label'>averageSalePrice</label>
+              <MyTextField
+                ariaLabel='averageSalePrice'
+                name='averageSalePrice'
+                type='text'
+                placeholder='averageSalePrice'
+                required
+              />
+            </div>
+            <div className='project__form-area'>
+              <label className='project__form-label'>conversionRate</label>
+              <MyTextField
+                ariaLabel='conversionRate'
+                name='conversionRate'
+                type='text'
+                placeholder='conversionRate'
+                required
+              />
+            </div>
+            <div className='project__form-area'>
+              <label className='project__form-label'>conversionOfLeads</label>
+              <MyTextField
+                ariaLabel='conversionOfLeads'
+                name='conversionOfLeads'
+                type='text'
+                placeholder='conversionOfLeads'
+                required
+              />
+            </div>
+            <div className='project__form-area'>
+              <label className='project__form-label'>numberOfLeads</label>
+              <MyTextField
+                ariaLabel='numberOfLeads'
+                name='numberOfLeads'
+                type='text'
+                placeholder='numberOfLeads'
                 required
               />
             </div>

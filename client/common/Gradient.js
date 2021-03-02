@@ -1,7 +1,16 @@
 import React from 'react';
 
-function Gradient({ color }) {
-  return <div className={`gradient gradient--${color}`}></div>;
+function Gradient({ color1, color2 }) {
+  return (
+    <div
+      className={`gradient `}
+      style={{
+        backgroundImage: `linear-gradient(
+${color1},${color2}
+  )`,
+      }}
+    ></div>
+  );
 }
 
 export default Gradient;

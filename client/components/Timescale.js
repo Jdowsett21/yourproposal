@@ -1,24 +1,35 @@
 import React from 'react';
 import deployment from '../public/img/shutterstock_1681458781.jpg';
+import Gradient from '../common/Gradient';
 
-function Timescale({ name, color1, color2 }) {
+function Timescale({ name, color1, color2, modifier }) {
   return (
     <div className='timescale'>
       <div
-        className='intro__header-background'
-        style={{ backgroundImage: `linear-gradient(${color1}, ${color2})` }}
+        className={`intro__header-background intro__header-background--${modifier}`}
       >
-        <h1 className='intro__header'>Process & Timescales</h1>
+        <Gradient color1={color1} color2={color2} />{' '}
+        <h1 className={`intro__header intro__header--${modifier}`} style={{}}>
+          Process & Timeline
+        </h1>
+        <img src={deployment} alt='' className='img img--timescale' />
       </div>
-      <img src={deployment} alt='' className='img img--timescale' />
-      <div className='timescale__content'>
+      <div
+        className={`timescale__content timescale__content--${modifier}`}
+        style={{ marginBottom: '10rem' }}
+      >
         <h3 className='timescale__content-header'>Content for the site</h3>
         <div className='timescale__content-item'>
           <div className='timescale__header-section'>
-            <h5 className='timescale__item-header timescale__item-header--1'>
+            <h5
+              className='timescale__item-header timescale__item-header--1'
+              style={{ borderColor: color1 }}
+            >
               Step 1
             </h5>
-            <h5 className='timescale__item-header'>Planning</h5>
+            <h5 className='timescale__item-header timescale__item-header--2'>
+              Planning
+            </h5>
           </div>
           <p className='timescale__item-text'>
             We need to get to the bottom of who you are, what you stand for and
@@ -29,10 +40,15 @@ function Timescale({ name, color1, color2 }) {
         </div>
         <div className='timescale__content-item'>
           <div className='timescale__header-section'>
-            <h5 className='timescale__item-header timescale__item-header--1'>
+            <h5
+              className='timescale__item-header timescale__item-header--1'
+              style={{ borderColor: color1 }}
+            >
               Step 2
             </h5>
-            <h5 className='timescale__item-header'>Wireframe</h5>
+            <h5 className='timescale__item-header timescale__item-header--2'>
+              Wireframe
+            </h5>
           </div>
           <p className='timescale__item-text'>
             Once the we understand your vision we can begin building the
@@ -44,10 +60,15 @@ function Timescale({ name, color1, color2 }) {
         </div>
         <div className='timescale__content-item'>
           <div className='timescale__header-section'>
-            <h5 className='timescale__item-header timescale__item-header--1'>
+            <h5
+              className='timescale__item-header timescale__item-header--1'
+              style={{ borderColor: color1 }}
+            >
               Step 3
             </h5>
-            <h5 className='timescale__item-header'>Design</h5>
+            <h5 className='timescale__item-header timescale__item-header--2'>
+              Design
+            </h5>
           </div>
           <p className='timescale__item-text'>
             Once the wireframe of the site is complete, our design team can take
@@ -60,10 +81,15 @@ function Timescale({ name, color1, color2 }) {
         </div>
         <div className='timescale__content-item'>
           <div className='timescale__header-section'>
-            <h5 className='timescale__item-header timescale__item-header--1'>
+            <h5
+              className='timescale__item-header timescale__item-header--1'
+              style={{ borderColor: color1 }}
+            >
               Step 4
             </h5>
-            <h5 className='timescale__item-header'>Code</h5>
+            <h5 className='timescale__item-header timescale__item-header--2'>
+              Code
+            </h5>
           </div>
           <p className='timescale__item-text'>
             Once the design is complete, it is time to build the magic that
@@ -77,10 +103,15 @@ function Timescale({ name, color1, color2 }) {
         </div>
         <div className='timescale__content-item'>
           <div className='timescale__header-section'>
-            <h5 className='timescale__item-header timescale__item-header--1'>
+            <h5
+              className='timescale__item-header timescale__item-header--1'
+              style={{ borderColor: color1 }}
+            >
               Step 5
             </h5>
-            <h5 className='timescale__item-header'>Deployment</h5>
+            <h5 className='timescale__item-header timescale__item-header--2'>
+              Deployment
+            </h5>
           </div>
           <p className='timescale__item-text'>
             Once the application is complete, it is reviewed and approved by our
@@ -94,13 +125,69 @@ function Timescale({ name, color1, color2 }) {
         </div>
       </div>
       <div
-        className='intro__header-background'
+        className={`intro__header-background intro__header-background--bottom--3 intro__header-background--${modifier} intro__header-background--no`}
         style={{ backgroundImage: `linear-gradient(${color1}, ${color2})` }}
       >
-        <h1 className='intro__header'>
-          In total, it will take us between 3 - 6 weeks to get your website
-          live.
+        <h1 className={`intro__header intro__header--${modifier}`} style={{}}>
+          We will follow up with you at each checkpoint before proceeding.
         </h1>
+      </div>
+      <div
+        className={`timescale__content timescale__content--1 timescale__content--${modifier}`}
+        style={{ marginBottom: '10rem' }}
+      >
+        <h3 className='timescale__header'>Proposed Schedule</h3>
+        <p style={{ marginBottom: '1rem' }}>
+          Please note: all dates are estimated in number of days having received
+          all materials necessary to begin the proposed project.
+        </p>
+        <div className='timescale__thick-border'></div>
+        <div className='timescale__table-header'>
+          <h3
+            className='timescale__row-1'
+            style={{ color: color1, fontWeight: 500 }}
+          >
+            Deliverable
+          </h3>
+          <h3
+            className='timescale__row-2'
+            style={{ color: color1, fontWeight: 500 }}
+          >
+            Number Of Days
+          </h3>
+          <h3
+            className='timescale__row-3'
+            style={{ color: color1, fontWeight: 500 }}
+          >
+            Process
+          </h3>
+        </div>
+        <div className='timescale__row-item'>
+          <h3 className='timescale__row-1'>Planning</h3>
+          <h3 className='timescale__row-2'>5 Days</h3>
+          <h3 className='timescale__row-3'>Brainstorming Initial Structure</h3>
+        </div>
+        <div className='timescale__row-item'>
+          <h3 className='timescale__row-1'>Wireframe</h3>
+          <h3 className='timescale__row-2'>9 days</h3>
+          <h3 className='timescale__row-3'>Blueprint Of Site Designed</h3>
+        </div>
+        <div className='timescale__row-item'>
+          <h3 className='timescale__row-1'>Design</h3>
+          <h3 className='timescale__row-2'>16 days</h3>
+          <h3 className='timescale__row-3'>Website Design Complete</h3>
+        </div>
+        <div className='timescale__row-item'>
+          <h3 className='timescale__row-1'>Code</h3>
+          <h3 className='timescale__row-2'>23 days</h3>
+          <h3 className='timescale__row-3'>Final Code Is Compiled</h3>
+        </div>
+        <div className='timescale__row-item'>
+          <h3 className='timescale__row-1'>Website Review</h3>
+          <h3 className='timescale__row-2'>30 Days</h3>
+          <h3 className='timescale__row-3'>Quality Assurance Review</h3>
+        </div>
+        <div className='timescale__thick-border'></div>
       </div>
     </div>
   );

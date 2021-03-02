@@ -24,11 +24,13 @@ function App({
     signatureImage,
     dateSigned,
     type,
+    noWebsite,
+    analyze,
   },
   companyInfo,
 }) {
   const path = useRouter().pathname;
-
+  const router = useRouter();
   useEffect(() => {
     companyInfo(path.substring(1));
   }, [path]);
@@ -37,68 +39,66 @@ function App({
     window.scrollTo(0, 0);
   }, [page]);
 
-  // useEffect(() => {
-  //   signed && router.push('/Accepted');
-  // }, [signed]);
-
+  useEffect(() => {
+    signed && router.push('/Accepted');
+  }, [signed]);
   return (
-    <>
-      {signed ? (
-        <>
-          <Intro name={name} color1={color1} color2={color2} />
-          <Website name={name} color1={color1} color2={color2} />
-          <Timescale name={name} color1={color1} color2={color2} />
-          <Paid name={name} color1={color1} color2={color2} />
-          <Investment name={name} color1={color1} color2={color2} />
-          <Guarantee name={name} color1={color1} color2={color2} />
-          <Proposal
-            name={name}
-            color1={color1}
-            color2={color2}
-            signed={signed}
-            ipAddress={ipAddress}
-            dateSigned={dateSigned}
-            signatureImage={signatureImage}
-            signatureText={signatureText}
-            type={type}
-          />
-          <Terms name={name} color1={color1} color2={color2} />
-        </>
-      ) : (
-        <div className='main-container'>
-          <NavBar name={name} />
+    <div className='main-container'>
+      <NavBar name={name} />
 
-          {page === 'intro' ? (
-            <Intro name={name} color1={color1} color2={color2} />
-          ) : page === 'website' ? (
-            <Website name={name} color1={color1} color2={color2} />
-          ) : page === 'timescale' ? (
-            <Timescale name={name} color1={color1} color2={color2} />
-          ) : page === 'paid' ? (
-            <Paid name={name} color1={color1} color2={color2} />
-          ) : page === 'investment' ? (
-            <Investment name={name} color1={color1} color2={color2} />
-          ) : page === 'guarantee' ? (
-            <Guarantee name={name} color1={color1} color2={color2} />
-          ) : page === 'proposal' ? (
-            <Proposal
-              name={name}
-              color1={color1}
-              color2={color2}
-              signed={signed}
-              ipAddress={ipAddress}
-              dateSigned={dateSigned}
-              signatureImage={signatureImage}
-              signatureText={signatureText}
-              type={type}
-            />
-          ) : (
-            <Terms name={name} color1={color1} color2={color2} />
-          )}
-          <NavButton page={page} />
-        </div>
+      {page === 'intro' ? (
+        <Intro
+          noWebsite={noWebsite}
+          name={name}
+          color1={color1}
+          color2={color2}
+        />
+      ) : page === 'website' ? (
+        <Website
+          noWebsite={noWebsite}
+          name={name}
+          color1={color1}
+          color2={color2}
+        />
+      ) : page === 'timescale' ? (
+        <Timescale
+          noWebsite={noWebsite}
+          name={name}
+          color1={color1}
+          color2={color2}
+        />
+      ) : page === 'paid' ? (
+        <Paid
+          noWebsite={noWebsite}
+          name={name}
+          color1={color1}
+          color2={color2}
+        />
+      ) : page === 'investment' ? (
+        <Investment
+          noWebsite={noWebsite}
+          name={name}
+          color1={color1}
+          color2={color2}
+        />
+      ) : page === 'proposal' ? (
+        <Proposal
+          noWebsite={noWebsite}
+          name={name}
+          color1={color1}
+          color2={color2}
+          signed={signed}
+          ipAddress={ipAddress}
+          dateSigned={dateSigned}
+          signatureImage={signatureImage}
+          signatureText={signatureText}
+          type={type}
+        />
+      ) : (
+        <Terms name={name} color1={color1} color2={color2} />
       )}
-    </>
+      <NavButton page={page} />
+    </div>
   );
 }
 

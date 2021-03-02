@@ -5,6 +5,12 @@ const companySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  companyName1: {
+    type: String,
+    required: true,
+    default: `${this.companyName}1`,
+  },
+
   color1: {
     type: String,
     required: false,
@@ -16,14 +22,37 @@ const companySchema = new mongoose.Schema({
   date: {
     type: Date,
   },
+  signed: {
+    type: Boolean,
+    default: false,
+  },
+  noWebsite: {
+    type: Boolean,
+  },
+  averageSalePrice: {
+    type: Number,
+  },
+  conversionRate: {
+    type: Number,
+  },
+  conversionOfLeads: {
+    type: Number,
+  },
+  numberOfLeads: {
+    type: Number,
+  },
   ipAddress: {
-    // type: Number,
+    type: String,
   },
   signatureText: {
     type: String,
   },
   signatureImage: {
     type: String,
+  },
+  analyze: {
+    type: Boolean,
+    default: false,
   },
 });
 

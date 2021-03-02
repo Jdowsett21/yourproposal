@@ -135,6 +135,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+.indent {
+  width: 16px;
+  height: 4px;
+  grid-column: 1/2;
+  margin-top: 2.8rem;
+  margin-right: 1rem;
+}
 body {
   min-width: width;
   width: 100%;
@@ -142,8 +149,17 @@ body {
 }
 .img {
   object-fit: cover;
-  height: 45rem;
+  height: 44rem;
+  overflow: hidden;
+  // clip-path: polygon(0 0, 100% 0, 100% 32rem, 0 100%);
+  &--bottom--1 {
+    clip-path: polygon(0 12rem, 100% 0, 100% 100%, 0 100%);
+  }
+
   width: 100%;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  // transform: skewY(-4deg);
   &--timescale {
     object-position: 0 20%;
   }
@@ -153,12 +169,20 @@ body {
   &--paid {
     object-position: 0 40%;
   }
+  &--investment {
+    height: 43rem;
+    object-position: 0 70%;
+  }
+  &--investment-1 {
+    height: 60rem;
+    margin-top: -15rem;
+    clip-path: polygon(0 10rem, 100% 0, 100% 50rem, 0 100%);
+  }
   &--guarantee {
     object-position: 0 89%;
   }
   &--proposal {
-    height: 35rem;
-    object-position: 0 20%;
+    object-position: 0 15%;
   }
 }
 html {

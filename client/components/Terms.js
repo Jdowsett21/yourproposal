@@ -1,22 +1,27 @@
 import React from 'react';
 
-function Terms({ name, color1, color2 }) {
+function Terms({ name, color1, color2, modifier }) {
   return (
     <div className='website'>
       <div
-        className='intro__header-background'
+        className={`intro__header-background  intro__header-background--${modifier} intro__header-background--no `}
         style={{
           backgroundImage: `linear-gradient(${color1}, ${color2})`,
         }}
       >
         <h1 className='intro__header'>Terms & Conditions</h1>
       </div>
-      <div className='investment__content'>
+      <div
+        className={`investment__content investment__content--${modifier}`}
+        style={{ marginTop: '.5rem' }}
+      >
+        {' '}
         <p className='investment__content-text--2'>Summary</p>
         <p className='investment__content-text'>
-          You, [customer name] are hiring [designer] located at [address] to
-          design and develop a website for the estimated total price of [price]
-          outlined in our previous correspondence.{' '}
+          You, {name} are hiring Smarter Web Solutions located at 1960 Queen
+          Street East, Toronto, Ontario to design and develop a website for the
+          estimated total price of $2,995 outlined in our previous
+          correspondence.
         </p>
         <p className='investment__content-text'>
           As my customer, you have the power and ability to enter into this
@@ -33,8 +38,13 @@ function Terms({ name, color1, color2 }) {
           I will carry them out in a professional and timely manner. I will
           endeavour to meet all the deadlines set but am not responsible for a
           missed launch date or a deadline if you have been late in supplying
-          materials or have not approved my work on time at any stage. I will
-          also maintain the confidentiality of any information that you give me.
+          materials or have not approved my work on time at any stage. If the
+          content that you are responsible for providing is not given before the
+          agreed upon launch date, I will launch your website live with
+          placeholder photo's and text and will add your content when it is
+          received. Final payment will still be given with launch of placeholder
+          text and photos version of site. I will also maintain the
+          confidentiality of any information that you give me.
         </p>
         <p className='investment__content-text--2'>Details of the works</p>
         <p className='investment__content-text'>
@@ -114,7 +124,7 @@ function Terms({ name, color1, color2 }) {
           You guarantee to me that any elements of text, graphics, photos,
           designs, trademarks, or other artwork that you provide me for
           inclusion in the website are either owned by you or that you have
-          permission to use them
+          permission to use them.
         </p>
         <p className='investment__content-text'>
           When I receive your final payment, copyright is automatically assigned
@@ -138,13 +148,13 @@ function Terms({ name, color1, color2 }) {
         </p>
         <p className='investment__content-text--2'>Payments</p>
         <p className='investment__content-text'>
-          [x%] of total fee upon agreement of initial design: [deposit fee]
+          50% of total fee upon agreement of initial design: $1,497.5 CAD
         </p>
         <p className='investment__content-text'>
-          [x%] of total on delivery of the website (pre-snagging): [second fee]
+          25% of total on delivery of the website (pre-snagging):$748.75 CAD
         </p>
         <p className='investment__content-text'>
-          [x%] of total fee on completion of the project: [balance]
+          25% of total fee on completion of the project: $748.75
         </p>
         <p className='investment__content-text'>
           Interest accrued if payment is more than 14 days late. We reserve the

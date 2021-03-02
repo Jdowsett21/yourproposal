@@ -5,7 +5,6 @@ function NavBar() {
   return (
     <div className='nav-bar'>
       <img src={logo} alt='logo' className='nav-bar__logo' />
-      <div className='navbar__logo'></div>
       <NavBarList />
     </div>
   );
