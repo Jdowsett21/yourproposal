@@ -89,7 +89,10 @@ router.put('/:companyName', async (req, res) => {
 router.get('/download/:companyName', async (req, res) => {
   const name = req.params.companyName.replace(/\s+/g, '_');
 
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
 
   const page = await browser.newPage();
 
