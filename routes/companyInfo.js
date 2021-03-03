@@ -56,14 +56,20 @@ router.post('/', async (req, res) => {
   res.send(company);
 });
 router.put('/analyze/:companyName', async (req, res) => {
-  const company = await Company.findOneAndUpdate(
-    { companyName: req.params.companyName },
-    {
-      analyze: !req.body.analyze,
-    }
+  const company = await Company.find({ companyName: req.params.companyName });
+  console.log(
+    '🚀 ~ file: companyInfo.js ~ line 60 ~ router.put ~ company',
+    company
   );
-
-  res.send(company);
+  console.log(company[0].analyze);
+  const company1 = await Company.findOneAndUpdate(
+    { companyName: company[0].companyName },
+    {
+      analyze: company[0].analyze === true ? false : true,
+    },
+    { new: true }
+  );
+  res.send(company1);
 });
 router.put('/:companyName', async (req, res) => {
   const company = await Company.findOneAndUpdate(

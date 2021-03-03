@@ -7,7 +7,7 @@ import Website from '../components/Website';
 import NavButton from '../components/NavButton';
 import Terms from '../components/Terms';
 import Proposal from '../components/Proposal';
-import Guarantee from '../components/Guarantee';
+import Home from '../components/Home';
 import Investment from '../components/Investment';
 import Paid from '../components/Paid';
 import Timescale from '../components/Timescale';
@@ -43,7 +43,9 @@ function App({
   useEffect(() => {
     signed && router.push('/Accepted');
   }, [signed]);
-  return (
+  return page === 'home' ? (
+    <Home name={name} />
+  ) : (
     <div className='main-container'>
       <NavBar name={name} />
 

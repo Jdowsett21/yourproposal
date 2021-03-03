@@ -128,8 +128,12 @@ function Timescale({ name, color1, color2, modifier }) {
         className={`intro__header-background intro__header-background--bottom--3 intro__header-background--${modifier} intro__header-background--no`}
         style={{ backgroundImage: `linear-gradient(${color1}, ${color2})` }}
       >
-        <h1 className={`intro__header intro__header--${modifier}`} style={{}}>
-          We will follow up with you at each checkpoint before proceeding.
+        <h1
+          className={`intro__header intro__header--${modifier}`}
+          style={{ textAlign: 'center' }}
+        >
+          We follow up with you at each checkpoint before moving to the next
+          step.
         </h1>
       </div>
       <div

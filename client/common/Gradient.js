@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Gradient({ color1, color2 }) {
+function Gradient({ color1, color2, modifier }) {
   return (
     <div
-      className={`gradient `}
+      className={`gradient gradient--${modifier}`}
       style={{
         backgroundImage: `linear-gradient(
 ${color1},${color2}

@@ -13,7 +13,7 @@ const initialState = {
   color1: '#000',
   analyze: false,
   color2: '#333',
-  page: 'intro',
+  page: 'home',
   signatureImage: '',
   signatureText: '',
   dateSigned: '',

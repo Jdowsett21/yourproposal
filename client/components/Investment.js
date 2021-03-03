@@ -201,7 +201,7 @@ function Investment({
           {!noWebsite && (
             <p className='investment__content-text'>
               Our goal is to get it to {conversionRate * 2}% which will be{' '}
-              {conversionRate * 2 * numberOfLeads} leads each month.
+              {2 * numberOfLeads} leads each month.
             </p>
           )}
           <p className='investment__content-text'>

@@ -24,6 +24,11 @@
     justify-self: center;
     margin-top: 4rem;
     height: 7rem;
+    &--1 {
+      margin-top: 13rem;
+      height: 10rem;
+      z-index: 1;
+    }
     &--collapse {
       height: 7rem;
     }
