@@ -94,7 +94,7 @@ router.get('/download/:companyName', async (req, res) => {
   const page = await browser.newPage();
 
   await page.goto(`http://localhost:3000/${name}1`, {
-    waitUntil: 'networkidle2',
+    waitUntil: 'load',
     timeout: 0,
   });
 
