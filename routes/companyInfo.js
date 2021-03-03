@@ -96,7 +96,7 @@ router.get('/download/:companyName', async (req, res) => {
   await page.goto(`http://localhost:3000/${name}1`, {
     waitUntil: 'networkidle2',
   });
-
+  await page.waitFor(900000000);
   const pdf = await page.pdf({ path: 'hn.pdf', format: 'a4' });
 
   await browser.close();

@@ -27,7 +27,7 @@ function Pdf({
     type,
   },
 }) {
-  const path = useRouter().pathname;
+  const path = useRouter().asPath;
   useEffect(() => {
     companyInfo(path.substring(1, path.length - 1));
   }, [path]);
