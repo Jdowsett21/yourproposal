@@ -29,7 +29,7 @@ function App({
   },
   companyInfo,
 }) {
-  const path = useRouter().pathname;
+  const path = useRouter().asPath;
   const router = useRouter();
   console.log('🚀 ~ file: index.js ~ line 34 ~ router', router);
   useEffect(() => {
